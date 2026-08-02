@@ -30,13 +30,37 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:c
 .home-brand{color:var(--ink);flex-shrink:0;transition:opacity .3s}
 .home-brand:hover{opacity:.72}
 .header-right{display:flex;align-items:center;gap:28px;margin-left:auto}
-nav{display:none;gap:26px;font-size:.9rem;letter-spacing:.14em}
-nav a{color:var(--ink-dim);transition:color .3s}
-nav a:hover{color:var(--gold)}
-nav a.act{color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:4px}
-.header-cta{font-size:.88rem;letter-spacing:.12em;border:1px solid var(--gold);color:var(--gold);padding:8px 18px;border-radius:2px;transition:background .3s,color .3s}
+.nav-toggle{display:inline-flex;flex-direction:column;justify-content:center;gap:6px;width:42px;height:42px;padding:10px;border:1px solid rgba(169,128,60,.45);background:rgba(255,255,255,.72);cursor:pointer;border-radius:2px;transition:border-color .3s,background .3s}
+.nav-toggle span{display:block;height:1px;background:var(--gold);transition:transform .3s,opacity .3s}
+.nav-toggle[aria-expanded="true"]{border-color:var(--vermilion);background:#fff}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(3.5px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){transform:translateY(-3.5px) rotate(-45deg)}
+nav{display:none}
+.header-cta{font-size:.82rem;letter-spacing:.12em;border:1px solid var(--gold);color:var(--gold);padding:8px 14px;border-radius:2px;transition:background .3s,color .3s;white-space:nowrap}
 .header-cta:hover{background:var(--vermilion);border-color:var(--vermilion);color:#fff}
-@media(min-width:820px){nav{display:flex}}
+@media(max-width:819px){
+  header{padding:10px 14px}
+  .header-right{gap:10px}
+  .brand{font-size:.95rem;gap:8px}
+  .brand .seal{font-size:.72rem;width:2.1em;height:2.1em}
+  nav{position:fixed;inset:62px 14px auto 14px;display:flex;flex-direction:column;gap:0;padding:8px 0;background:rgba(255,255,255,.97);border:1px solid rgba(169,128,60,.28);border-radius:4px;box-shadow:0 18px 40px rgba(62,16,23,.12);opacity:0;visibility:hidden;transform:translateY(-8px);pointer-events:none;transition:opacity .28s,transform .28s,visibility .28s;z-index:60;backdrop-filter:blur(12px)}
+  body.nav-open nav{opacity:1;visibility:visible;transform:none;pointer-events:auto}
+  nav a{display:block;padding:16px 22px;font-size:.95rem;letter-spacing:.18em;color:var(--ink);border-bottom:1px solid rgba(110,26,36,.08)}
+  nav a:last-child{border-bottom:none}
+  nav a.act{color:var(--vermilion-bright);border-bottom-color:rgba(110,26,36,.08)}
+  nav a:hover{color:var(--gold);background:rgba(249,243,238,.7)}
+  section{padding:88px 18px 72px}
+  .page-hero{padding:120px 18px 48px;min-height:42svh}
+  .sticky-cta{padding-bottom:calc(12px + env(safe-area-inset-bottom))}
+}
+@media(min-width:820px){
+  .nav-toggle{display:none}
+  nav{display:flex;gap:26px;font-size:.9rem;letter-spacing:.14em;position:static;opacity:1;visibility:visible;transform:none;pointer-events:auto;background:none;border:none;box-shadow:none;padding:0;flex-direction:row}
+  nav a{color:var(--ink-dim);padding:0;border:none;font-size:inherit}
+  nav a.act{color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:4px}
+  nav a:hover{color:var(--gold);background:none}
+  .header-cta{font-size:.88rem;padding:8px 18px}
+}
 section{padding:110px 24px;position:relative}
 .wrap{max-width:var(--maxw);margin:0 auto}
 .eyebrow{display:flex;align-items:center;gap:18px;font-size:clamp(.98rem,1.6vw,1.12rem);letter-spacing:.42em;color:var(--gold);margin-bottom:26px;font-weight:500}
@@ -105,6 +129,7 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
   <a class="brand home-brand" href="index.html" aria-label="SHIN ホーム"><span class="seal">志</span>SHIN</a>
   <div class="header-right">
   <nav><a href="about.html" class="">SHINについて</a><a href="story.html" class="">想い</a><a href="journal.html" class="">志動録</a><a href="voice.html" class="act">お客様の声</a></nav>
+  <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span></button>
   <a class="header-cta" href="contact.html">申し込む</a>
   </div>
 </header>
@@ -183,6 +208,18 @@ document.querySelectorAll('.fx').forEach(el=>io.observe(el));
 const st=document.getElementById('stickyCta');
 if(st){const h=document.querySelector('.page-hero,.hero');
 new IntersectionObserver(es=>{st.classList.toggle('show',!es[0].isIntersecting)},{threshold:.1}).observe(h);}
+const navToggle=document.querySelector('.nav-toggle');
+if(navToggle){
+  const closeNav=()=>{navToggle.setAttribute('aria-expanded','false');document.body.classList.remove('nav-open')};
+  navToggle.addEventListener('click',()=>{
+    const open=navToggle.getAttribute('aria-expanded')==='true';
+    navToggle.setAttribute('aria-expanded',open?'false':'true');
+    document.body.classList.toggle('nav-open',!open);
+  });
+  document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',closeNav));
+  window.addEventListener('keydown',e=>{if(e.key==='Escape')closeNav()});
+}
+
 </script>
 </body>
 </html>

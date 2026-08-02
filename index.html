@@ -86,23 +86,24 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;background:var(--bg-deep);overflow:hidden}
 .hero-photos{position:absolute;inset:0;overflow:hidden}
-.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center 18%;opacity:0;filter:saturate(.96);animation:heroFade 12s infinite;transform:scale(1.08)}
+.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center 18%;opacity:0;filter:saturate(.96);animation:heroFade 16s infinite;transform:scale(1.06)}
 .hero-slide:nth-child(1){animation-delay:0s;background-image:url(img/hero_kimono.jpg);background-position:center 15%}
-.hero-slide:nth-child(2){animation-delay:6s;background-image:url(img/hero_stage.jpg);background-position:center 35%}
+.hero-slide:nth-child(2){animation-delay:4s;background-image:url(img/hero_stage.jpg);background-position:center 35%}
+.hero-slide:nth-child(3){animation-delay:8s;background-image:url(img/hero_mission.jpg);background-position:center center}
+.hero-slide:nth-child(4){animation-delay:12s;background-image:url(img/hero_suit_red.jpg);background-position:center 22%}
 @keyframes heroFade{
-  0%{opacity:0;transform:scale(1.08)}
-  5%{opacity:1}
-  14%{opacity:1;transform:scale(1.18)}
-  42%{opacity:1;transform:scale(1.18)}
-  47%{opacity:0;transform:scale(1.18)}
+  0%{opacity:0;transform:scale(1.06)}
+  4%{opacity:1}
+  21%{opacity:1;transform:scale(1.14)}
+  25%{opacity:0;transform:scale(1.14)}
   100%{opacity:0}
 }
 @media(prefers-reduced-motion:reduce){.hero-slide{animation:none;opacity:0}.hero-slide:first-child{opacity:1;transform:scale(1)}}
 .hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,253,251,.55),rgba(255,253,251,.22) 40%,rgba(250,246,243,.78));}
 .hero-dots{position:absolute;right:22px;top:50%;transform:translateY(-50%);z-index:3;display:flex;flex-direction:column;gap:10px}
-.hero-dots span{width:5px;height:5px;border-radius:50%;background:rgba(110,26,36,.25);animation:dotPulse 12s infinite}
-.hero-dots span:nth-child(1){animation-delay:0s}.hero-dots span:nth-child(2){animation-delay:6s}
-@keyframes dotPulse{0%{background:rgba(110,26,36,.25);transform:scale(1)}5%{background:var(--vermilion);transform:scale(1.6)}42%{background:var(--vermilion);transform:scale(1.6)}47%{background:rgba(110,26,36,.25);transform:scale(1)}100%{background:rgba(110,26,36,.25)}}
+.hero-dots span{width:5px;height:5px;border-radius:50%;background:rgba(110,26,36,.25);animation:dotPulse 16s infinite}
+.hero-dots span:nth-child(1){animation-delay:0s}.hero-dots span:nth-child(2){animation-delay:4s}.hero-dots span:nth-child(3){animation-delay:8s}.hero-dots span:nth-child(4){animation-delay:12s}
+@keyframes dotPulse{0%{background:rgba(110,26,36,.25);transform:scale(1)}4%{background:var(--vermilion);transform:scale(1.6)}21%{background:var(--vermilion);transform:scale(1.6)}25%{background:rgba(110,26,36,.25);transform:scale(1)}100%{background:rgba(110,26,36,.25)}}
 @media(max-width:819px){.hero-dots{right:12px}}
 .hero::after{content:"";position:absolute;inset:0;opacity:.05;pointer-events:none;background-image:radial-gradient(rgba(44,30,33,.5) .5px,transparent .5px);background-size:22px 22px}
 .hero-inner{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;gap:min(7vw,110px);padding:96px 16px 130px;width:100%;max-width:var(--maxw);overflow:hidden}
@@ -115,10 +116,20 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 .hero-rule .bar{width:min(9vw,64px);height:1px;background:linear-gradient(90deg,rgba(169,128,60,.75),transparent)}
 .hero-rule span{font-family:var(--serif);font-size:clamp(1rem,2.5vw,1.4rem);letter-spacing:.32em;color:var(--gold);font-weight:600;writing-mode:horizontal-tb;line-height:1.55}
 @media(max-width:819px){.hero-rule{left:14px}.hero-rule span{font-size:clamp(.92rem,2.2vw,1.1rem);letter-spacing:.24em}}
-.hero-sub{position:absolute;bottom:88px;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:18px;opacity:0;animation:rise 1.2s 2.3s forwards}
-.hero-sub .ln{width:52px;height:1px;background:linear-gradient(90deg,transparent,rgba(169,128,60,.6));}
-.hero-sub .ln.r{background:linear-gradient(90deg,rgba(169,128,60,.6),transparent)}
-.hero-sub .tx{font-family:var(--serif);font-size:clamp(1.05rem,2.6vw,1.35rem);letter-spacing:.28em;color:var(--ink);font-weight:600}
+.hero-msgs{position:absolute;bottom:88px;left:0;right:0;z-index:3;height:3.2em;pointer-events:none}
+.hero-msg{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;text-align:center;padding:0 28px;animation:heroMsg 16s infinite}
+.hero-msg:nth-child(1){animation-delay:0s}.hero-msg:nth-child(2){animation-delay:4s}.hero-msg:nth-child(3){animation-delay:8s}.hero-msg:nth-child(4){animation-delay:12s}
+.hero-msg-tag{font-size:clamp(.68rem,1vw,.78rem);letter-spacing:.48em;color:var(--gold);font-weight:500}
+.hero-msg-tx{font-family:var(--serif);font-size:clamp(1rem,2.4vw,1.28rem);letter-spacing:.22em;color:var(--ink);font-weight:600;line-height:1.7;margin:0}
+.hero-msg-tx em{font-style:normal;color:var(--vermilion-bright)}
+@keyframes heroMsg{
+  0%{opacity:0;transform:translateY(10px)}
+  4%{opacity:1;transform:none}
+  21%{opacity:1}
+  25%{opacity:0;transform:translateY(-8px)}
+  100%{opacity:0}
+}
+@media(prefers-reduced-motion:reduce){.hero-msg{animation:none;opacity:0}.hero-msg:first-child{opacity:1;transform:none}}
 .scroll-cue{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);width:1px;height:44px;overflow:hidden}
 .scroll-cue::before{content:"";position:absolute;left:0;top:-100%;width:1px;height:100%;background:var(--gold);animation:drip 2.2s ease-in-out infinite}
 @keyframes drip{0%{top:-100%}55%{top:100%}100%{top:100%}}
@@ -232,8 +243,10 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
   <div class="hero-photos" aria-hidden="true">
     <div class="hero-slide"></div>
     <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
   </div>
-  <div class="hero-dots" aria-hidden="true"><span></span><span></span></div>
+  <div class="hero-dots" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
   <div class="hero-veil" aria-hidden="true"></div>
   <div class="hero-inner">
     <div class="hero-rule" aria-hidden="true"><span>VISION<br>COMES<br>FIRST</span><div class="bar"></div></div>
@@ -242,7 +255,12 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
       <span class="line">自動から<span class="shidou">志動</span>へ。</span>
     </h1>
   </div>
-  <p class="hero-sub"><span class="ln"></span><span class="tx">考える人生から、動く人生へ。</span><span class="ln r"></span></p>
+  <div class="hero-msgs" aria-live="polite">
+    <div class="hero-msg"><span class="hero-msg-tag">PASSION</span><p class="hero-msg-tx">志を、身体に込める。</p></div>
+    <div class="hero-msg"><span class="hero-msg-tag">CHALLENGE</span><p class="hero-msg-tx">挑戦に、本気で向き合う。</p></div>
+    <div class="hero-msg"><span class="hero-msg-tag">MISSION</span><p class="hero-msg-tx">どうなりたいかより、<em>どう在りたいか。</em></p></div>
+    <div class="hero-msg"><span class="hero-msg-tag">VISION</span><p class="hero-msg-tx">想いを、ステージで届ける。</p></div>
+  </div>
   <div class="scroll-cue" aria-hidden="true"></div>
 </div>
 <section>

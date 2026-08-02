@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>想い・ストーリー｜SHIN Official Website</title>
+<meta name="description" content="なぜこの活動を始めたのか。なぜ志動録は生まれたのか。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Noto+Sans+JP:wght@350;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg-deep:#F4ECE7; --bg-wine:#FFFFFF; --bg-wine-2:#FAF6F3;
+  --gold:#A9803C; --gold-soft:#8F6F3E;
+  --vermilion:#6E1A24; --vermilion-bright:#95293A;
+  --enji-deep:#3E1017;
+  --ink:#2C1E21; --ink-dim:rgba(44,30,33,.66);
+  --serif:'Shippori Mincho',serif; --sans:'Noto Sans JP',sans-serif;
+  --maxw:1080px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg-wine);color:var(--ink);font-family:var(--sans);font-weight:350;line-height:2;letter-spacing:.06em;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.seal{display:inline-flex;align-items:center;justify-content:center;width:2.6em;height:2.6em;background:var(--vermilion);color:#FBEFE4;font-family:var(--serif);font-weight:800;font-size:1rem;border-radius:4px;box-shadow:0 0 0 1px rgba(216,73,43,.35),0 4px 18px rgba(216,73,43,.35);letter-spacing:0;line-height:1}
+header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:flex-end;gap:28px;padding:14px 20px;background:linear-gradient(180deg,rgba(255,255,255,.94),rgba(255,255,255,.8) 70%,transparent);backdrop-filter:blur(10px)}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:700;letter-spacing:.14em}
+.brand .seal{font-size:.8rem;width:2.4em;height:2.4em}
+nav{display:none;gap:26px;font-size:.82rem;letter-spacing:.14em}
+nav a{color:var(--ink-dim);transition:color .3s}
+nav a:hover{color:var(--gold)}
+nav a.act{color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:4px}
+.header-cta{font-size:.78rem;letter-spacing:.12em;border:1px solid var(--gold);color:var(--gold);padding:8px 18px;border-radius:2px;transition:background .3s,color .3s}
+.header-cta:hover{background:var(--vermilion);border-color:var(--vermilion);color:#fff}
+@media(min-width:820px){nav{display:flex}}
+section{padding:110px 24px;position:relative}
+.wrap{max-width:var(--maxw);margin:0 auto}
+.eyebrow{display:flex;align-items:center;gap:14px;font-size:.72rem;letter-spacing:.42em;color:var(--gold);margin-bottom:26px;font-weight:500}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--gold)}
+.eyebrow.center{justify-content:center}
+h2{font-family:var(--serif);font-weight:700;font-size:clamp(1.55rem,4.6vw,2.3rem);line-height:1.7;letter-spacing:.1em;margin-bottom:34px}
+h2 em,h1 em{font-style:normal;color:var(--vermilion-bright)}
+.lead{color:var(--ink-dim);font-size:.95rem;max-width:620px}
+.fx{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.fx.on{opacity:1;transform:none}
+/* サブページ共通ヒーロー */
+.page-hero{min-height:52svh;display:flex;align-items:flex-end;padding:140px 24px 64px;background:radial-gradient(120% 90% at 50% 0%,rgba(216,73,43,.13),transparent 55%),linear-gradient(180deg,var(--bg-deep),var(--bg-wine))}
+.page-hero .wrap{width:100%}
+.page-hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(1.9rem,6vw,3rem);letter-spacing:.14em;line-height:1.6}
+.page-hero .en{font-size:.7rem;letter-spacing:.5em;color:var(--gold-soft);margin-bottom:18px;display:block}
+.page-hero .desc{color:var(--ink-dim);font-size:.9rem;margin-top:20px;max-width:560px}
+/* ボタン */
+.btn-fire{display:inline-block;font-weight:700;font-size:1rem;letter-spacing:.16em;color:#fff;background:linear-gradient(90deg,#5A1420,#8A2334);padding:20px 58px;border-radius:999px;box-shadow:0 12px 32px rgba(90,20,32,.35);transition:transform .3s,box-shadow .3s;border:none;cursor:pointer;font-family:var(--sans)}
+.btn-fire:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(90,20,32,.45)}
+.link-more{font-size:.82rem;letter-spacing:.24em;color:var(--gold);border-bottom:1px solid rgba(201,162,75,.5);padding-bottom:6px;transition:opacity .3s}
+.link-more:hover{opacity:.7}
+/* footer / sticky */
+footer{background:var(--enji-deep);padding:54px 24px 120px;text-align:center;font-size:.75rem;color:rgba(245,239,230,.4);letter-spacing:.14em}
+footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
+.follow-lead{color:var(--ink-dim);font-size:.8rem;letter-spacing:.16em;margin-bottom:22px}
+.sns-btns{display:flex;flex-direction:column;gap:14px;align-items:center;margin-bottom:34px}
+@media(min-width:560px){.sns-btns{flex-direction:row;justify-content:center}}
+.sns-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:min(100%,300px);padding:15px 22px;border-radius:999px;font-size:.9rem;font-weight:700;letter-spacing:.08em;color:#fff;transition:transform .3s,box-shadow .3s}
+.sns-btn:hover{transform:translateY(-2px)}
+.sns-btn.ig{background:linear-gradient(45deg,#F58529,#DD2A7B 55%,#8134AF);box-shadow:0 8px 24px rgba(221,42,123,.35)}
+.sns-btn.line{background:#06C755;box-shadow:0 8px 24px rgba(6,199,85,.3)}
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(0deg,rgba(255,255,255,.97),rgba(255,255,255,.9));border-top:1px solid rgba(110,26,36,.15);box-shadow:0 -8px 24px rgba(62,16,23,.08);transform:translateY(110%);transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.sticky-cta.show{transform:none}
+.sticky-cta a{display:block;text-align:center;font-weight:700;font-size:.92rem;letter-spacing:.14em;color:#fff;background:linear-gradient(90deg,#5A1420,#8A2334);padding:15px;border-radius:999px}
+@media(min-width:820px){.sticky-cta{display:none}}
+/* 汎用パーツ */
+.card-grid{display:grid;gap:22px}
+@media(min-width:820px){.card-grid.c3{grid-template-columns:repeat(3,1fr)}.card-grid.c2{grid-template-columns:repeat(2,1fr)}}
+.card{background:#fff;border:1px solid rgba(110,26,36,.12);border-radius:6px;padding:30px 26px;box-shadow:0 8px 28px rgba(62,16,23,.07)}
+.card h3{font-family:var(--serif);font-size:1.05rem;letter-spacing:.12em;color:var(--gold);margin-bottom:14px;font-weight:700}
+.card p{font-size:.88rem;color:var(--ink-dim)}
+.checklist{list-style:none;display:grid;gap:14px;margin:30px 0}
+.checklist li{display:flex;gap:14px;align-items:flex-start;font-size:.95rem}
+.checklist li::before{content:"";flex:none;width:9px;height:9px;margin-top:14px;background:var(--vermilion);transform:rotate(45deg)}
+.ph{border:1px dashed rgba(110,26,36,.3);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--ink-dim);font-size:.78rem;letter-spacing:.2em;background:#F3EAE5}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.fx{opacity:1;transform:none}}
+
+.chapters{max-width:640px;margin:0 auto;display:grid;gap:80px}
+.chapter .num{font-family:var(--serif);color:var(--vermilion-bright);font-size:.85rem;letter-spacing:.4em;margin-bottom:14px}
+.chapter h2{margin-bottom:20px}
+.chapter p{color:var(--ink-dim);font-size:.95rem}
+.big-quote{font-family:var(--serif);font-weight:600;font-size:clamp(1.25rem,4vw,1.8rem);line-height:2.4;letter-spacing:.14em;text-align:center;max-width:680px;margin:0 auto}
+.big-quote em{font-style:normal;color:var(--vermilion-bright)}
+.essay{max-width:620px;margin:0 auto}
+.essay p{color:var(--ink-dim);font-size:.95rem;margin-bottom:1.8em}
+.essay .strong{color:var(--ink);font-weight:500}
+.pull{font-family:var(--serif);font-weight:600;font-size:clamp(1.1rem,3.4vw,1.4rem);line-height:2.3;letter-spacing:.12em;color:var(--ink);border-left:3px solid var(--vermilion);padding:6px 0 6px 24px;margin:2.6em 0}
+.pull em{font-style:normal;color:var(--vermilion-bright)}
+.essay-title{font-family:var(--serif);font-weight:700;font-size:clamp(1.45rem,4.4vw,2rem);letter-spacing:.12em;line-height:1.8;margin-bottom:40px}
+.sig{font-family:var(--serif);text-align:right;letter-spacing:.3em;color:var(--vermilion);margin-top:3em;font-size:1.02rem}
+</style>
+</head>
+<body>
+<header>
+  <nav><a href="about.html" class="">SHINについて</a><a href="story.html" class="act">想い</a><a href="journal.html" class="">志動録</a><a href="index.html#media" class="">メディア</a><a href="voice.html" class="">お客様の声</a></nav>
+  <a class="header-cta" href="contact.html">申し込む</a>
+</header>
+
+<div class="page-hero">
+  <div class="wrap">
+    <span class="en">STORY</span>
+    <h1>想い・ストーリー</h1>
+    <p class="desc">SHINの生き様と、志動録ジャーナルに込めたすべて。</p>
+  </div>
+</div>
+
+<section>
+  <div class="essay">
+    <p class="eyebrow fx">MY LIFE</p>
+    <h2 class="essay-title fx">SHINの生き様</h2>
+    <p class="fx">私は、<span class="strong">「人生を、自動から志動へ導く」</span>ことを人生のmissionに掲げて生きています。</p>
+    <p class="fx">多くの人は、誰かが決めた常識や環境の中で、気づかないうちに"自動"で人生を歩んでいます。でも、本当の人生は、自分の意志で選び、自分の志で生きることで初めて輝き始める。</p>
+    <p class="fx">だから私は、身体を鍛えるだけではなく、思考を整え、習慣を変え、人生そのものをデザインするサポートをしています。私が作った「志動録ジャーナル」も、その想いから生まれました。夢を書くためのノートではありません。<span class="strong">志を軸にゴールを言語化し、今日の行動へ落とし込み、理想を現実に変えるための人生設計ツール</span>です。</p>
+    <p class="pull fx">私が本当に増やしたいのは、<br>お金持ちではありません。</p>
+    <p class="fx">自分の人生に誇りを持ち、誰かのために挑戦し、人生の最後に「最高の人生だった」と笑える人です。利益の先にある、生きがいを生きる人を増やす。そのために、一人ひとりの可能性を信じ、<span class="strong">日本人が本来持っている精神性と志を、もう一度呼び覚ましていく</span>。それが、SHINという人間の生き方です。</p>
+    <p class="fx">口先だけではなく、自ら行動で示し、挑戦し続ける姿を届け続けます。そして、一人でも多くの人が自分の人生に誇りを持ち、「人生を、自動から志動へ。」と踏み出せるように。私はこれからも全国へ足を運び、想いを言葉に乗せて届け続けます。</p>
+    <p class="sig fx">私の人生が終わるその日まで。</p>
+  </div>
+</section>
+
+<section style="background:var(--bg-deep)">
+  <div class="essay">
+    <p class="eyebrow fx">WHY</p>
+    <h2 class="essay-title fx">なぜ、志動録ジャーナルを<br>作ったのか。</h2>
+    <p class="fx">私はこれまで、多くの人を見てきました。才能がある人。努力できる人。夢を語れる人。それでも、人生が変わらない人があまりにも多かったんです。</p>
+    <p class="fx">その違いは、性格でも才能でもなく、<span class="strong">「毎日の生き方」</span>でした。</p>
+    <p class="fx">人は、人生を変えたいと言いますが、多くの人は今日を変えません。夢はある。目標もある。だけど、今日何をするのかは決まっていない。だから時間に流され、気づけばまた1年が終わる。</p>
+    <p class="fx">私自身もそうでした。「いつか変わる」「そのうち成功する」——そんな未来を待っていました。でも、人生は待っていても変わりませんでした。</p>
+    <p class="fx">そこで私自身、自分の理想の在り方から逆算し、やるべき事を志と共に、毎日ジャーナルを書き始めました。すると、やるべき事が明確になり、毎日が充実し、目標達成率がどんどん上がっていきました。そうして今の自分がいます。私自身、ジャーナルを書き始めて5年が経ちます。</p>
+    <p class="pull fx">人生は<em>書いて、決めて、行動した人</em>から<br>変わっていく。</p>
+    <p class="fx">だから私は、志動録ジャーナルを作りました。ただ予定を書くためではない。毎日、自分の志を確認し、今日やるべきことを明確にし、一日の終わりに自分と向き合う。その積み重ねが、未来の自分をつくります。</p>
+    <p class="fx">私が届けたいのは、ノートではなく、自分との約束を守れる人間になり、<span class="strong">「自分の人生の主人公として生きる習慣」</span>です。</p>
+    <p class="fx">AIがどれだけ進化しても、人生を歩くのは自分しかいません。誰かが人生をデザインしてくれる時代ではない。だからこそ、自分の人生は自分で設計する。そのために必要なのは、気合いや根性ではなく、<span class="strong">毎日積み上げられる仕組み</span>です。志動録ジャーナルは、その仕組みそのものです。</p>
+    <p class="pull fx">人生は偶然では変わらない。<br>人生は、<em>毎日の選択</em>で決まる。<br>そしてその選択は、毎日ペンを持つことから始まる。</p>
+    <p class="fx">私の使命は、日本人の可能性を最大限に引き出すことです。その第一歩として一人でも多くの人に、「自分の人生を自分でデザインする力」を届けたい。</p>
+    <p class="fx"><span class="strong">その想いを、この一冊にすべて込めました。</span></p>
+  </div>
+</section>
+
+<section>
+  <p class="big-quote fx">23歳は土台。24歳は飛躍。<br>何度も作り直し、何度も壊し、<br>何度もゼロからやり直した。</p>
+  <p class="fx" style="text-align:center;margin-top:30px;color:var(--ink-dim);font-size:.9rem;letter-spacing:.1em">完成したものより、諦めなかった自分がちょっとだけ誇らしい。</p>
+  <div class="fx" style="text-align:center;margin-top:56px"><a class="btn-fire" href="journal.html">志動録ジャーナルを見る</a></div>
+</section>
+
+<footer>
+  <a class="brand" href="index.html"><span class="seal">志</span>SHIN</a>
+  <p class="follow-lead">最新情報・日々の発信はこちらから</p>
+  <div class="sns-btns">
+    <a class="sns-btn ig" href="https://www.instagram.com/shinnnn.1/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor" stroke="none"/></svg>
+      Instagramをフォロー
+    </a>
+    <a class="sns-btn line" href="https://lin.ee/riYjWrx" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 3C6.5 3 2 6.7 2 11.2c0 4 3.4 7.4 8 8.1.3.1.8.2.9.5.1.3.1.7 0 1 0 0-.1.7-.1.8-.1.3-.2 1 .9.5s5.8-3.4 7.9-5.9c1.5-1.6 2.4-3.2 2.4-5C22 6.7 17.5 3 12 3z"/></svg>
+      公式LINEを追加
+    </a>
+  </div>
+  <p>© 2026 SHIN — Vision comes first.</p>
+</footer>
+<div class="sticky-cta" id="stickyCta"><a href="contact.html">志動録を申し込む</a></div>
+<script>
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.fx').forEach(el=>io.observe(el));
+const st=document.getElementById('stickyCta');
+if(st){const h=document.querySelector('.page-hero,.hero');
+new IntersectionObserver(es=>{st.classList.toggle('show',!es[0].isIntersecting)},{threshold:.1}).observe(h);}
+</script>
+</body>
+</html>

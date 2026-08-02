@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>申し込み｜SHIN Official Website</title>
-<meta name="description" content="志動録ジャーナル×志動設計セッションの申込フォーム。">
+<title>購入｜SHIN Official Website</title>
+<meta name="description" content="志動録ジャーナル×志動設計セッションの購入ページ。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Noto+Sans+JP:wght@350;400;500;700&display=swap" rel="stylesheet">
@@ -24,20 +24,23 @@ body{background:var(--bg-wine);color:var(--ink);font-family:var(--sans);font-wei
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 .seal{display:inline-flex;align-items:center;justify-content:center;width:2.6em;height:2.6em;background:var(--vermilion);color:#FBEFE4;font-family:var(--serif);font-weight:800;font-size:1rem;border-radius:4px;box-shadow:0 0 0 1px rgba(216,73,43,.35),0 4px 18px rgba(216,73,43,.35);letter-spacing:0;line-height:1}
-header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:flex-end;gap:28px;padding:14px 20px;background:linear-gradient(180deg,rgba(255,255,255,.94),rgba(255,255,255,.8) 70%,transparent);backdrop-filter:blur(10px)}
+header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 20px;background:linear-gradient(180deg,rgba(255,255,255,.94),rgba(255,255,255,.8) 70%,transparent);backdrop-filter:blur(10px)}
 .brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:700;letter-spacing:.14em}
 .brand .seal{font-size:.8rem;width:2.4em;height:2.4em}
-nav{display:none;gap:26px;font-size:.82rem;letter-spacing:.14em}
+.home-brand{color:var(--ink);flex-shrink:0;transition:opacity .3s}
+.home-brand:hover{opacity:.72}
+.header-right{display:flex;align-items:center;gap:28px;margin-left:auto}
+nav{display:none;gap:26px;font-size:.9rem;letter-spacing:.14em}
 nav a{color:var(--ink-dim);transition:color .3s}
 nav a:hover{color:var(--gold)}
 nav a.act{color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:4px}
-.header-cta{font-size:.78rem;letter-spacing:.12em;border:1px solid var(--gold);color:var(--gold);padding:8px 18px;border-radius:2px;transition:background .3s,color .3s}
+.header-cta{font-size:.88rem;letter-spacing:.12em;border:1px solid var(--gold);color:var(--gold);padding:8px 18px;border-radius:2px;transition:background .3s,color .3s}
 .header-cta:hover{background:var(--vermilion);border-color:var(--vermilion);color:#fff}
 @media(min-width:820px){nav{display:flex}}
 section{padding:110px 24px;position:relative}
 .wrap{max-width:var(--maxw);margin:0 auto}
-.eyebrow{display:flex;align-items:center;gap:14px;font-size:.72rem;letter-spacing:.42em;color:var(--gold);margin-bottom:26px;font-weight:500}
-.eyebrow::before{content:"";width:34px;height:1px;background:var(--gold)}
+.eyebrow{display:flex;align-items:center;gap:18px;font-size:clamp(.98rem,1.6vw,1.12rem);letter-spacing:.42em;color:var(--gold);margin-bottom:26px;font-weight:500}
+.eyebrow::before{content:"";width:52px;height:1px;background:var(--gold)}
 .eyebrow.center{justify-content:center}
 h2{font-family:var(--serif);font-weight:700;font-size:clamp(1.55rem,4.6vw,2.3rem);line-height:1.7;letter-spacing:.1em;margin-bottom:34px}
 h2 em,h1 em{font-style:normal;color:var(--vermilion-bright)}
@@ -48,12 +51,12 @@ h2 em,h1 em{font-style:normal;color:var(--vermilion-bright)}
 .page-hero{min-height:52svh;display:flex;align-items:flex-end;padding:140px 24px 64px;background:radial-gradient(120% 90% at 50% 0%,rgba(216,73,43,.13),transparent 55%),linear-gradient(180deg,var(--bg-deep),var(--bg-wine))}
 .page-hero .wrap{width:100%}
 .page-hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(1.9rem,6vw,3rem);letter-spacing:.14em;line-height:1.6}
-.page-hero .en{font-size:.7rem;letter-spacing:.5em;color:var(--gold-soft);margin-bottom:18px;display:block}
+.page-hero .en{font-size:clamp(.85rem,1.2vw,.98rem);letter-spacing:.46em;color:var(--gold-soft);margin-bottom:18px;display:block}
 .page-hero .desc{color:var(--ink-dim);font-size:.9rem;margin-top:20px;max-width:560px}
 /* ボタン */
 .btn-fire{display:inline-block;font-weight:700;font-size:1rem;letter-spacing:.16em;color:#fff;background:linear-gradient(90deg,#5A1420,#8A2334);padding:20px 58px;border-radius:999px;box-shadow:0 12px 32px rgba(90,20,32,.35);transition:transform .3s,box-shadow .3s;border:none;cursor:pointer;font-family:var(--sans)}
 .btn-fire:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(90,20,32,.45)}
-.link-more{font-size:.82rem;letter-spacing:.24em;color:var(--gold);border-bottom:1px solid rgba(201,162,75,.5);padding-bottom:6px;transition:opacity .3s}
+.link-more{font-size:clamp(.9rem,1.2vw,1rem);letter-spacing:.22em;color:var(--gold);border-bottom:1px solid rgba(201,162,75,.5);padding-bottom:6px;transition:opacity .3s}
 .link-more:hover{opacity:.7}
 /* footer / sticky */
 footer{background:var(--enji-deep);padding:54px 24px 120px;text-align:center;font-size:.75rem;color:rgba(245,239,230,.4);letter-spacing:.14em}
@@ -73,7 +76,7 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 .card-grid{display:grid;gap:22px}
 @media(min-width:820px){.card-grid.c3{grid-template-columns:repeat(3,1fr)}.card-grid.c2{grid-template-columns:repeat(2,1fr)}}
 .card{background:#fff;border:1px solid rgba(110,26,36,.12);border-radius:6px;padding:30px 26px;box-shadow:0 8px 28px rgba(62,16,23,.07)}
-.card h3{font-family:var(--serif);font-size:1.05rem;letter-spacing:.12em;color:var(--gold);margin-bottom:14px;font-weight:700}
+.card h3{font-family:var(--serif);font-size:1.15rem;letter-spacing:.12em;color:var(--gold);margin-bottom:14px;font-weight:700}
 .card p{font-size:.88rem;color:var(--ink-dim)}
 .checklist{list-style:none;display:grid;gap:14px;margin:30px 0}
 .checklist li{display:flex;gap:14px;align-items:flex-start;font-size:.95rem}
@@ -83,14 +86,14 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 
 .form-wrap{max-width:560px;margin:0 auto}
 .field{margin-bottom:26px}
-label{display:block;font-size:.8rem;letter-spacing:.2em;color:var(--gold);margin-bottom:10px}
+label{display:block;font-size:.9rem;letter-spacing:.2em;color:var(--gold);margin-bottom:10px}
 label small{color:var(--vermilion-bright);margin-left:8px}
 input,select,textarea{width:100%;background:#fff;border:1px solid rgba(110,26,36,.25);border-radius:3px;padding:15px 16px;color:var(--ink);font-family:var(--sans);font-size:16px;letter-spacing:.04em;transition:border-color .3s}
 input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
 textarea{min-height:130px;resize:vertical}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;max-width:680px;margin:0 auto;background:rgba(201,162,75,.2);border:1px solid rgba(201,162,75,.2)}
 .steps div{background:var(--bg-deep);padding:22px 12px;text-align:center}
-.steps b{display:block;font-family:var(--serif);color:var(--gold);font-size:.95rem;letter-spacing:.1em;margin-bottom:6px}
+.steps b{display:block;font-family:var(--serif);color:var(--gold);font-size:1.05rem;letter-spacing:.1em;margin-bottom:6px}
 .steps span{font-size:.72rem;color:var(--ink-dim);letter-spacing:.08em;line-height:1.8}
 details{border-bottom:1px solid rgba(201,162,75,.2);max-width:640px;margin:0 auto}
 summary{cursor:pointer;padding:22px 8px;font-family:var(--serif);font-size:.98rem;letter-spacing:.1em;list-style:none;display:flex;justify-content:space-between;align-items:center}
@@ -102,29 +105,22 @@ details p{padding:0 8px 22px;font-size:.88rem;color:var(--ink-dim)}
 </head>
 <body>
 <header>
+  <a class="brand home-brand" href="index.html" aria-label="SHIN ホーム"><span class="seal">志</span>SHIN</a>
+  <div class="header-right">
   <nav><a href="about.html" class="">SHINについて</a><a href="story.html" class="">想い</a><a href="journal.html" class="">志動録</a><a href="index.html#media" class="">メディア</a><a href="voice.html" class="">お客様の声</a></nav>
   <a class="header-cta" href="contact.html">申し込む</a>
+  </div>
 </header>
 
 <div class="page-hero">
   <div class="wrap">
-    <span class="en">CONTACT</span>
-    <h1>申し込み</h1>
-    <p class="desc">フォーム送信後、<br>24時間以内に個別でご案内をお送りします。</p>
+    <span class="en">PURCHASE</span>
+    <h1>志動録ジャーナルを<br>手に入れる</h1>
+    <p class="desc">下記の購入フォームからお申し込みください。</p>
   </div>
 </div>
-<section style="padding-top:70px">
-  <div class="steps fx">
-    <div><b>一</b><span>フォームを送信</span></div>
-    <div><b>二</b><span>個別にご連絡</span></div>
-    <div><b>三</b><span>お届け＆セッション</span></div>
-  </div>
-</section>
-<section style="padding-top:0">
+<section>
   <div class="form-wrap" style="text-align:center">
-    <p class="eyebrow center fx">PURCHASE</p>
-    <h2 class="fx">志動録ジャーナルを手に入れる</h2>
-    <p class="lead fx" style="margin:0 auto 40px">購入フォームからお申し込みください。<br>送信後、<br>個別にご案内をお送りします。</p>
     <a class="btn-fire fx" href="https://docs.google.com/forms/d/1wHIOR2D6fwcnCX8yMCgGtjbsC5LvLKysjaLjKJnykv8/viewform" target="_blank" rel="noopener">今すぐ購入する</a>
     <p class="fx" style="margin:36px 0 14px;color:var(--ink-dim);font-size:.85rem">ご質問・ご相談はお気軽にLINEから</p>
     <a class="sns-btn line fx" href="https://lin.ee/riYjWrx" target="_blank" rel="noopener" style="margin:0 auto">
@@ -137,8 +133,8 @@ details p{padding:0 8px 22px;font-size:.88rem;color:var(--ink-dim)}
   <div class="wrap">
     <p class="eyebrow center fx">FAQ</p>
     <h2 class="fx" style="text-align:center">よくあるご質問</h2>
-    <details class="fx"><summary>申し込み後の流れを教えてください</summary><p>〈ダミー〉フォーム送信後、24時間以内にメールにて決済方法とセッション日程のご案内をお送りします。</p></details>
-    <details class="fx"><summary>支払い方法は何がありますか?</summary><p>〈ダミー〉銀行振込・クレジットカードに対応予定です。個別案内メールにてご確認いただけます。</p></details>
+    <details class="fx"><summary>申し込み後の流れを教えてください</summary><p>購入フォーム送信後、決済方法とセッション日程のご案内をお送りします。</p></details>
+    <details class="fx"><summary>支払い方法は何がありますか?</summary><p>銀行振込のみ対応しています。クレジットカードには対応しておりません。</p></details>
     <details class="fx"><summary>セッションはオンラインですか?</summary><p>〈ダミー〉Zoomでのオンライン実施です。所要時間は約◯◯分を予定しています。</p></details>
     <details class="fx"><summary>手帳が続いたことがなくても大丈夫?</summary><p>大丈夫です。続かないのは意志の問題ではなく構造の問題。志動録は「続く仕組み」ごとお渡しします。</p></details>
   </div>

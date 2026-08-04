@@ -120,25 +120,37 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 .prof-photo{background-size:cover;background-position:center 12%;border-radius:4px;border:1px solid rgba(201,162,75,.25);box-shadow:0 18px 44px rgba(62,16,23,.1)}
 .prof-photo.main{aspect-ratio:3/4}
 .origin-sec{background:linear-gradient(180deg,var(--bg-wine),var(--bg-deep) 40%,var(--bg-wine-2))}
-.origin-list{position:relative;max-width:720px;margin:0 auto;padding-left:0;display:grid;gap:0}
-.origin-item{position:relative;display:grid;gap:10px;padding:0 0 42px 36px;border-left:1px solid rgba(169,128,60,.28)}
-.origin-item:last-child{padding-bottom:0}
-.origin-item::before{content:"";position:absolute;left:-5px;top:8px;width:9px;height:9px;background:var(--gold);transform:rotate(45deg);box-shadow:0 0 0 4px rgba(255,252,249,.9)}
-.origin-age{font-family:var(--serif);font-size:clamp(.95rem,2vw,1.05rem);letter-spacing:.18em;color:var(--vermilion-bright);font-weight:700}
-.origin-title{font-family:var(--serif);font-size:clamp(1.1rem,2.6vw,1.3rem);letter-spacing:.1em;font-weight:700;line-height:1.7;margin:0 0 10px;color:var(--ink)}
-.origin-body{font-size:.92rem;color:var(--ink-dim);line-height:2.15;letter-spacing:.04em}
-.origin-body p{margin:0 0 .9em}
-.origin-body p:last-child{margin-bottom:0}
-@media(max-width:819px){
-  .origin-item{padding-left:28px;padding-bottom:36px}
-  .origin-body{font-size:.9rem;line-height:2}
-}
+.origin-list{position:relative;max-width:680px;margin:0 auto;display:grid;gap:0}
+.origin-item{position:relative;padding:0 0 40px 32px;border-left:1px solid rgba(169,128,60,.28)}
+.origin-item:last-child{padding-bottom:0;border-left-color:transparent}
+.origin-item::before{content:"";position:absolute;left:-5px;top:6px;width:9px;height:9px;background:var(--gold);transform:rotate(45deg);box-shadow:0 0 0 4px rgba(255,252,249,.95)}
+.origin-age{font-family:var(--serif);font-size:.95rem;letter-spacing:.2em;color:var(--vermilion-bright);font-weight:700;margin-bottom:6px}
+.origin-title{font-family:var(--serif);font-size:clamp(1.08rem,2.8vw,1.28rem);letter-spacing:.08em;font-weight:700;line-height:1.65;margin:0 0 16px;color:var(--ink)}
+.origin-body{display:grid;gap:14px}
+.origin-body p{margin:0;font-size:.95rem;color:var(--ink-dim);line-height:2.05;letter-spacing:.04em}
 .life-sec{background:var(--bg-wine)}
 .life-body{max-width:680px;margin:0 auto}
-.life-body p{font-family:var(--serif);font-size:clamp(1rem,1.6vw,1.1rem);line-height:2.5;letter-spacing:.08em;margin-bottom:28px}
+.life-body p{font-family:var(--serif);font-size:clamp(1rem,1.6vw,1.1rem);line-height:2.45;letter-spacing:.06em;margin:0 0 22px}
 .life-body p em{font-style:normal;color:var(--vermilion-bright)}
-.life-body .pull{font-size:clamp(1.15rem,2.4vw,1.4rem);color:var(--gold);letter-spacing:.12em;line-height:2.2;text-align:center;margin:40px 0}
-.life-body .sig{text-align:right;color:var(--gold-soft);letter-spacing:.2em}
+.life-body .pull{font-size:clamp(1.12rem,2.4vw,1.35rem);color:var(--gold);letter-spacing:.1em;line-height:2.1;text-align:center;margin:36px 0}
+.life-body .sig{text-align:right;color:var(--gold-soft);letter-spacing:.2em;margin-bottom:0}
+@media(max-width:819px){
+  .prof-visual{max-width:280px;margin:0 auto}
+  .prof-grid{gap:36px}
+  .mission-block{margin:28px 0 0;padding:20px 0 20px 18px}
+  .mission{font-size:1rem;line-height:2.2}
+  .life-body p{font-size:1rem;line-height:2.15;margin-bottom:18px;letter-spacing:.04em}
+  .life-body .pull{margin:28px 0;line-height:1.9}
+  .origin-sec .wrap{padding:0}
+  .origin-list{gap:18px}
+  .origin-item{padding:22px 18px 22px;border-left:none;border:1px solid rgba(169,128,60,.2);border-radius:4px;background:rgba(255,255,255,.72);box-shadow:0 8px 24px rgba(62,16,23,.04)}
+  .origin-item:last-child{padding-bottom:22px;border-left:none}
+  .origin-item::before{display:none}
+  .origin-age{font-size:.88rem;letter-spacing:.16em;margin-bottom:8px}
+  .origin-title{font-size:1.08rem;letter-spacing:.06em;line-height:1.55;margin-bottom:14px}
+  .origin-body{gap:12px}
+  .origin-body p{font-size:.92rem;line-height:1.95;letter-spacing:.03em}
+}
 </style>
 </head>
 <body>
@@ -171,7 +183,8 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
         <li style="border-left:2px solid var(--vermilion);padding-left:14px">YouTube企画「シンデレラは努力する」企画代表トレーナー</li>
         <li style="border-left:2px solid var(--vermilion);padding-left:14px">SBT1級メンタルコーチ(最年少取得)</li>
       </ul>
-      <p class="lead fx" style="font-family:var(--serif);line-height:2.4;letter-spacing:.08em">身体づくりを入口に、延べ300名以上の「人生の変化」に伴走。<br>恋をし、挑戦を始め、憧れの場所に住む——<br>そんな瞬間に立ち会い続けている。</p>
+      <p class="lead fx" style="font-family:var(--serif);line-height:2.2;letter-spacing:.06em">身体づくりを入口に、延べ300名以上の「人生の変化」に伴走。</p>
+      <p class="lead fx" style="font-family:var(--serif);line-height:2.2;letter-spacing:.06em;margin-top:12px">恋をし、挑戦を始め、憧れの場所に住む——そんな瞬間に立ち会い続けている。</p>
       <div class="mission-block fx">
         <p class="mission-label">MISSION<em>使命</em></p>
         <p class="mission">人生を自動から<span style="color:var(--vermilion-bright)">志動</span>に導き、<br>志ある仲間と共に<span style="color:var(--gold)">粋な日本</span>を創り上げる🪭</p>
@@ -185,10 +198,14 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
     <p class="eyebrow fx">LIFE</p>
     <h2 class="fx">SHINの生き様</h2>
     <p class="fx">私は、<em>「人生を、自動から志動へ導く」</em>ことを人生のmissionに掲げて生きています。</p>
-    <p class="fx">多くの人は、誰かが決めた常識や環境の中で、気づかないうちに"自動"で人生を歩んでいます。でも、本当の人生は、自分の意志で選び、自分の志で生きることで初めて輝き始める。</p>
+    <p class="fx">多くの人は、誰かが決めた常識や環境の中で、気づかないうちに"自動"で人生を歩んでいます。</p>
+    <p class="fx">でも、本当の人生は、自分の意志で選び、自分の志で生きることで初めて輝き始める。</p>
     <p class="pull fx">私が本当に増やしたいのは、<br>お金持ちではありません。</p>
-    <p class="fx">自分の人生に誇りを持ち、誰かのために挑戦し、人生の最後に「最高の人生だった」と笑える人です。利益の先にある、生きがいを生きる人を増やす。日本人が本来持っている精神性と志を、もう一度呼び覚ましていく。それが、SHINという人間の生き方です。</p>
-    <p class="fx">口先だけではなく、自ら行動で示し、挑戦し続ける姿を届け続けます。一人でも多くの人が「人生を、自動から志動へ。」と踏み出せるように。</p>
+    <p class="fx">自分の人生に誇りを持ち、誰かのために挑戦し、人生の最後に「最高の人生だった」と笑える人です。</p>
+    <p class="fx">利益の先にある、生きがいを生きる人を増やす。</p>
+    <p class="fx">日本人が本来持っている精神性と志を、もう一度呼び覚ましていく。<br>それが、SHINという人間の生き方です。</p>
+    <p class="fx">口先だけではなく、自ら行動で示し、挑戦し続ける姿を届け続けます。</p>
+    <p class="fx">一人でも多くの人が「人生を、自動から志動へ。」と踏み出せるように。</p>
     <p class="sig fx">私の人生が終わるその日まで。</p>
     <div class="fx" style="margin-top:40px;text-align:center"><a class="link-more" href="story.html">想いのすべてを読む →</a></div>
   </div>
@@ -197,42 +214,50 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 <section class="origin-sec">
   <div class="wrap">
     <p class="eyebrow center fx">ORIGIN</p>
-    <h2 class="fx" style="text-align:center;margin-bottom:52px">生い立ち</h2>
+    <h2 class="fx" style="text-align:center;margin-bottom:40px">生い立ち</h2>
     <div class="origin-list">
       <article class="origin-item fx">
         <div class="origin-age">18歳</div>
         <h3 class="origin-title">夢を追いかけた挑戦期</h3>
         <div class="origin-body">
-          <p>静岡県、清水桜が丘高校サッカー部。<br>正ゴールキーパーとして活躍し、静岡県高校選抜にも選出。<br>プロサッカー選手を目指していた。</p>
+          <p>静岡県、清水桜が丘高校サッカー部。</p>
+          <p>正ゴールキーパーとして活躍し、静岡県高校選抜にも選出。</p>
+          <p>プロサッカー選手を目指していた。</p>
         </div>
       </article>
       <article class="origin-item fx">
         <div class="origin-age">19歳</div>
         <h3 class="origin-title">人生最大の挫折</h3>
         <div class="origin-body">
-          <p>大学特待を断り、プロサッカー選手の夢を断念。<br>目標を失い、「自分には何もない」と感じる日々が始まる。</p>
+          <p>大学特待を断り、プロサッカー選手の夢を断念。</p>
+          <p>目標を失い、「自分には何もない」と感じる日々が始まる。</p>
         </div>
       </article>
       <article class="origin-item fx">
         <div class="origin-age">19〜21歳</div>
         <h3 class="origin-title">迷いと空白の2年間</h3>
         <div class="origin-body">
-          <p>約2年間、飲食店でフリーターとして勤務。<br>自信を失い、将来の方向性も見えないまま過ごす。</p>
+          <p>約2年間、飲食店でフリーターとして勤務。</p>
+          <p>自信を失い、将来の方向性も見えないまま過ごす。</p>
         </div>
       </article>
       <article class="origin-item fx">
         <div class="origin-age">21歳</div>
         <h3 class="origin-title">超戦</h3>
         <div class="origin-body">
-          <p>「このままの甘えた自分では人生を積む」と確信し、4ヶ月で20kgの減量に成功。</p>
-          <p>フィットネスのステージに立ち、ワクワクする努力をすれば人生は変えられること。<br>そして、周りの支えがあっての自分がいること——を強く実感する。</p>
+          <p>「このままの甘えた自分では人生を積む」と確信する。</p>
+          <p>4ヶ月で20kgの減量に成功。</p>
+          <p>フィットネスのステージに立ち、ワクワクする努力をすれば、人生は変えられると実感する。</p>
+          <p>そして、周りの支えがあっての自分がいることを、強く知る。</p>
         </div>
       </article>
       <article class="origin-item fx">
         <div class="origin-age">21歳</div>
-        <h3 class="origin-title">フィットネストレーナーへの挑戦・メンタルコーチ最年少取得</h3>
+        <h3 class="origin-title">トレーナーへの挑戦</h3>
         <div class="origin-body">
-          <p>フィットネストレーナーとして活動を開始。<br>ダイエットの知識だけでは人は変われないことを痛感し、「続けたくなる仕組み」や「心の在り方」の重要性に気づく。</p>
+          <p>フィットネストレーナーとして活動を開始。</p>
+          <p>ダイエットの知識だけでは、人は変われないと痛感する。</p>
+          <p>「続けたくなる仕組み」や「心の在り方」の重要性に気づく。</p>
           <p>約1年半の学びを経て、「SBT1級メンタルコーチ」を最年少で取得。</p>
         </div>
       </article>
@@ -240,22 +265,27 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
         <div class="origin-age">22歳</div>
         <h3 class="origin-title">日本舞踊への挑戦</h3>
         <div class="origin-body">
-          <p>日本の精神性や伝統に触れたいという強い想いから、日本舞踊に挑戦。<br>仕事の合間を縫って約6ヶ月間稽古を重ね、新たな舞台表現を経験する。</p>
+          <p>日本の精神性や伝統に触れたいという強い想いから、日本舞踊に挑戦。</p>
+          <p>仕事の合間を縫って約6ヶ月間稽古を重ね、新たな舞台表現を経験する。</p>
         </div>
       </article>
       <article class="origin-item fx">
         <div class="origin-age">23歳</div>
         <h3 class="origin-title">志動録ジャーナル開発</h3>
         <div class="origin-body">
-          <p>18歳から続けてきたジャーナリング。<br>志や目標、想いを書き続け、自分との約束を守り続けてきたからこそ、今の自分があると確信する。</p>
-          <p>「書くことで人生は変えられる。」<br>その想いを形にするため約1年をかけて志動録ジャーナルを開発し、23歳で世に送り出す。</p>
+          <p>18歳から続けてきたジャーナリング。</p>
+          <p>志や目標、想いを書き続け、自分との約束を守り続けてきたからこそ、今の自分があると確信する。</p>
+          <p>「書くことで人生は変えられる。」</p>
+          <p>その想いを形にするため、約1年をかけて志動録ジャーナルを開発。</p>
+          <p>23歳で、世に送り出す。</p>
         </div>
       </article>
       <article class="origin-item fx">
         <div class="origin-age">24歳</div>
         <h3 class="origin-title">人生を志動へ導く挑戦</h3>
         <div class="origin-body">
-          <p>志動録ジャーナルを軸に、一人でも多くの人が「自分らしい人生」を歩めるきっかけを届けるため、活動を続けている。</p>
+          <p>志動録ジャーナルを軸に、活動を続けている。</p>
+          <p>一人でも多くの人が、「自分らしい人生」を歩めるきっかけを届けるために。</p>
         </div>
       </article>
     </div>

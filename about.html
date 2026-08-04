@@ -112,7 +112,15 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 .mission-block::before{content:"";position:absolute;left:-2px;top:0;width:2px;height:32px;background:var(--vermilion-bright)}
 .mission-label{display:flex;align-items:baseline;gap:14px;font-size:clamp(.9rem,1.35vw,1.02rem);letter-spacing:.48em;color:var(--gold-soft);font-weight:500;margin-bottom:20px}
 .mission-label em{font-style:normal;font-family:var(--serif);font-size:clamp(1.15rem,1.8vw,1.35rem);letter-spacing:.38em;color:var(--vermilion-bright);font-weight:600}
-.mission{font-family:var(--serif);font-size:1.05rem;line-height:2.4;margin:0}
+.mission{font-family:var(--serif);font-size:1.05rem;line-height:2.2;margin:0;letter-spacing:.06em}
+.mission-lines{display:grid;gap:10px}
+.mission-lines p{font-family:var(--serif);font-size:1.05rem;line-height:1.95;margin:0;letter-spacing:.06em}
+.prof-roles{list-style:none;display:grid;gap:16px;margin:8px 0 28px}
+.prof-roles li{border-left:2px solid var(--vermilion);padding:2px 0 2px 14px;display:grid;gap:4px}
+.prof-role-main{font-size:.9rem;line-height:1.75;letter-spacing:.04em;color:var(--ink);word-break:keep-all}
+.prof-role-sub{font-size:.84rem;line-height:1.6;letter-spacing:.08em;color:var(--ink-dim)}
+.prof-leads{display:grid;gap:14px;margin-bottom:8px}
+.prof-leads .lead{font-family:var(--serif);font-size:.95rem;line-height:2.05;letter-spacing:.05em;margin:0}
 
 .prof-grid{display:grid;gap:44px}
 @media(min-width:820px){.prof-grid{grid-template-columns:.9fr 1.1fr;align-items:start}}
@@ -138,7 +146,11 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
   .prof-visual{max-width:280px;margin:0 auto}
   .prof-grid{gap:36px}
   .mission-block{margin:28px 0 0;padding:20px 0 20px 18px}
-  .mission{font-size:1rem;line-height:2.2}
+  .mission,.mission-lines p{font-size:1rem;line-height:1.9;letter-spacing:.04em}
+  .prof-roles{gap:18px;margin:6px 0 24px}
+  .prof-role-main{font-size:.88rem;line-height:1.7}
+  .prof-role-sub{font-size:.82rem}
+  .prof-leads .lead{font-size:.92rem;line-height:1.95}
   .life-body p{font-size:1rem;line-height:2.15;margin-bottom:18px;letter-spacing:.04em}
   .life-body .pull{margin:28px 0;line-height:1.9}
   .origin-sec .wrap{padding:0}
@@ -178,16 +190,32 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
     <div>
       <p class="eyebrow fx">PROFILE</p>
       <h2 class="fx">SHIN<span style="font-size:.55em;color:var(--ink-dim);margin-left:14px;letter-spacing:.2em">シン</span></h2>
-      <ul class="fx" style="list-style:none;display:grid;gap:8px;margin:4px 0 22px;font-size:.92rem">
-        <li style="border-left:2px solid var(--vermilion);padding-left:14px">目標逆算型ジャーナル「志動録」プロデューサー</li>
-        <li style="border-left:2px solid var(--vermilion);padding-left:14px">YouTube企画「シンデレラは努力する」企画代表トレーナー</li>
-        <li style="border-left:2px solid var(--vermilion);padding-left:14px">SBT1級メンタルコーチ(最年少取得)</li>
+      <ul class="prof-roles fx">
+        <li>
+          <span class="prof-role-main">目標逆算型ジャーナル「志動録」</span>
+          <span class="prof-role-sub">プロデューサー</span>
+        </li>
+        <li>
+          <span class="prof-role-main">YouTube企画「シンデレラは努力する」</span>
+          <span class="prof-role-sub">企画代表トレーナー</span>
+        </li>
+        <li>
+          <span class="prof-role-main">SBT1級メンタルコーチ</span>
+          <span class="prof-role-sub">最年少取得</span>
+        </li>
       </ul>
-      <p class="lead fx" style="font-family:var(--serif);line-height:2.2;letter-spacing:.06em">身体づくりを入口に、延べ300名以上の「人生の変化」に伴走。</p>
-      <p class="lead fx" style="font-family:var(--serif);line-height:2.2;letter-spacing:.06em;margin-top:12px">恋をし、挑戦を始め、憧れの場所に住む——そんな瞬間に立ち会い続けている。</p>
+      <div class="prof-leads">
+        <p class="lead fx">身体づくりを入口に、<br>延べ300名以上の「人生の変化」に伴走。</p>
+        <p class="lead fx">恋をし、挑戦を始め、<br>憧れの場所に住む——</p>
+        <p class="lead fx">そんな瞬間に立ち会い続けている。</p>
+      </div>
       <div class="mission-block fx">
         <p class="mission-label">MISSION<em>使命</em></p>
-        <p class="mission">人生を自動から<span style="color:var(--vermilion-bright)">志動</span>に導き、<br>志ある仲間と共に<span style="color:var(--gold)">粋な日本</span>を創り上げる🪭</p>
+        <div class="mission-lines">
+          <p>人生を自動から<span style="color:var(--vermilion-bright)">志動</span>に導き、</p>
+          <p>志ある仲間と共に</p>
+          <p><span style="color:var(--gold)">粋な日本</span>を創り上げる。🪭</p>
+        </div>
       </div>
     </div>
   </div>

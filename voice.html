@@ -111,17 +111,27 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 .ph{border:1px dashed rgba(110,26,36,.3);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--ink-dim);font-size:.78rem;letter-spacing:.2em;background:#F3EAE5}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.fx{opacity:1;transform:none}}
 
-.ba-masonry{columns:2;column-gap:14px;max-width:900px;margin:0 auto}
-@media(min-width:820px){.ba-masonry{columns:3;column-gap:18px}}
-.ba-masonry img{width:100%;display:block;border-radius:8px;margin-bottom:14px;break-inside:avoid;box-shadow:0 8px 24px rgba(62,16,23,.12);border:1px solid rgba(110,26,36,.08)}
-@media(min-width:820px){.ba-masonry img{margin-bottom:18px}}
+.ba-masonry{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;max-width:960px;margin:0 auto}
+@media(min-width:820px){.ba-masonry{grid-template-columns:repeat(3,1fr);gap:16px}}
+.ba-masonry img{width:100%;aspect-ratio:1;object-fit:cover;display:block;border-radius:6px;box-shadow:0 8px 24px rgba(62,16,23,.12);border:1px solid rgba(110,26,36,.08)}
+.ba-masonry img:last-child{grid-column:1/-1;width:calc((100% - 10px)/2);justify-self:center}
+@media(min-width:820px){.ba-masonry img:last-child{width:calc((100% - 32px)/3)}}
 .perm-note{text-align:center;font-size:.7rem;color:rgba(44,30,33,.45);letter-spacing:.12em;margin-top:20px}
-.moments{display:grid;gap:16px;max-width:960px;margin:0 auto}
-@media(min-width:820px){.moments{grid-template-columns:1fr 1fr;gap:20px}}
+.moments{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:960px;margin:0 auto}
+@media(min-width:820px){.moments{gap:20px}}
 .moments figure{margin:0}
-.moments img{width:100%;display:block;border-radius:8px;box-shadow:0 10px 30px rgba(62,16,23,.14);border:1px solid rgba(110,26,36,.08)}
+.moments img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:6px;box-shadow:0 10px 30px rgba(62,16,23,.14);border:1px solid rgba(110,26,36,.08)}
 .moments figcaption{font-size:.78rem;color:var(--ink-dim);letter-spacing:.1em;margin-top:10px;text-align:center}
 .voice-meta{font-size:clamp(.88rem,1.1vw,.95rem);letter-spacing:.14em;color:var(--gold-soft);border-top:1px solid rgba(110,26,36,.12);padding-top:14px;margin-top:16px}
+.yt-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:960px;margin:40px auto 0}
+@media(min-width:820px){.yt-grid{gap:18px}}
+.yt-card{display:block;position:relative;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#F1E7E2 center/cover no-repeat;border:1px solid rgba(110,26,36,.12);box-shadow:0 8px 24px rgba(62,16,23,.1);transition:transform .35s,box-shadow .35s}
+.yt-card::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(23,6,7,.55))}
+.yt-card:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(62,16,23,.16)}
+.yt-card .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:48px;height:34px;background:rgba(216,32,32,.94);border-radius:8px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.28)}
+.yt-card .play::after{content:"";border-style:solid;border-width:7px 0 7px 12px;border-color:transparent transparent transparent #fff;margin-left:3px}
+.mission-lead{font-family:var(--serif);font-size:clamp(1rem,1.8vw,1.12rem);line-height:2.4;letter-spacing:.1em;color:var(--ink);max-width:640px}
+.mission-lead em{font-style:normal;color:var(--vermilion-bright)}
 </style>
 </head>
 <body>
@@ -148,17 +158,18 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
   <div class="wrap">
     <p class="eyebrow fx">BEFORE → AFTER</p>
     <h2 class="fx">努力は、こんなにも人を変える。</h2>
-    <p class="lead fx" style="margin-bottom:44px">合計1,000万再生を超えるYouTube企画<br><span class="cinderella-brand">「シンデレラは努力する」</span><br>企画代表トレーナーとして伴走した、挑戦者たちの記録です。</p>
+    <p class="mission-lead fx" style="margin-bottom:44px">身体が変わり、目つきが変わり、<br>人生が動き出す。<br><span class="cinderella-brand">「シンデレラは努力する」</span><br>企画代表トレーナーとして伴走した、<em>本物の変化</em>の記録です。</p>
     <div class="ba-masonry fx">
       <img src="img/ba_label1.jpg" alt="ビフォーアフター" loading="lazy">
-      <img src="img/ba_body1.jpg" alt="ビフォーアフター" loading="lazy">
-      <img src="img/ba_face1.jpg" alt="ビフォーアフター" loading="lazy">
       <img src="img/ba_label2.jpg" alt="ビフォーアフター" loading="lazy">
-      <img src="img/ba_body2.jpg" alt="ビフォーアフター" loading="lazy">
       <img src="img/ba_label3.jpg" alt="ビフォーアフター" loading="lazy">
+      <img src="img/ba_body1.jpg" alt="ビフォーアフター" loading="lazy">
+      <img src="img/ba_body2.jpg" alt="ビフォーアフター" loading="lazy">
+      <img src="img/ba_face1.jpg" alt="ビフォーアフター" loading="lazy">
       <img src="img/ba_face2.jpg" alt="ビフォーアフター" loading="lazy">
     </div>
     <p class="perm-note fx">※ご本人の許可をいただいて掲載しています</p>
+    <div class="yt-grid fx" id="ytGrid" aria-label="シンデレラ出演動画"></div>
   </div>
 </section>
 
@@ -220,6 +231,19 @@ if(navToggle){
   window.addEventListener('keydown',e=>{if(e.key==='Escape')closeNav()});
 }
 
+const VIDEOS=["vM_soSQTJM0","mLqJjr3Hjss","dBLzf0N153k","z3ncQa3Sxdw"];
+const ytGrid=document.getElementById('ytGrid');
+if(ytGrid){VIDEOS.forEach(id=>{
+  const a=document.createElement('a');
+  a.className='yt-card';
+  a.href='https://www.youtube.com/watch?v='+id;
+  a.target='_blank';
+  a.rel='noopener';
+  a.setAttribute('aria-label','YouTube動画を再生');
+  a.style.backgroundImage='url(https://i.ytimg.com/vi/'+id+'/hqdefault.jpg)';
+  a.innerHTML='<span class="play" aria-hidden="true"></span>';
+  ytGrid.appendChild(a);
+})}
 </script>
 </body>
 </html>

@@ -20,7 +20,9 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg-wine);color:var(--ink);font-family:var(--sans);font-weight:350;line-height:2;letter-spacing:.06em;overflow-x:hidden}
+body{background:var(--bg-wine);color:var(--ink);font-family:var(--sans);font-weight:350;line-height:2;letter-spacing:.06em;overflow-x:hidden;line-break:strict;word-break:keep-all;overflow-wrap:break-word}
+h1,h2,h3{text-wrap:balance}
+p{text-wrap:pretty}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 .seal{display:inline-flex;align-items:center;justify-content:center;width:2.6em;height:2.6em;background:var(--vermilion);color:#FBEFE4;font-family:var(--serif);font-weight:800;font-size:1rem;border-radius:4px;box-shadow:0 0 0 1px rgba(216,73,43,.35),0 4px 18px rgba(216,73,43,.35);letter-spacing:0;line-height:1}
@@ -112,15 +114,15 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 .mission-block::before{content:"";position:absolute;left:-2px;top:0;width:2px;height:32px;background:var(--vermilion-bright)}
 .mission-label{display:flex;align-items:baseline;gap:14px;font-size:clamp(.9rem,1.35vw,1.02rem);letter-spacing:.48em;color:var(--gold-soft);font-weight:500;margin-bottom:20px}
 .mission-label em{font-style:normal;font-family:var(--serif);font-size:clamp(1.15rem,1.8vw,1.35rem);letter-spacing:.38em;color:var(--vermilion-bright);font-weight:600}
-.mission{font-family:var(--serif);font-size:1.05rem;line-height:2.2;margin:0;letter-spacing:.06em}
+.mission{font-family:var(--serif);font-size:1.02rem;line-height:2.1;margin:0;letter-spacing:.05em}
 .mission-lines{display:grid;gap:10px}
-.mission-lines p{font-family:var(--serif);font-size:1.05rem;line-height:1.95;margin:0;letter-spacing:.06em}
+.mission-lines p{font-family:var(--serif);font-size:1.02rem;line-height:1.9;margin:0;letter-spacing:.05em}
 .prof-roles{list-style:none;display:grid;gap:16px;margin:8px 0 28px}
 .prof-roles li{border-left:2px solid var(--vermilion);padding:2px 0 2px 14px;display:grid;gap:4px}
-.prof-role-main{font-size:.9rem;line-height:1.75;letter-spacing:.04em;color:var(--ink);word-break:keep-all}
-.prof-role-sub{font-size:.84rem;line-height:1.6;letter-spacing:.08em;color:var(--ink-dim)}
+.prof-role-main{font-size:.95rem;line-height:1.7;letter-spacing:.03em;color:var(--ink)}
+.prof-role-sub{font-size:.85rem;line-height:1.6;letter-spacing:.06em;color:var(--ink-dim)}
 .prof-leads{display:grid;gap:14px;margin-bottom:8px}
-.prof-leads .lead{font-family:var(--serif);font-size:.95rem;line-height:2.05;letter-spacing:.05em;margin:0}
+.prof-leads .lead{font-family:var(--serif);font-size:1.02rem;line-height:1.95;letter-spacing:.04em;margin:0}
 
 .prof-grid{display:grid;gap:44px}
 @media(min-width:820px){.prof-grid{grid-template-columns:.9fr 1.1fr;align-items:start}}
@@ -132,36 +134,30 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 .origin-item{position:relative;padding:0 0 40px 32px;border-left:1px solid rgba(169,128,60,.28)}
 .origin-item:last-child{padding-bottom:0;border-left-color:transparent}
 .origin-item::before{content:"";position:absolute;left:-5px;top:6px;width:9px;height:9px;background:var(--gold);transform:rotate(45deg);box-shadow:0 0 0 4px rgba(255,252,249,.95)}
-.origin-age{font-family:var(--serif);font-size:.95rem;letter-spacing:.2em;color:var(--vermilion-bright);font-weight:700;margin-bottom:6px}
-.origin-title{font-family:var(--serif);font-size:clamp(1.08rem,2.8vw,1.28rem);letter-spacing:.08em;font-weight:700;line-height:1.65;margin:0 0 16px;color:var(--ink)}
+.origin-age{font-family:var(--serif);font-size:.9rem;letter-spacing:.18em;color:var(--vermilion-bright);font-weight:700;margin-bottom:6px}
+.origin-title{font-family:var(--serif);font-size:1.15rem;letter-spacing:.06em;font-weight:700;line-height:1.6;margin:0 0 16px;color:var(--ink)}
 .origin-body{display:grid;gap:14px}
-.origin-body p{margin:0;font-size:.95rem;color:var(--ink-dim);line-height:2.05;letter-spacing:.04em}
+.origin-body p{margin:0;font-size:.95rem;color:var(--ink-dim);line-height:1.95;letter-spacing:.03em}
 .life-sec{background:var(--bg-wine)}
 .life-body{max-width:680px;margin:0 auto}
-.life-body p{font-family:var(--serif);font-size:clamp(1rem,1.6vw,1.1rem);line-height:2.45;letter-spacing:.06em;margin:0 0 22px}
+.life-body p{font-family:var(--serif);font-size:1.02rem;line-height:2.1;letter-spacing:.05em;margin:0 0 22px}
 .life-body p em{font-style:normal;color:var(--vermilion-bright)}
-.life-body .pull{font-size:clamp(1.12rem,2.4vw,1.35rem);color:var(--gold);letter-spacing:.1em;line-height:2.1;text-align:center;margin:36px 0}
-.life-body .sig{text-align:right;color:var(--gold-soft);letter-spacing:.2em;margin-bottom:0}
+.life-body .pull{font-size:1.18rem;color:var(--gold);letter-spacing:.08em;line-height:1.9;text-align:center;margin:36px 0}
+.life-body .sig{text-align:right;color:var(--gold-soft);letter-spacing:.18em;margin-bottom:0;font-size:.95rem}
 @media(max-width:819px){
   .prof-visual{max-width:280px;margin:0 auto}
   .prof-grid{gap:36px}
   .mission-block{margin:28px 0 0;padding:20px 0 20px 18px}
-  .mission,.mission-lines p{font-size:1rem;line-height:1.9;letter-spacing:.04em}
   .prof-roles{gap:18px;margin:6px 0 24px}
-  .prof-role-main{font-size:.88rem;line-height:1.7}
-  .prof-role-sub{font-size:.82rem}
-  .prof-leads .lead{font-size:.92rem;line-height:1.95}
-  .life-body p{font-size:1rem;line-height:2.15;margin-bottom:18px;letter-spacing:.04em}
-  .life-body .pull{margin:28px 0;line-height:1.9}
   .origin-sec .wrap{padding:0}
   .origin-list{gap:18px}
   .origin-item{padding:22px 18px 22px;border-left:none;border:1px solid rgba(169,128,60,.2);border-radius:4px;background:rgba(255,255,255,.72);box-shadow:0 8px 24px rgba(62,16,23,.04)}
   .origin-item:last-child{padding-bottom:22px;border-left:none}
   .origin-item::before{display:none}
-  .origin-age{font-size:.88rem;letter-spacing:.16em;margin-bottom:8px}
-  .origin-title{font-size:1.08rem;letter-spacing:.06em;line-height:1.55;margin-bottom:14px}
+  .origin-age{margin-bottom:8px}
+  .origin-title{margin-bottom:14px}
   .origin-body{gap:12px}
-  .origin-body p{font-size:.92rem;line-height:1.95;letter-spacing:.03em}
+  .life-body .pull{margin:28px 0}
 }
 </style>
 </head>
@@ -214,7 +210,8 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
         <div class="mission-lines">
           <p>人生を自動から<span style="color:var(--vermilion-bright)">志動</span>に導き、</p>
           <p>志ある仲間と共に</p>
-          <p><span style="color:var(--gold)">粋な日本</span>を創り上げる。🪭</p>
+          <p><span style="color:var(--gold)">粋な日本</span>を</p>
+          <p>創り上げる。🪭</p>
         </div>
       </div>
     </div>

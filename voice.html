@@ -79,9 +79,20 @@ h2 em,h1 em{font-style:normal;color:var(--vermilion-bright)}
 .page-hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(1.9rem,6vw,3rem);letter-spacing:.14em;line-height:1.6}
 .page-hero .en{font-size:clamp(.85rem,1.2vw,.98rem);letter-spacing:.46em;color:var(--gold-soft);margin-bottom:18px;display:block}
 .page-hero .desc{color:var(--ink-dim);font-size:.9rem;margin-top:20px;max-width:560px}
-.cinderella-brand{font-family:var(--serif);font-weight:700;color:var(--vermilion-bright);letter-spacing:.12em;line-height:1.5}
+.cinderella-brand{font-family:var(--serif);font-weight:700;color:var(--vermilion-bright);letter-spacing:.12em;line-height:1.5;max-width:100%}
 .page-hero .cinderella-brand{display:block;font-size:clamp(1.45rem,5vw,2.25rem);margin-top:28px}
+.page-hero .desc-after{margin-top:12px;font-size:.88rem}
 .lead .cinderella-brand{font-size:clamp(1.15rem,3.4vw,1.5rem)}
+@media(max-width:819px){
+  .page-hero h1{letter-spacing:.1em;font-size:clamp(1.65rem,7vw,2.2rem)}
+  .page-hero .en{letter-spacing:.32em}
+  .cinderella-brand{letter-spacing:.05em;line-height:1.65}
+  .page-hero .cinderella-brand{font-size:clamp(1.12rem,4.6vw,1.45rem);margin-top:18px}
+  .page-hero .desc-after{margin-top:8px;font-size:.84rem}
+  h2{letter-spacing:.06em;font-size:clamp(1.35rem,5.2vw,1.85rem);line-height:1.65;margin-bottom:26px}
+  .eyebrow{gap:12px;letter-spacing:.28em;font-size:.9rem}
+  .eyebrow::before{width:32px;flex-shrink:0}
+}
 /* ボタン */
 .btn-fire{display:inline-block;font-weight:700;font-size:1rem;letter-spacing:.16em;color:#fff;background:linear-gradient(90deg,#5A1420,#8A2334);padding:20px 58px;border-radius:999px;box-shadow:0 12px 32px rgba(90,20,32,.35);transition:transform .3s,box-shadow .3s;border:none;cursor:pointer;font-family:var(--sans)}
 .btn-fire:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(90,20,32,.45)}
@@ -132,7 +143,7 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 .ba-dot:hover{border-color:var(--vermilion)}
 .ba-counter{text-align:center;font-family:var(--serif);font-size:.82rem;letter-spacing:.2em;color:var(--gold-soft);margin-top:12px}
 @media(max-width:819px){
-  .ba-slider{padding:0 36px;max-width:100%}
+  .ba-slider{padding:0 36px;max-width:100%;overflow:hidden;width:100%;box-sizing:border-box}
   .ba-nav{width:34px;height:34px;font-size:1.2rem}
   .ba-tag{top:10px;font-size:.62rem;padding:4px 8px;letter-spacing:.12em}
   .ba-tag-before{left:8px}
@@ -173,7 +184,7 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
     <h1>変化の記録</h1>
     <p class="desc">身体が変わり、目つきが変わり、<br>人生が動き出す。</p>
     <p class="cinderella-brand">「シンデレラは努力する」</p>
-    <p class="desc" style="margin-top:14px">で生まれた、本物の変化。</p>
+    <p class="desc desc-after">で生まれた、本物の変化。</p>
   </div>
 </div>
 
@@ -181,7 +192,7 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
   <div class="wrap">
     <p class="eyebrow fx">BEFORE → AFTER</p>
     <h2 class="fx">努力は、こんなにも人を変える。</h2>
-    <p class="mission-lead fx" style="margin-bottom:44px">身体が変わり、目つきが変わり、<br>人生が動き出す。<br><span class="cinderella-brand">「シンデレラは努力する」</span><br>企画代表トレーナーとして伴走した、<em>本物の変化</em>の記録です。</p>
+    <p class="mission-lead fx" style="margin-bottom:44px">身体が変わり、目つきが変わり、<br>人生が動き出す。<br>企画代表トレーナーとして伴走した、<em>本物の変化</em>の記録です。</p>
     <div class="ba-slider fx" data-ba-slider>
       <button class="ba-nav ba-prev" type="button" aria-label="前の写真">‹</button>
       <div class="ba-viewport" aria-roledescription="carousel" aria-label="ビフォーアフター">

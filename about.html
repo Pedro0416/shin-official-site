@@ -130,14 +130,14 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 .prof-photo{background-size:cover;background-position:center 12%;border-radius:4px;border:1px solid rgba(201,162,75,.25);box-shadow:0 18px 44px rgba(62,16,23,.1)}
 .prof-photo.main{aspect-ratio:3/4}
 .origin-sec{background:linear-gradient(180deg,var(--bg-wine),var(--bg-deep) 40%,var(--bg-wine-2))}
-.origin-list{position:relative;max-width:680px;margin:0 auto;display:grid;gap:0}
-.origin-item{position:relative;padding:0 0 40px 32px;border-left:1px solid rgba(169,128,60,.28)}
+.origin-list{position:relative;max-width:680px;margin:0 auto;display:grid;gap:0;width:100%;min-width:0}
+.origin-item{position:relative;padding:0 0 40px 32px;border-left:1px solid rgba(169,128,60,.28);min-width:0;max-width:100%}
 .origin-item:last-child{padding-bottom:0;border-left-color:transparent}
 .origin-item::before{content:"";position:absolute;left:-5px;top:6px;width:9px;height:9px;background:var(--gold);transform:rotate(45deg);box-shadow:0 0 0 4px rgba(255,252,249,.95)}
 .origin-age{font-family:var(--serif);font-size:.9rem;letter-spacing:.18em;color:var(--vermilion-bright);font-weight:700;margin-bottom:6px}
-.origin-title{font-family:var(--serif);font-size:1.15rem;letter-spacing:.06em;font-weight:700;line-height:1.6;margin:0 0 16px;color:var(--ink)}
-.origin-body{display:grid;gap:14px}
-.origin-body p{margin:0;font-size:.95rem;color:var(--ink-dim);line-height:1.95;letter-spacing:.03em}
+.origin-title{font-family:var(--serif);font-size:clamp(1.05rem,2.2vw,1.15rem);letter-spacing:.06em;font-weight:700;line-height:1.6;margin:0 0 16px;color:var(--ink);text-wrap:pretty}
+.origin-body{display:grid;gap:14px;min-width:0}
+.origin-body p{margin:0;font-size:clamp(.88rem,1.5vw,.95rem);color:var(--ink-dim);line-height:1.95;letter-spacing:.03em;max-width:100%;overflow-wrap:break-word;word-break:normal;line-break:strict}
 .life-sec{background:var(--bg-wine)}
 .life-body{max-width:680px;margin:0 auto}
 .life-body p{font-family:var(--serif);font-size:1.02rem;line-height:2.1;letter-spacing:.05em;margin:0 0 22px}
@@ -149,14 +149,16 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
   .prof-grid{gap:36px}
   .mission-block{margin:28px 0 0;padding:20px 0 20px 18px}
   .prof-roles{gap:18px;margin:6px 0 24px}
-  .origin-sec .wrap{padding:0}
-  .origin-list{gap:18px}
-  .origin-item{padding:22px 18px 22px;border-left:none;border:1px solid rgba(169,128,60,.2);border-radius:4px;background:rgba(255,255,255,.72);box-shadow:0 8px 24px rgba(62,16,23,.04)}
-  .origin-item:last-child{padding-bottom:22px;border-left:none}
+  .origin-sec .wrap{padding:0;min-width:0}
+  .origin-list{gap:18px;width:100%}
+  .origin-item{padding:20px 16px;border-left:none;border:1px solid rgba(169,128,60,.2);border-radius:4px;background:rgba(255,255,255,.72);box-shadow:0 8px 24px rgba(62,16,23,.04);overflow:hidden}
+  .origin-item:last-child{padding:20px 16px;border-left:none}
   .origin-item::before{display:none}
-  .origin-age{margin-bottom:8px}
-  .origin-title{margin-bottom:14px}
-  .origin-body{gap:12px}
+  .origin-age{margin-bottom:8px;font-size:.82rem;letter-spacing:.1em}
+  .origin-title{margin-bottom:12px;font-size:clamp(.98rem,4.2vw,1.08rem);letter-spacing:.04em;line-height:1.55}
+  .origin-body{gap:10px}
+  .origin-body p{font-size:clamp(.82rem,3.6vw,.88rem);line-height:1.82;letter-spacing:.02em}
+  .life-body p{font-size:clamp(.92rem,3.8vw,.98rem);line-height:1.95;letter-spacing:.03em;overflow-wrap:break-word;word-break:normal}
   .life-body .pull{margin:28px 0}
 }
 </style>
@@ -210,8 +212,7 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
         <div class="mission-lines">
           <p>人生を自動から<span style="color:var(--vermilion-bright)">志動</span>に導き、</p>
           <p>志ある仲間と共に</p>
-          <p><span style="color:var(--gold)">粋な日本</span>を</p>
-          <p>創り上げる。🪭</p>
+          <p><span style="color:var(--gold)">粋な日本</span>を創り上げる。🪭</p>
         </div>
       </div>
     </div>

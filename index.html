@@ -186,6 +186,9 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 .mission-label{display:flex;align-items:baseline;gap:14px;font-size:clamp(.9rem,1.35vw,1.02rem);letter-spacing:.48em;color:var(--gold-soft);font-weight:500;margin-bottom:20px}
 .mission-label em{font-style:normal;font-family:var(--serif);font-size:clamp(1.15rem,1.8vw,1.35rem);letter-spacing:.38em;color:var(--vermilion-bright);font-weight:600}
 .mission{font-family:var(--serif);font-size:1.05rem;line-height:2.4;margin:0}
+.mission-lines{display:grid;gap:10px}
+.mission-lines p{font-family:var(--serif);font-size:1.02rem;line-height:1.9;margin:0;letter-spacing:.05em}
+@media(max-width:819px){.mission-lines p{font-size:1rem;line-height:1.85}}
 .stats{background:var(--bg-deep)}
 .stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(201,162,75,.2);border:1px solid rgba(201,162,75,.2)}
 @media(min-width:820px){.stats-grid{grid-template-columns:repeat(4,1fr)}}
@@ -314,12 +317,21 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
       <p class="mission-lead fx">目標逆算型ジャーナル「志動録」プロデューサー。<br>YouTube企画「シンデレラは努力する」企画代表トレーナー。<br>SBT1級メンタルコーチ。</p>
       <div class="mission-block fx">
         <p class="mission-label">MISSION<em>使命</em></p>
-        <p class="mission">人生を自動から<em style="font-style:normal;color:var(--vermilion-bright)">志動</em>に導き、<br>志ある仲間と共に<em style="font-style:normal;color:var(--gold)">粋な日本</em>を創り上げる🪭</p>
+        <div class="mission-lines">
+          <p>人生を自動から<em style="font-style:normal;color:var(--vermilion-bright)">志動</em>に導き、</p>
+          <p>志ある仲間と共に</p>
+          <p><em style="font-style:normal;color:var(--gold)">粋な日本</em>を</p>
+          <p>創り上げる。🪭</p>
+        </div>
       </div>
       <div class="essay-block fx">
         <p class="essay-label">LIFE<em>SHINの生き様</em></p>
-        <p class="essay-copy">私は、<em>「人生を、自動から志動へ導く」</em>ことを<br>人生のmissionに掲げて生きています。</p>
-        <p class="essay-copy">利益の先にある、生きがいを生きる人を増やす。<br>日本人が本来持っている<span class="gold">精神性と志</span>を、<br>もう一度呼び覚ましていく。<br>それが、SHINという人間の生き方です。</p>
+        <p class="essay-copy">私は、<em>「人生を、自動から志動へ導く」</em></p>
+        <p class="essay-copy">ことを人生のmissionに掲げて生きています。</p>
+        <p class="essay-copy">利益の先にある、生きがいを生きる人を増やす。</p>
+        <p class="essay-copy">日本人が本来持っている<span class="gold">精神性と志</span>を、</p>
+        <p class="essay-copy">もう一度呼び覚ましていく。</p>
+        <p class="essay-copy">それが、SHINという人間の生き方です。</p>
       </div>
       <div class="fx" style="margin-top:26px"><a class="link-more" href="story.html">生き様を読む →</a></div>
     </div>

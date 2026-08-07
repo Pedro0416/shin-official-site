@@ -154,13 +154,14 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 }
 @media(prefers-reduced-motion:reduce){.ba-track{transition:none}}
 .perm-note{text-align:center;font-size:.7rem;color:rgba(44,30,33,.45);letter-spacing:.12em;margin-top:20px}
-.moments{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:960px;margin:0 auto}
-@media(min-width:820px){.moments{gap:20px}}
-.moments figure{margin:0}
-.moments img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:6px;box-shadow:0 10px 30px rgba(62,16,23,.14);border:1px solid rgba(110,26,36,.08)}
-.moments figcaption{font-size:.78rem;color:var(--ink-dim);letter-spacing:.1em;margin-top:10px;text-align:center}
+.moments{display:grid;grid-template-columns:1fr;gap:28px;max-width:960px;margin:0 auto;width:100%;min-width:0}
+@media(min-width:820px){.moments{grid-template-columns:1fr 1fr;gap:20px}}
+.moments figure{margin:0;min-width:0;max-width:100%}
+.moments img{width:100%;max-width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:6px;box-shadow:0 10px 30px rgba(62,16,23,.14);border:1px solid rgba(110,26,36,.08)}
+.moments figcaption{font-size:.78rem;color:var(--ink-dim);letter-spacing:.06em;margin-top:10px;text-align:center;line-height:1.75;word-break:normal;overflow-wrap:break-word}
 .voice-meta{font-size:clamp(.88rem,1.1vw,.95rem);letter-spacing:.14em;color:var(--gold-soft);border-top:1px solid rgba(110,26,36,.12);padding-top:14px;margin-top:16px}
-.yt-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:960px;margin:40px auto 0}
+.yt-grid{display:grid;grid-template-columns:1fr;gap:12px;max-width:960px;margin:40px auto 0;width:100%;min-width:0}
+@media(min-width:560px){.yt-grid{grid-template-columns:1fr 1fr;gap:10px}}
 @media(min-width:820px){.yt-grid{gap:18px}}
 .yt-card{display:block;position:relative;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#F1E7E2 center/cover no-repeat;border:1px solid rgba(110,26,36,.12);box-shadow:0 8px 24px rgba(62,16,23,.1);transition:transform .35s,box-shadow .35s}
 .yt-card::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(23,6,7,.55))}

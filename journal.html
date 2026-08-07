@@ -120,17 +120,17 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 .j-hero{position:relative;min-height:50svh;display:flex;align-items:flex-end;padding:150px 24px 64px;overflow:hidden;background:var(--bg-deep)}
 .j-hero-bg{position:absolute;inset:0;background:url(img/journal_desk.jpg) center 32%/cover;transform:scale(1.08);animation:jZoom 10s ease-in-out infinite alternate;filter:saturate(1.02) brightness(.97)}
 @keyframes jZoom{0%{transform:scale(1.08)}100%{transform:scale(1.16) translateY(-1%)}}
-.j-hero-veil{position:absolute;inset:0;background:linear-gradient(100deg,rgba(250,246,243,.97) 0%,rgba(250,246,243,.94) 32%,rgba(250,246,243,.55) 58%,rgba(250,246,243,.22) 100%)}
+.j-hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(250,246,243,.42) 0%,rgba(250,246,243,.82) 42%,rgba(250,246,243,.97) 72%,rgba(250,246,243,.98) 100%),linear-gradient(100deg,rgba(250,246,243,.96) 0%,rgba(250,246,243,.88) 40%,rgba(250,246,243,.45) 72%,rgba(250,246,243,.2) 100%)}
 .j-hero .wrap{position:relative;z-index:2;width:100%}
-.j-hero .en{display:block;font-size:clamp(.85rem,1.2vw,.98rem);letter-spacing:.46em;color:var(--vermilion);margin-bottom:18px}
-.j-hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(1.9rem,6vw,3rem);letter-spacing:.1em;line-height:1.6;max-width:11ch}
-.j-hero .desc{display:grid;gap:8px;color:var(--ink-dim);font-size:.92rem;line-height:1.9;margin-top:20px;max-width:420px}
+.j-hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(1.9rem,6vw,3rem);letter-spacing:.1em;line-height:1.6;max-width:11ch;color:var(--ink);text-shadow:0 1px 0 rgba(250,246,243,.6)}
+.j-hero .desc{display:grid;gap:6px;color:var(--ink);font-size:clamp(.92rem,2.8vw,1.02rem);font-weight:500;line-height:1.95;letter-spacing:.04em;margin-top:22px;max-width:460px;padding:16px 18px;background:rgba(250,246,243,.78);border:1px solid rgba(110,26,36,.1);border-radius:6px;backdrop-filter:blur(6px)}
 .j-hero .desc p{margin:0}
 @media(prefers-reduced-motion:reduce){.j-hero-bg{animation:none;transform:scale(1.12)}}
 @media(max-width:819px){
   .j-hero{padding:130px 18px 44px;min-height:46svh}
   .j-hero h1{max-width:none}
-  .j-hero .desc{font-size:.9rem}
+  .j-hero-veil{background:linear-gradient(180deg,rgba(250,246,243,.5) 0%,rgba(250,246,243,.9) 38%,rgba(250,246,243,.98) 100%)}
+  .j-hero .desc{font-size:.9rem;padding:14px 16px;max-width:100%}
 }
 /* 使用イメージギャラリー */
 .use-gallery{display:grid;gap:20px;max-width:900px;margin:0 auto}
@@ -159,7 +159,8 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 .why-body p{font-family:var(--serif);font-size:1.02rem;line-height:2.1;letter-spacing:.05em;margin:0 0 22px}
 .why-body .essay-traits{text-align:center;letter-spacing:.1em;color:var(--ink);font-weight:500;margin:1.8em 0}
 .why-body p em{font-style:normal;color:var(--vermilion-bright)}
-.why-body .pull{font-size:clamp(1.32rem,5.2vw,1.78rem);font-weight:700;color:var(--gold);letter-spacing:.08em;line-height:1.85;text-align:center;margin:36px 0}
+.why-body .pull{font-size:clamp(1.32rem,5.2vw,1.78rem);font-weight:700;color:var(--ink);letter-spacing:.08em;line-height:1.85;text-align:center;margin:36px 0}
+.why-body .pull em{font-style:normal;color:var(--vermilion-bright)}
 .why-body .strong{font-family:var(--serif);font-size:clamp(1.12rem,4.2vw,1.38rem);font-weight:700;color:var(--vermilion-bright);letter-spacing:.06em;line-height:1.8}
 .why-body .essay-emphasis{font-size:clamp(1.18rem,4.6vw,1.55rem);font-weight:700;letter-spacing:.08em;line-height:1.85;text-align:center;margin:1.2em 0 1.6em}
 .why-body .essay-emphasis .strong{font-size:inherit;color:var(--vermilion-bright)}
@@ -186,7 +187,6 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
   <div class="j-hero-bg" aria-hidden="true"></div>
   <div class="j-hero-veil" aria-hidden="true"></div>
   <div class="wrap">
-    <span class="en">PRODUCT</span>
     <h1>志動録ジャーナル<br>× 志動設計セッション</h1>
     <div class="desc">
       <p>Shinが開発・プロデュースした目標逆算型ジャーナルと、</p>
@@ -204,7 +204,7 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
     <p class="fx">それでも、人生が変わらない人があまりにも多かった。</p>
     <p class="fx">その違いは、性格でも才能でもなく、</p>
     <p class="fx essay-emphasis"><span class="strong">「毎日の生き方」</span>でした。</p>
-    <p class="pull fx">人生は<em>書いて、決めて、行動した</em><br>人から<br>変わっていく。</p>
+    <p class="pull fx">人生は<em>書いて、決めて、行動した</em>人から<br>変わっていく。</p>
     <p class="fx">ただ予定を書くためではない。</p>
     <p class="fx">毎日、自分の志を確認し、今日やるべきことを明確にする。</p>
     <p class="fx">そして一日の終わりに、自分と向き合う。</p>

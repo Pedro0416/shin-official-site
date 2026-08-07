@@ -21,6 +21,9 @@
   .origin-item,
   .ba-slider,
   .ba-viewport,
+  .moments,
+  .moments figure,
+  .yt-grid,
   .product-sec,
   .product-showcase,
   .product-visual,
@@ -34,6 +37,30 @@
   section {
     overflow-x: clip;
     padding: 80px 16px 64px;
+  }
+
+  .moments {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    width: 100%;
+  }
+
+  .moments figcaption {
+    font-size: clamp(.78rem, 3.2vw, .86rem);
+    letter-spacing: .04em;
+    padding: 0 4px;
+  }
+
+  .yt-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    width: 100%;
+  }
+
+  @media (min-width: 560px) {
+    .yt-grid {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   .hero { overflow: hidden; }

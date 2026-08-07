@@ -1,0 +1,508 @@
+/* スマホ専用（820px未満）— PC表示は変更しない */
+@media (max-width: 819px) {
+  html { overflow-x: clip; }
+
+  body {
+    letter-spacing: .04em;
+    line-height: 1.85;
+  }
+
+  .wrap,
+  section,
+  .page-hero,
+  .j-hero,
+  .hero,
+  .hero-photos,
+  .hero-inner,
+  .stats,
+  .stats-grid,
+  .cin-head,
+  .origin-list,
+  .origin-item,
+  .ba-slider,
+  .ba-viewport,
+  .product-sec,
+  .product-showcase,
+  .product-visual,
+  .product-copy,
+  .about-grid,
+  .cta-sec .wrap {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  section {
+    overflow-x: clip;
+    padding: 80px 16px 64px;
+  }
+
+  .hero { overflow: hidden; }
+  .hero-photos { overflow: hidden; }
+
+  .product-sec {
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .product-visual::after {
+    inset: auto -8px -8px 8px;
+  }
+
+  .product-copy { padding: 0; }
+
+  .product-cta {
+    font-size: clamp(.8rem, 3.1vw, .86rem);
+    letter-spacing: .16em;
+    margin-top: 28px;
+  }
+
+  .cta-sec h2 {
+    font-size: clamp(1.18rem, 4.6vw, 1.55rem);
+    letter-spacing: .06em;
+    line-height: 1.6;
+  }
+
+  .mission {
+    font-size: clamp(.84rem, 3.3vw, .9rem);
+    line-height: 1.82;
+    letter-spacing: .03em;
+  }
+
+  nav a {
+    font-size: clamp(.88rem, 3.4vw, .92rem);
+    letter-spacing: .14em;
+    padding: 14px 18px;
+  }
+
+  .brand {
+    font-size: clamp(.88rem, 3.2vw, .92rem);
+    letter-spacing: .1em;
+  }
+
+  .sig {
+    font-size: clamp(.82rem, 3.2vw, .88rem);
+    letter-spacing: .2em;
+    line-height: 1.75;
+  }
+
+  .steps b {
+    font-size: clamp(.92rem, 3.5vw, .98rem);
+    letter-spacing: .08em;
+  }
+
+  .steps p,
+  .form-note,
+  .faq p {
+    font-size: clamp(.82rem, 3.2vw, .88rem);
+    line-height: 1.78;
+  }
+
+  .sns-btn {
+    font-size: clamp(.82rem, 3.2vw, .88rem);
+    padding: 13px 18px;
+    letter-spacing: .06em;
+  }
+
+  p, li, h1, h2, h3,
+  .lead, .desc, .desc-after,
+  .mission-lead, .mission-lines p,
+  .essay-copy, .story-quote, .big-quote,
+  .stat .label, .stat .num,
+  .origin-body p, .origin-title,
+  .life-body p, .why-body p,
+  .card p, .card h3,
+  .prof-role-main, .prof-role-sub,
+  .cinderella-brand, .cin-brand,
+  .lecture-text p, .change-list li,
+  .j-hero .desc p, .follow-lead {
+    word-break: normal;
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: clamp(1.15rem, 4.5vw, 1.52rem);
+    letter-spacing: .04em;
+    line-height: 1.55;
+    margin-bottom: 20px;
+    text-wrap: pretty;
+  }
+
+  h3 {
+    font-size: clamp(.98rem, 3.8vw, 1.1rem);
+    letter-spacing: .04em;
+    line-height: 1.55;
+  }
+
+  .eyebrow {
+    gap: 10px;
+    letter-spacing: .24em;
+    font-size: clamp(.78rem, 3vw, .86rem);
+    margin-bottom: 18px;
+  }
+
+  .eyebrow::before {
+    width: 26px;
+    flex-shrink: 0;
+  }
+
+  .page-hero {
+    min-height: auto;
+    padding: 118px 18px 52px;
+    overflow: hidden;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(1.55rem, 6.2vw, 1.95rem);
+    letter-spacing: .08em;
+    line-height: 1.55;
+  }
+
+  .page-hero .en {
+    letter-spacing: .26em;
+    font-size: clamp(.76rem, 2.8vw, .84rem);
+    margin-bottom: 14px;
+  }
+
+  .page-hero .desc,
+  .page-hero .desc-after {
+    font-size: clamp(.82rem, 3.3vw, .88rem);
+    line-height: 1.82;
+    letter-spacing: .03em;
+  }
+
+  .j-hero {
+    min-height: auto;
+    padding: 118px 18px 52px;
+  }
+
+  .j-hero h1 {
+    font-size: clamp(1.38rem, 5.2vw, 1.72rem);
+    letter-spacing: .08em;
+    line-height: 1.55;
+  }
+
+  .j-hero .en {
+    letter-spacing: .26em;
+    font-size: clamp(.76rem, 2.8vw, .84rem);
+  }
+
+  .j-hero .desc,
+  .j-hero .desc p {
+    font-size: clamp(.82rem, 3.3vw, .88rem);
+    line-height: 1.82;
+    letter-spacing: .03em;
+  }
+
+  .lead,
+  .mission-lead,
+  .prof-leads .lead {
+    font-size: clamp(.84rem, 3.4vw, .9rem);
+    line-height: 1.82;
+    letter-spacing: .03em;
+  }
+
+  .mission-block {
+    margin: 22px 0 0;
+    padding: 16px 0 16px 14px;
+  }
+
+  .mission-label {
+    gap: 8px;
+    letter-spacing: .28em;
+    font-size: clamp(.78rem, 2.9vw, .86rem);
+    margin-bottom: 14px;
+  }
+
+  .mission-label em {
+    letter-spacing: .18em;
+    font-size: clamp(.92rem, 3.5vw, 1rem);
+  }
+
+  .mission-lines p {
+    font-size: clamp(.86rem, 3.4vw, .92rem);
+    line-height: 1.78;
+    letter-spacing: .03em;
+  }
+
+  .essay-copy {
+    font-size: clamp(.84rem, 3.3vw, .9rem);
+    line-height: 1.9;
+    letter-spacing: .03em;
+    margin-bottom: 10px;
+  }
+
+  .essay-block .essay-label {
+    gap: 8px;
+    letter-spacing: .28em;
+    font-size: clamp(.78rem, 2.9vw, .86rem);
+    margin-bottom: 14px;
+  }
+
+  .essay-block .essay-label em {
+    letter-spacing: .16em;
+    font-size: clamp(.92rem, 3.5vw, 1rem);
+  }
+
+  .story-quote,
+  .big-quote {
+    font-size: clamp(.98rem, 3.8vw, 1.18rem);
+    letter-spacing: .05em;
+    line-height: 1.85;
+    padding: 0 2px;
+  }
+
+  .cinderella-brand {
+    letter-spacing: .04em;
+    line-height: 1.55;
+  }
+
+  .page-hero .cinderella-brand {
+    font-size: clamp(1.02rem, 4vw, 1.28rem);
+    margin-top: 14px;
+  }
+
+  .cin-brand {
+    font-size: clamp(.96rem, 3.5vw, 1.18rem);
+    letter-spacing: .04em;
+    line-height: 1.55;
+    margin: 4px 0 12px;
+  }
+
+  .cin-head {
+    padding: 0 2px;
+    margin-bottom: 36px;
+  }
+
+  .cin-head h2 {
+    font-size: clamp(1.12rem, 4.3vw, 1.45rem);
+    letter-spacing: .04em;
+    line-height: 1.55;
+    margin-bottom: 18px;
+  }
+
+  .cin-head .mission-lead {
+    font-size: clamp(.82rem, 3.2vw, .88rem);
+    line-height: 1.82;
+    letter-spacing: .03em;
+  }
+
+  .stats-grid {
+    width: 100%;
+  }
+
+  .stat {
+    padding: 18px 6px;
+  }
+
+  .stat .num {
+    font-size: clamp(1.1rem, 4.4vw, 1.4rem);
+    letter-spacing: 0;
+    line-height: 1.25;
+  }
+
+  .stat .num small {
+    font-size: .44em;
+  }
+
+  .stat .label {
+    font-size: clamp(.66rem, 2.7vw, .72rem);
+    letter-spacing: .04em;
+    line-height: 1.58;
+    margin-top: 6px;
+  }
+
+  .stat-note {
+    font-size: clamp(.62rem, 2.5vw, .68rem);
+    letter-spacing: .04em;
+    margin-top: 6px;
+    line-height: 1.55;
+  }
+
+  .origin-item {
+    padding: 16px 14px;
+  }
+
+  .origin-age {
+    font-size: .76rem;
+    letter-spacing: .08em;
+    margin-bottom: 6px;
+  }
+
+  .origin-title {
+    font-size: clamp(.92rem, 3.8vw, 1rem);
+    letter-spacing: .03em;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .origin-body {
+    gap: 8px;
+  }
+
+  .origin-body p {
+    font-size: clamp(.78rem, 3.2vw, .84rem);
+    line-height: 1.75;
+    letter-spacing: .02em;
+  }
+
+  .life-body p,
+  .why-body p {
+    font-size: clamp(.84rem, 3.3vw, .9rem);
+    line-height: 1.82;
+    letter-spacing: .03em;
+    margin-bottom: 14px;
+  }
+
+  .life-body .pull,
+  .why-body .pull {
+    font-size: clamp(.92rem, 3.6vw, 1rem);
+    line-height: 1.72;
+    margin: 20px 0;
+  }
+
+  .product-title-main {
+    font-size: clamp(1.28rem, 4.8vw, 1.55rem);
+    margin-bottom: 8px;
+  }
+
+  .product-title-sub {
+    font-size: clamp(.88rem, 3.4vw, 1rem);
+    letter-spacing: .08em;
+  }
+
+  .product-showcase,
+  .about-grid,
+  .prof-grid,
+  .journal-grid {
+    gap: 28px;
+  }
+
+  .tate {
+    font-size: clamp(1.22rem, 6.2vw, 1.65rem);
+    letter-spacing: .1em;
+    line-height: 1.95;
+    max-height: min(50svh, 360px);
+    text-shadow: 0 0 16px rgba(255, 252, 249, .95), 0 1px 0 rgba(255, 252, 249, .8);
+  }
+
+  .hero-inner {
+    padding: 100px 16px 76px;
+    gap: 0;
+  }
+
+  .card {
+    padding: 20px 16px;
+  }
+
+  .card h3 {
+    font-size: clamp(.92rem, 3.6vw, 1rem);
+    letter-spacing: .08em;
+    margin-bottom: 8px;
+  }
+
+  .card p {
+    font-size: clamp(.8rem, 3.2vw, .86rem);
+    line-height: 1.78;
+  }
+
+  .checklist li {
+    font-size: clamp(.84rem, 3.3vw, .9rem);
+    line-height: 1.72;
+  }
+
+  .change-list li {
+    padding: 14px 12px;
+    font-size: clamp(.82rem, 3.2vw, .88rem);
+    line-height: 1.62;
+    gap: 12px;
+  }
+
+  .lecture-text {
+    padding: 22px 16px;
+  }
+
+  .lecture-text h3 {
+    font-size: clamp(.92rem, 3.6vw, 1rem);
+    letter-spacing: .12em;
+    margin-bottom: 10px;
+  }
+
+  .lecture-text p {
+    font-size: clamp(.82rem, 3.2vw, .88rem);
+    line-height: 1.82;
+  }
+
+  .ba-slider {
+    padding: 0 30px;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .ba-nav {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+
+  .ba-counter {
+    font-size: .76rem;
+    letter-spacing: .14em;
+  }
+
+  .btn-fire {
+    font-size: clamp(.86rem, 3.4vw, .9rem);
+    padding: 15px 28px;
+    letter-spacing: .1em;
+  }
+
+  .btn-line {
+    font-size: clamp(.86rem, 3.4vw, .9rem);
+    padding: 15px 28px;
+    letter-spacing: .1em;
+  }
+
+  .sticky-cta .btn-line {
+    font-size: clamp(.84rem, 3.2vw, .88rem);
+    padding: 13px;
+  }
+
+  .link-more {
+    font-size: clamp(.8rem, 3.1vw, .86rem);
+    letter-spacing: .14em;
+  }
+
+  .btn-yt {
+    font-size: clamp(.84rem, 3.2vw, .88rem);
+    padding: 13px 22px;
+    letter-spacing: .08em;
+  }
+
+  .header-cta {
+    font-size: .74rem;
+    padding: 7px 10px;
+    letter-spacing: .08em;
+  }
+
+  .sticky-cta a {
+    font-size: clamp(.84rem, 3.2vw, .88rem);
+    padding: 13px;
+    letter-spacing: .1em;
+  }
+
+  footer {
+    padding-bottom: 96px;
+    font-size: .7rem;
+  }
+
+  .prof-role-main {
+    font-size: clamp(.84rem, 3.3vw, .9rem);
+    line-height: 1.68;
+  }
+
+  .prof-role-sub {
+    font-size: clamp(.76rem, 2.9vw, .8rem);
+    line-height: 1.58;
+  }
+}

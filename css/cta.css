@@ -1,0 +1,81 @@
+/* LINE優先CTA — 全ページ共通 */
+.btn-line{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  font-weight:700;
+  font-size:1rem;
+  letter-spacing:.12em;
+  color:#fff;
+  background:#06C755;
+  padding:20px 48px;
+  border-radius:999px;
+  box-shadow:0 12px 32px rgba(6,199,85,.35);
+  transition:transform .3s,box-shadow .3s;
+  font-family:var(--sans);
+}
+.btn-line:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(6,199,85,.45)}
+.btn-line svg{flex:none}
+
+.header-cta-line{
+  background:#06C755!important;
+  border-color:#06C755!important;
+  color:#fff!important;
+  white-space:normal;
+  text-align:center;
+  line-height:1.35;
+  max-width:9.5em;
+}
+.header-cta-line:hover{
+  background:#05b34c!important;
+  border-color:#05b34c!important;
+  color:#fff!important;
+}
+
+.sticky-cta .btn-line{
+  display:flex;
+  width:100%;
+  padding:15px;
+  font-size:.92rem;
+  letter-spacing:.1em;
+  box-shadow:0 8px 24px rgba(6,199,85,.3);
+}
+
+.cta-group{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:20px;
+}
+
+.cta-sub{
+  font-size:.88rem;
+  letter-spacing:.14em;
+  color:rgba(247,239,233,.55);
+  border-bottom:1px solid rgba(247,239,233,.25);
+  padding-bottom:4px;
+  transition:opacity .3s,color .3s;
+}
+.cta-sub:hover{opacity:.85;color:rgba(247,239,233,.78)}
+
+.cta-sub-light{
+  color:var(--ink-dim);
+  border-bottom-color:rgba(110,26,36,.2);
+}
+.cta-sub-light:hover{color:var(--ink)}
+
+.btn-ghost{
+  display:inline-block;
+  font-weight:600;
+  font-size:.9rem;
+  letter-spacing:.12em;
+  color:var(--gold);
+  border:1px solid rgba(169,128,60,.45);
+  padding:14px 32px;
+  border-radius:999px;
+  transition:background .3s,color .3s;
+}
+.btn-ghost:hover{background:rgba(169,128,60,.08)}
+
+.sns-btns .sns-btn.line{order:-1}

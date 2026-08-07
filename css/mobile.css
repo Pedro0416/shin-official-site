@@ -63,6 +63,13 @@
     line-height: 1.6;
   }
 
+  .assert-title {
+    font-size: clamp(1.12rem, 4.2vw, 1.42rem);
+    letter-spacing: .04em;
+    line-height: 1.7;
+    margin-bottom: 22px;
+  }
+
   .mission {
     font-size: clamp(.84rem, 3.3vw, .9rem);
     line-height: 1.82;
@@ -81,7 +88,7 @@
   }
 
   .sig {
-    font-size: clamp(.82rem, 3.2vw, .88rem);
+    font-size: clamp(1.15rem, 4.2vw, 1.35rem);
     letter-spacing: .2em;
     line-height: 1.75;
   }
@@ -127,6 +134,14 @@
     line-height: 1.55;
     margin-bottom: 20px;
     text-wrap: pretty;
+  }
+
+  .life-sec h2 {
+    font-size: clamp(1.7rem, 7.2vw, 2.2rem);
+    font-weight: 800;
+    letter-spacing: .06em;
+    line-height: 1.5;
+    margin-bottom: 22px;
   }
 
   h3 {
@@ -276,9 +291,9 @@
   }
 
   .cin-head h2 {
-    font-size: clamp(1.12rem, 4.3vw, 1.45rem);
-    letter-spacing: .04em;
-    line-height: 1.55;
+    font-size: clamp(1.02rem, 3.9vw, 1.28rem);
+    letter-spacing: .03em;
+    line-height: 1.68;
     margin-bottom: 18px;
   }
 
@@ -290,6 +305,49 @@
 
   .stats-grid {
     width: 100%;
+  }
+
+  /* ACHIEVEMENTS → STORY 間の縦余白（section padding の二重積みを解消） */
+  .stats {
+    padding-bottom: 24px;
+  }
+
+  .stats + section {
+    padding-top: 24px;
+    padding-bottom: 32px;
+  }
+
+  .stats + section .eyebrow {
+    margin-bottom: 14px;
+  }
+
+  .achieve-block {
+    padding: 22px 14px;
+  }
+
+  .achieve-tag {
+    font-size: clamp(1.05rem, 4.2vw, 1.2rem);
+    margin-bottom: 14px;
+  }
+
+  .achieve-brand {
+    font-size: clamp(.98rem, 4vw, 1.2rem);
+    margin-bottom: 18px;
+  }
+
+  .achieve-item {
+    padding: 20px 10px;
+  }
+
+  .achieve-item .achieve-num {
+    font-size: clamp(1.25rem, 4.8vw, 1.65rem);
+    letter-spacing: 0;
+  }
+
+  .achieve-item .achieve-label {
+    font-size: clamp(.68rem, 2.6vw, .74rem);
+    line-height: 1.58;
+    margin-top: 8px;
   }
 
   .stat {
@@ -313,11 +371,10 @@
     margin-top: 6px;
   }
 
-  .stat-note {
-    font-size: clamp(.62rem, 2.5vw, .68rem);
-    letter-spacing: .04em;
+  .btn-yt-sm {
+    font-size: clamp(.62rem, 2.4vw, .68rem);
+    padding: 7px 12px;
     margin-top: 6px;
-    line-height: 1.55;
   }
 
   .origin-item {
@@ -355,11 +412,35 @@
     margin-bottom: 14px;
   }
 
+  .essay-traits,
+  .why-body .essay-traits {
+    line-height: 2.2;
+    letter-spacing: .06em;
+    margin: 1.2em 0;
+  }
+
+  .essay .pull,
   .life-body .pull,
   .why-body .pull {
-    font-size: clamp(.92rem, 3.6vw, 1rem);
-    line-height: 1.72;
-    margin: 20px 0;
+    font-size: clamp(1.18rem, 4.6vw, 1.52rem);
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 1.85;
+    margin: 24px 0;
+    text-wrap: balance;
+  }
+
+  .essay .pull {
+    padding: 4px 0 4px 18px;
+    margin: 2em 0;
+  }
+
+  .essay-emphasis,
+  .why-body .essay-emphasis {
+    font-size: clamp(1.12rem, 4.4vw, 1.42rem);
+    letter-spacing: .06em;
+    line-height: 1.75;
+    margin: 1em 0 1.4em;
   }
 
   .product-title-main {
@@ -379,17 +460,28 @@
     gap: 28px;
   }
 
-  .tate {
-    font-size: clamp(1.22rem, 6.2vw, 1.65rem);
-    letter-spacing: .1em;
-    line-height: 1.95;
-    max-height: min(50svh, 360px);
-    text-shadow: 0 0 16px rgba(255, 252, 249, .95), 0 1px 0 rgba(255, 252, 249, .8);
-  }
-
   .hero-inner {
     padding: 100px 16px 76px;
     gap: 0;
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: clamp(1.38rem, 6.8vw, 1.85rem);
+    line-height: 1.68;
+    letter-spacing: .08em;
+    max-width: 100%;
+    padding: 0 6px;
+    text-shadow: 0 0 16px rgba(255, 252, 249, .95), 0 1px 0 rgba(255, 252, 249, .8);
+  }
+
+  .achieve-feature {
+    margin-top: 16px;
+  }
+
+  .achieve-vid .play {
+    width: 44px;
+    height: 30px;
   }
 
   .card {
@@ -471,6 +563,26 @@
   .link-more {
     font-size: clamp(.8rem, 3.1vw, .86rem);
     letter-spacing: .14em;
+  }
+
+  .life-sec .link-more {
+    font-family: var(--serif);
+    font-size: clamp(1.08rem, 4.4vw, 1.28rem);
+    font-weight: 700;
+    letter-spacing: .12em;
+    line-height: 1.55;
+    padding-bottom: 8px;
+    border-bottom-width: 2px;
+  }
+
+  .why-sec .link-more {
+    font-family: var(--serif);
+    font-size: clamp(1.08rem, 4.4vw, 1.28rem);
+    font-weight: 700;
+    letter-spacing: .12em;
+    line-height: 1.55;
+    padding-bottom: 8px;
+    border-bottom-width: 2px;
   }
 
   .btn-yt {

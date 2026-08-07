@@ -84,6 +84,7 @@ h2 em,h1 em{font-style:normal;color:var(--vermilion-bright)}
 .btn-fire:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(90,20,32,.45)}
 .link-more{font-size:clamp(.9rem,1.2vw,1rem);letter-spacing:.22em;color:var(--gold);border-bottom:1px solid rgba(201,162,75,.5);padding-bottom:6px;transition:opacity .3s}
 .link-more:hover{opacity:.7}
+.life-sec .link-more{font-family:var(--serif);font-size:clamp(1.1rem,4.2vw,1.4rem);font-weight:700;letter-spacing:.14em;line-height:1.55;padding-bottom:8px;border-bottom-width:2px}
 /* footer / sticky */
 footer{background:var(--enji-deep);padding:54px 24px 120px;text-align:center;font-size:.75rem;color:rgba(245,239,230,.4);letter-spacing:.14em}
 footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
@@ -127,8 +128,8 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 .prof-grid{display:grid;gap:44px}
 @media(min-width:820px){.prof-grid{grid-template-columns:.9fr 1.1fr;align-items:start}}
 .prof-visual{display:grid;gap:16px}
-.prof-photo{background-size:cover;background-position:center 12%;border-radius:4px;border:1px solid rgba(201,162,75,.25);box-shadow:0 18px 44px rgba(62,16,23,.1)}
-.prof-photo.main{aspect-ratio:3/4}
+.prof-photo{aspect-ratio:3/4;width:100%;overflow:hidden;border-radius:4px;border:1px solid rgba(201,162,75,.25);box-shadow:0 18px 44px rgba(62,16,23,.1)}
+.prof-photo img{width:100%;height:100%;object-fit:cover;object-position:center 12%;display:block}
 .origin-sec{background:linear-gradient(180deg,var(--bg-wine),var(--bg-deep) 40%,var(--bg-wine-2))}
 .origin-list{position:relative;max-width:680px;margin:0 auto;display:grid;gap:0;width:100%;min-width:0}
 .origin-item{position:relative;padding:0 0 40px 32px;border-left:1px solid rgba(169,128,60,.28);min-width:0;max-width:100%}
@@ -139,11 +140,12 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 .origin-body{display:grid;gap:14px;min-width:0}
 .origin-body p{margin:0;font-size:clamp(.88rem,1.5vw,.95rem);color:var(--ink-dim);line-height:1.95;letter-spacing:.03em;max-width:100%;overflow-wrap:break-word;word-break:normal;line-break:strict}
 .life-sec{background:var(--bg-wine)}
+.life-sec h2{font-size:clamp(1.7rem,7vw,2.6rem);font-weight:800;letter-spacing:.08em;line-height:1.55;margin-bottom:28px}
 .life-body{max-width:680px;margin:0 auto}
 .life-body p{font-family:var(--serif);font-size:1.02rem;line-height:2.1;letter-spacing:.05em;margin:0 0 22px}
 .life-body p em{font-style:normal;color:var(--vermilion-bright)}
-.life-body .pull{font-size:1.18rem;color:var(--gold);letter-spacing:.08em;line-height:1.9;text-align:center;margin:36px 0}
-.life-body .sig{text-align:right;color:var(--gold-soft);letter-spacing:.18em;margin-bottom:0;font-size:.95rem}
+.life-body .pull{font-size:clamp(1.32rem,5.2vw,1.78rem);font-weight:700;color:var(--gold);letter-spacing:.08em;line-height:1.85;text-align:center;margin:36px 0}
+.life-body .sig{text-align:right;color:var(--gold-soft);letter-spacing:.18em;margin-bottom:0;font-size:clamp(1.15rem,4.2vw,1.35rem)}
 @media(max-width:819px){
   .prof-visual{max-width:280px;margin:0 auto}
   .prof-grid{gap:36px}
@@ -159,7 +161,8 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
   .origin-body{gap:10px}
   .origin-body p{font-size:clamp(.82rem,3.6vw,.88rem);line-height:1.82;letter-spacing:.02em}
   .life-body p{font-size:clamp(.92rem,3.8vw,.98rem);line-height:1.95;letter-spacing:.03em;overflow-wrap:break-word;word-break:normal}
-  .life-body .pull{margin:28px 0}
+  .life-sec h2{font-size:clamp(1.7rem,7.2vw,2.2rem);letter-spacing:.06em;line-height:1.5;margin-bottom:22px}
+  .life-body .pull{font-size:clamp(1.22rem,5vw,1.58rem);letter-spacing:.06em;line-height:1.75;margin:28px 0}
 }
 </style>
 <link rel="stylesheet" href="css/mobile.css">
@@ -171,7 +174,7 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
   <div class="header-right">
   <nav><a href="about.html" class="act">SHINについて</a><a href="story.html" class="">想い</a><a href="journal.html" class="">志動録</a><a href="voice.html" class="">お客様の声</a></nav>
   <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span></button>
-  <a class="header-cta header-cta-line" href="https://lin.ee/riYjWrx" target="_blank" rel="noopener">Shinと直接話してみる</a>
+  <a class="header-cta header-cta-line" href="https://lin.ee/riYjWrx" target="_blank" rel="noopener"><span class="cta-label-long">Shinと直接話す</span><span class="cta-label-short">直接話す</span></a>
   </div>
 </header>
 
@@ -185,7 +188,7 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 <section>
   <div class="wrap prof-grid">
     <div class="prof-visual">
-      <div class="prof-photo main fx" style="background-image:url(img/about_portrait.jpg)"></div>
+      <div class="prof-photo fx"><img src="img/hero_sunglasses.jpg" alt="SHIN" loading="lazy"></div>
     </div>
     <div>
       <p class="eyebrow fx">PROFILE</p>
@@ -205,7 +208,7 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
         </li>
       </ul>
       <div class="prof-leads">
-        <p class="lead fx">身体づくりを入口に、<br>延べ300名以上の「人生の変化」に伴走。</p>
+        <p class="lead fx">身体づくりを入口に、<br>延べ300名以上の「人生の変化」に伴走</p>
         <p class="lead fx">恋をし、挑戦を始め、<br>憧れの場所に住む——</p>
         <p class="lead fx">そんな瞬間に立ち会い続けている。</p>
       </div>
@@ -214,7 +217,7 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
         <div class="mission-lines">
           <p>人生を自動から<span style="color:var(--vermilion-bright)">志動</span>に導き、</p>
           <p>志ある仲間と共に</p>
-          <p><span style="color:var(--gold)">粋な日本</span>を創り上げる。🪭</p>
+          <p><span style="color:var(--gold)">粋な日本</span>を創り上げる。</p>
         </div>
       </div>
     </div>
@@ -225,8 +228,9 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
   <div class="wrap life-body">
     <p class="eyebrow fx">LIFE</p>
     <h2 class="fx">SHINの生き様</h2>
-    <p class="fx">私は、<em>「人生を、自動から志動へ導く」</em>ことを人生のmissionに掲げて生きています。</p>
-    <p class="fx">多くの人は、誰かが決めた常識や環境の中で、気づかないうちに"自動"で人生を歩んでいます。</p>
+    <p class="fx">私は、<em>「人生を、自動から志動へ導く」</em><br>ことを人生のmissionに掲げて生きています。</p>
+    <p class="fx">多くの人は、誰かが決めた常識や環境の中で、</p>
+    <p class="fx">気づかないうちに"自動"で人生を歩んでいます。</p>
     <p class="fx">でも、本当の人生は、自分の意志で選び、自分の志で生きることで初めて輝き始める。</p>
     <p class="pull fx">私が本当に増やしたいのは、<br>お金持ちではありません。</p>
     <p class="fx">自分の人生に誇りを持ち、誰かのために挑戦し、人生の最後に「最高の人生だった」と笑える人です。</p>
@@ -326,7 +330,7 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
   <div class="sns-btns">
     <a class="sns-btn line" href="https://lin.ee/riYjWrx" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.7 2 11.2c0 4 3.4 7.4 8 8.1.3.1.8.2.9.5.1.3.1.7 0 1 0 0-.1.7-.1.8-.1.3-.2 1 .9.5s5.8-3.4 7.9-5.9c1.5-1.6 2.4-3.2 2.4-5C22 6.7 17.5 3 12 3z"/></svg>
-      Shinと直接話してみる
+      Shinと直接話す
     </a>
     <a class="sns-btn ig" href="https://www.instagram.com/shinnnn.1/" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor" stroke="none"/></svg>
@@ -335,7 +339,7 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
   </div>
   <p>© 2026 SHIN — Vision comes first.</p>
 </footer>
-<div class="sticky-cta" id="stickyCta"><a class="btn-line" href="https://lin.ee/riYjWrx" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.7 2 11.2c0 4 3.4 7.4 8 8.1.3.1.8.2.9.5.1.3.1.7 0 1 0 0-.1.7-.1.8-.1.3-.2 1 .9.5s5.8-3.4 7.9-5.9c1.5-1.6 2.4-3.2 2.4-5C22 6.7 17.5 3 12 3z"/></svg>Shinと直接話してみる</a></div>
+<div class="sticky-cta" id="stickyCta"><a class="btn-line" href="https://lin.ee/riYjWrx" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.7 2 11.2c0 4 3.4 7.4 8 8.1.3.1.8.2.9.5.1.3.1.7 0 1 0 0-.1.7-.1.8-.1.3-.2 1 .9.5s5.8-3.4 7.9-5.9c1.5-1.6 2.4-3.2 2.4-5C22 6.7 17.5 3 12 3z"/></svg>Shinと直接話す</a></div>
 <script>
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.15});
 document.querySelectorAll('.fx').forEach(el=>io.observe(el));

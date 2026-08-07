@@ -1,0 +1,192 @@
+/* index.html 見出し — 大きく強調 */
+.eyebrow {
+  font-size: clamp(1.02rem, 4vw, 1.38rem);
+  font-weight: 600;
+  letter-spacing: .34em;
+  margin-bottom: 22px;
+}
+
+.eyebrow::before {
+  width: clamp(32px, 8vw, 52px);
+}
+
+h2 {
+  font-size: clamp(1.72rem, 6.8vw, 2.85rem);
+  font-weight: 800;
+  letter-spacing: .08em;
+  line-height: 1.55;
+  margin-bottom: 28px;
+}
+
+.mission-label,
+.essay-block .essay-label {
+  gap: 12px;
+  font-size: clamp(1rem, 3.6vw, 1.18rem);
+  font-weight: 600;
+  letter-spacing: .36em;
+  margin-bottom: 18px;
+}
+
+.mission-label {
+  font-size: clamp(1.15rem, 4.2vw, 1.35rem);
+  letter-spacing: .32em;
+  margin-bottom: 20px;
+}
+
+.mission-label em,
+.essay-block .essay-label em {
+  font-size: clamp(1.38rem, 5.2vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: .22em;
+}
+
+.mission-label em {
+  font-size: clamp(1.65rem, 6.5vw, 2.2rem);
+  letter-spacing: .18em;
+}
+
+.link-more,
+.product-cta {
+  font-family: var(--serif);
+  font-size: clamp(1.08rem, 4.2vw, 1.42rem);
+  font-weight: 700;
+  letter-spacing: .14em;
+  line-height: 1.55;
+  padding-bottom: 8px;
+  border-bottom-width: 2px;
+}
+
+.life-sec .link-more {
+  font-size: clamp(1.1rem, 4.2vw, 1.4rem);
+}
+
+.why-sec .link-more {
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 4.2vw, 1.4rem);
+  font-weight: 700;
+  letter-spacing: .14em;
+  line-height: 1.55;
+  padding-bottom: 8px;
+  border-bottom-width: 2px;
+}
+
+.lecture-text h3 {
+  font-size: clamp(1.38rem, 5vw, 1.95rem);
+  font-weight: 800;
+  letter-spacing: .14em;
+  margin-bottom: 16px;
+}
+
+.cin-brand {
+  font-size: clamp(1.48rem, 5.8vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: .1em;
+  line-height: 1.55;
+  margin: 10px 0 24px;
+}
+
+.cin-head h2 {
+  font-size: clamp(1.35rem, 4.6vw, 1.85rem);
+  letter-spacing: .06em;
+  line-height: 1.7;
+}
+
+.product-title-main {
+  font-size: clamp(1.78rem, 6.2vw, 2.75rem);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.product-title-sub {
+  font-size: clamp(1.18rem, 4.5vw, 1.72rem);
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+.product-title-sub em {
+  font-size: 1.2em;
+}
+
+.stats h2 {
+  font-size: clamp(1.65rem, 6.2vw, 2.5rem);
+}
+
+/* about.html LIFE */
+.life-sec h2 {
+  font-size: clamp(1.7rem, 7vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: .08em;
+  line-height: 1.55;
+  margin-bottom: 28px;
+}
+
+/* about.html LIFE / journal.html WHY pull */
+.life-body .pull,
+.why-body .pull {
+  font-size: clamp(1.32rem, 5.2vw, 1.78rem);
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1.85;
+}
+
+.why-body .strong {
+  font-family: var(--serif);
+  font-size: clamp(1.12rem, 4.2vw, 1.38rem);
+  font-weight: 700;
+  color: var(--vermilion-bright);
+  letter-spacing: .06em;
+  line-height: 1.8;
+}
+
+@media (max-width: 819px) {
+  .eyebrow {
+    font-size: clamp(.98rem, 4.5vw, 1.15rem);
+    letter-spacing: .28em;
+    gap: 12px;
+  }
+
+  h2 {
+    font-size: clamp(1.58rem, 7vw, 2rem);
+    letter-spacing: .06em;
+    margin-bottom: 22px;
+  }
+
+  .mission-label,
+  .essay-block .essay-label {
+    font-size: clamp(.95rem, 3.8vw, 1.05rem);
+  }
+
+  .mission-label {
+    font-size: clamp(1.08rem, 4.4vw, 1.22rem);
+  }
+
+  .mission-label em,
+  .essay-block .essay-label em {
+    font-size: clamp(1.28rem, 5.5vw, 1.55rem);
+  }
+
+  .mission-label em {
+    font-size: clamp(1.55rem, 6.8vw, 1.9rem);
+  }
+
+  .link-more,
+  .product-cta {
+    font-size: clamp(1.02rem, 4.5vw, 1.22rem);
+  }
+
+  .lecture-text h3 {
+    font-size: clamp(1.28rem, 5.2vw, 1.55rem);
+  }
+
+  .cin-brand {
+    font-size: clamp(1.32rem, 6vw, 1.72rem);
+  }
+
+  .product-title-main {
+    font-size: clamp(1.55rem, 6.5vw, 1.95rem);
+  }
+
+  .product-title-sub {
+    font-size: clamp(1.05rem, 4.8vw, 1.35rem);
+  }
+}

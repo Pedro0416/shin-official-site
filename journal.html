@@ -70,6 +70,8 @@ section{padding:110px 24px;position:relative}
 .eyebrow.center{justify-content:center}
 h2{font-family:var(--serif);font-weight:700;font-size:clamp(1.55rem,4.6vw,2.3rem);line-height:1.7;letter-spacing:.1em;margin-bottom:34px}
 h2 em,h1 em{font-style:normal;color:var(--vermilion-bright)}
+.assert-title{font-size:clamp(1.18rem,4.4vw,1.85rem);font-weight:800;letter-spacing:.05em;line-height:1.75;text-align:center;max-width:22em;margin-inline:auto;margin-bottom:28px;text-wrap:balance}
+.assert-title .strong{font-style:normal;color:var(--vermilion-bright);font-weight:800}
 .lead{color:var(--ink-dim);font-size:.95rem;max-width:620px}
 .fx{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
 .fx.on{opacity:1;transform:none}
@@ -84,6 +86,7 @@ h2 em,h1 em{font-style:normal;color:var(--vermilion-bright)}
 .btn-fire:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(90,20,32,.45)}
 .link-more{font-size:clamp(.9rem,1.2vw,1rem);letter-spacing:.22em;color:var(--gold);border-bottom:1px solid rgba(201,162,75,.5);padding-bottom:6px;transition:opacity .3s}
 .link-more:hover{opacity:.7}
+.why-sec .link-more{font-family:var(--serif);font-size:clamp(1.1rem,4.2vw,1.4rem);font-weight:700;letter-spacing:.14em;line-height:1.55;padding-bottom:8px;border-bottom-width:2px}
 /* footer / sticky */
 footer{background:var(--enji-deep);padding:54px 24px 120px;text-align:center;font-size:.75rem;color:rgba(245,239,230,.4);letter-spacing:.14em}
 footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
@@ -103,7 +106,8 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 @media(min-width:820px){.card-grid.c3{grid-template-columns:repeat(3,1fr)}.card-grid.c2{grid-template-columns:repeat(2,1fr)}}
 .card{background:#fff;border:1px solid rgba(110,26,36,.12);border-radius:6px;padding:30px 26px;box-shadow:0 8px 28px rgba(62,16,23,.07)}
 .card h3{font-family:var(--serif);font-size:1.15rem;letter-spacing:.12em;color:var(--gold);margin-bottom:14px;font-weight:700}
-.card p{font-size:.88rem;color:var(--ink-dim)}
+.card p{font-size:.88rem;color:var(--ink-dim);line-height:1.85}
+.card .card-emph{font-family:var(--serif);font-size:clamp(1.02rem,3.6vw,1.18rem);font-weight:700;color:var(--vermilion-bright);letter-spacing:.06em;line-height:1.75;margin-top:10px}
 .checklist{list-style:none;display:grid;gap:14px;margin:30px 0}
 .checklist li{display:flex;gap:14px;align-items:flex-start;font-size:.95rem}
 .checklist li::before{content:"";flex:none;width:9px;height:9px;margin-top:14px;background:var(--vermilion);transform:rotate(45deg)}
@@ -148,16 +152,21 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
   .jgallery{margin-top:0}
   .checklist li{font-size:.92rem;line-height:1.7}
   .card p{font-size:.9rem;line-height:1.85}
+  .assert-title{font-size:clamp(1.12rem,4.2vw,1.42rem);letter-spacing:.04em;line-height:1.7;margin-bottom:22px;max-width:100%;padding:0 4px}
 }
 .why-sec{background:linear-gradient(180deg,var(--bg-wine),var(--bg-deep))}
 .why-body{max-width:680px;margin:0 auto}
 .why-body p{font-family:var(--serif);font-size:1.02rem;line-height:2.1;letter-spacing:.05em;margin:0 0 22px}
+.why-body .essay-traits{text-align:center;letter-spacing:.1em;color:var(--ink);font-weight:500;margin:1.8em 0}
 .why-body p em{font-style:normal;color:var(--vermilion-bright)}
-.why-body .pull{font-size:1.18rem;color:var(--gold);letter-spacing:.08em;line-height:1.9;text-align:center;margin:36px 0}
-.why-body .strong{color:var(--vermilion-bright)}
+.why-body .pull{font-size:clamp(1.32rem,5.2vw,1.78rem);font-weight:700;color:var(--gold);letter-spacing:.08em;line-height:1.85;text-align:center;margin:36px 0}
+.why-body .strong{font-family:var(--serif);font-size:clamp(1.12rem,4.2vw,1.38rem);font-weight:700;color:var(--vermilion-bright);letter-spacing:.06em;line-height:1.8}
+.why-body .essay-emphasis{font-size:clamp(1.18rem,4.6vw,1.55rem);font-weight:700;letter-spacing:.08em;line-height:1.85;text-align:center;margin:1.2em 0 1.6em}
+.why-body .essay-emphasis .strong{font-size:inherit;color:var(--vermilion-bright)}
 @media(max-width:819px){
   .why-body p{font-size:1rem;line-height:1.95;margin-bottom:18px}
-  .why-body .pull{margin:26px 0}
+  .why-body .pull{font-size:clamp(1.22rem,5vw,1.58rem);letter-spacing:.06em;line-height:1.75;margin:26px 0}
+  .why-body .strong{font-size:clamp(1.08rem,4.4vw,1.28rem);line-height:1.75}
 }
 </style>
 <link rel="stylesheet" href="css/mobile.css">
@@ -169,7 +178,7 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
   <div class="header-right">
   <nav><a href="about.html" class="">SHINについて</a><a href="story.html" class="">想い</a><a href="journal.html" class="act">志動録</a><a href="voice.html" class="">お客様の声</a></nav>
   <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span></button>
-  <a class="header-cta header-cta-line" href="https://lin.ee/riYjWrx" target="_blank" rel="noopener">Shinと直接話してみる</a>
+  <a class="header-cta header-cta-line" href="https://lin.ee/riYjWrx" target="_blank" rel="noopener"><span class="cta-label-long">Shinと直接話す</span><span class="cta-label-short">直接話す</span></a>
   </div>
 </header>
 
@@ -190,10 +199,12 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
   <div class="wrap why-body">
     <p class="eyebrow fx">WHY</p>
     <h2 class="fx">なぜ、志動録を作ったのか。</h2>
-    <p class="fx">才能がある人。努力できる人。夢を語れる人。</p>
+    <p class="fx">私はこれまで、多くの人を見てきました。</p>
+    <p class="fx essay-traits">才能がある人　努力できる人　夢を語る人</p>
     <p class="fx">それでも、人生が変わらない人があまりにも多かった。</p>
-    <p class="fx">その違いは、性格でも才能でもなく、<span class="strong">「毎日の生き方」</span>でした。</p>
-    <p class="pull fx">人生は<em>書いて、決めて、行動した人</em>から<br>変わっていく。</p>
+    <p class="fx">その違いは、性格でも才能でもなく、</p>
+    <p class="fx essay-emphasis"><span class="strong">「毎日の生き方」</span>でした。</p>
+    <p class="pull fx">人生は<em>書いて、決めて、行動した</em><br>人から<br>変わっていく。</p>
     <p class="fx">ただ予定を書くためではない。</p>
     <p class="fx">毎日、自分の志を確認し、今日やるべきことを明確にする。</p>
     <p class="fx">そして一日の終わりに、自分と向き合う。</p>
@@ -248,9 +259,9 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
     <h2 class="fx">志動設計セッションとは?</h2>
     <p class="lead fx">志動録ジャーナルを使いながら、<br>理想の未来から逆算して人生を設計するセッションです。</p>
     <div class="day-grid" style="margin-top:36px">
-      <div class="card fx"><h3>本当に設定すべき目標とは何か</h3><p>表面的な目標ではなく、あなたの志から逆算した「本物の目標」を一緒に言語化します。</p></div>
+      <div class="card fx"><h3>本当に設定すべき目標とは何か</h3><p>表面的な目標ではなく、あなたの志から逆算した</p><p class="card-emph">「本物の目標」を一緒に言語化します。</p></div>
       <div class="card fx"><h3>なぜ「感謝」を書くと人生が加速するのか</h3><p>感謝の記録が行動力に変わるメカニズムを、実践を通じて体得します。</p></div>
-      <div class="card fx"><h3>行動が続く人の思考構造</h3><p>続かないのは意志の弱さではなく、構造の問題。続く仕組みをインストールします。</p></div>
+      <div class="card fx"><h3>行動が続く人の思考構造</h3><p>続かないのは意志の弱さではなく、構造の問題。</p><p class="card-emph">続く仕組みをインストールします。</p></div>
       <div class="card fx"><h3>夢が"予定"に変わる書き方</h3><p>ただ書くのではなく、"人生が動き出す書き方"を直接ティーチングします。</p></div>
     </div>
     <div class="use-gallery fx" style="margin-top:44px">
@@ -261,12 +272,12 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 </section>
 <section style="background:radial-gradient(100% 100% at 50% 0%,rgba(216,73,43,.16),transparent 55%),var(--bg-deep);text-align:center">
   <div class="wrap">
-    <h2 class="fx">この一冊を、1年間"毎日"使い続けたとき、<br>あなたは<br>「この1冊以上の価値」を手にしています。</h2>
+    <h2 class="fx assert-title">この一冊を、1年間"毎日"使い続けたとき、<br>あなたは<br><span class="strong">「この1冊以上の価値」</span>を<br>手にしています。</h2>
     <p class="fx" style="font-family:var(--serif);color:var(--gold);letter-spacing:.2em;margin-bottom:44px">ここに断言します。</p>
     <div class="cta-group fx">
       <a class="btn-line" href="https://lin.ee/riYjWrx" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.7 2 11.2c0 4 3.4 7.4 8 8.1.3.1.8.2.9.5.1.3.1.7 0 1 0 0-.1.7-.1.8-.1.3-.2 1 .9.5s5.8-3.4 7.9-5.9c1.5-1.6 2.4-3.2 2.4-5C22 6.7 17.5 3 12 3z"/></svg>
-        Shinと直接話してみる
+        Shinと直接話す
       </a>
       <a class="cta-sub cta-sub-light" href="contact.html">志動録を購入する →</a>
     </div>
@@ -279,7 +290,7 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
   <div class="sns-btns">
     <a class="sns-btn line" href="https://lin.ee/riYjWrx" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.7 2 11.2c0 4 3.4 7.4 8 8.1.3.1.8.2.9.5.1.3.1.7 0 1 0 0-.1.7-.1.8-.1.3-.2 1 .9.5s5.8-3.4 7.9-5.9c1.5-1.6 2.4-3.2 2.4-5C22 6.7 17.5 3 12 3z"/></svg>
-      Shinと直接話してみる
+      Shinと直接話す
     </a>
     <a class="sns-btn ig" href="https://www.instagram.com/shinnnn.1/" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor" stroke="none"/></svg>
@@ -288,7 +299,7 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
   </div>
   <p>© 2026 SHIN — Vision comes first.</p>
 </footer>
-<div class="sticky-cta" id="stickyCta"><a class="btn-line" href="https://lin.ee/riYjWrx" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.7 2 11.2c0 4 3.4 7.4 8 8.1.3.1.8.2.9.5.1.3.1.7 0 1 0 0-.1.7-.1.8-.1.3-.2 1 .9.5s5.8-3.4 7.9-5.9c1.5-1.6 2.4-3.2 2.4-5C22 6.7 17.5 3 12 3z"/></svg>Shinと直接話してみる</a></div>
+<div class="sticky-cta" id="stickyCta"><a class="btn-line" href="https://lin.ee/riYjWrx" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.7 2 11.2c0 4 3.4 7.4 8 8.1.3.1.8.2.9.5.1.3.1.7 0 1 0 0-.1.7-.1.8-.1.3-.2 1 .9.5s5.8-3.4 7.9-5.9c1.5-1.6 2.4-3.2 2.4-5C22 6.7 17.5 3 12 3z"/></svg>Shinと直接話す</a></div>
 <script>
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.15});
 document.querySelectorAll('.fx').forEach(el=>io.observe(el));

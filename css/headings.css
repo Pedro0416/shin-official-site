@@ -7,7 +7,7 @@
 }
 
 .eyebrow::before {
-  width: clamp(32px, 8vw, 52px);
+  display: none;
 }
 
 h2 {
@@ -45,8 +45,7 @@ h2 {
   letter-spacing: .18em;
 }
 
-.link-more,
-.product-cta {
+.link-more {
   font-family: var(--serif);
   font-size: clamp(1.08rem, 4.2vw, 1.42rem);
   font-weight: 700;
@@ -54,6 +53,12 @@ h2 {
   line-height: 1.55;
   padding-bottom: 8px;
   border-bottom-width: 2px;
+}
+
+.product-cta {
+  font-family: var(--serif);
+  font-size: clamp(1.05rem, 3.8vw, 1.28rem);
+  font-weight: 700;
 }
 
 .life-sec .link-more {
@@ -169,9 +174,12 @@ h2 {
     font-size: clamp(1.55rem, 6.8vw, 1.9rem);
   }
 
-  .link-more,
-  .product-cta {
+  .link-more {
     font-size: clamp(1.02rem, 4.5vw, 1.22rem);
+  }
+
+  .product-cta {
+    font-size: clamp(1rem, 3.8vw, 1.15rem);
   }
 
   .lecture-text h3 {

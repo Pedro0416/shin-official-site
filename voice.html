@@ -64,7 +64,7 @@ nav{display:none}
   .desc{font-size:clamp(.84rem,3.4vw,.9rem);word-break:normal;overflow-wrap:break-word}
   h2{text-wrap:pretty;font-size:clamp(1.18rem,4.6vw,1.55rem);letter-spacing:.04em;line-height:1.55;margin-bottom:20px;word-break:normal;overflow-wrap:break-word}
   .eyebrow{gap:12px;letter-spacing:.28em;font-size:.9rem;max-width:100%}
-  .eyebrow::before{width:32px;flex-shrink:0}
+  .eyebrow-lg{font-size:clamp(1.12rem,4.4vw,1.38rem);letter-spacing:.2em;gap:14px}
   .mission-lead{font-size:clamp(.86rem,3.5vw,.92rem);line-height:1.85;letter-spacing:.03em;max-width:100%;word-break:normal;overflow-wrap:break-word}
 }
 @media(min-width:820px){
@@ -78,8 +78,9 @@ nav{display:none}
 section{padding:110px 24px;position:relative}
 .wrap{max-width:var(--maxw);margin:0 auto}
 .eyebrow{display:flex;align-items:center;gap:18px;font-size:clamp(.98rem,1.6vw,1.12rem);letter-spacing:.42em;color:var(--gold);margin-bottom:26px;font-weight:500}
-.eyebrow::before{content:"";width:52px;height:1px;background:var(--gold)}
+.eyebrow::before{display:none}
 .eyebrow.center{justify-content:center}
+.eyebrow-lg{font-size:clamp(1.15rem,4.6vw,1.55rem);font-weight:700;letter-spacing:.28em;margin-bottom:22px}
 h2{font-family:var(--serif);font-weight:700;font-size:clamp(1.55rem,4.6vw,2.3rem);line-height:1.7;letter-spacing:.1em;margin-bottom:34px}
 h2 em,h1 em{font-style:normal;color:var(--vermilion-bright)}
 .lead{color:var(--ink-dim);font-size:.95rem;max-width:620px}
@@ -194,7 +195,7 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 
 <section>
   <div class="wrap">
-    <p class="eyebrow fx">BEFORE → AFTER</p>
+    <p class="eyebrow eyebrow-lg fx">BEFORE → AFTER</p>
     <h2 class="fx">努力は、<br>こんなにも人を変える。</h2>
     <p class="mission-lead fx" style="margin-bottom:44px">企画代表トレーナーとして伴走した、<br><em>本物の変化</em>の記録です。</p>
     <div class="ba-slider fx" data-ba-slider>
@@ -256,7 +257,7 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 
 <section style="background:var(--bg-deep)">
   <div class="wrap">
-    <p class="eyebrow center fx">THE MOMENT</p>
+    <p class="eyebrow eyebrow-lg center fx">最高の瞬間</p>
     <h2 class="fx" style="text-align:center">変化の瞬間に、立ち会う。</h2>
     <div class="moments">
       <figure class="fx"><img src="img/moment_thanks.jpg" alt="卒業の瞬間" loading="lazy"><figcaption>努力を積み重ねた先にある、本物の自信と笑顔。</figcaption></figure>
@@ -270,9 +271,18 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
     <p class="eyebrow fx">REVIEW</p>
     <h2 class="fx">お客様の声</h2>
     <div class="card-grid c3">
-      <div class="card fx"><p>〈ダミー〉ここに利用者の声を掲載します。体験談・変化のコメントなど。</p><p class="voice-meta">◯代・◯◯ A様</p></div>
-      <div class="card fx"><p>〈ダミー〉ここに利用者の声を掲載します。</p><p class="voice-meta">◯代・◯◯ B様</p></div>
-      <div class="card fx"><p>〈ダミー〉ここに利用者の声を掲載します。</p><p class="voice-meta">◯代・◯◯ C様</p></div>
+      <div class="card fx">
+        <p>何度も目標を立てては挫折してきました。でもShinさんのジャーナルに向き合ううちに、「今日やるべきこと」がはっきりして、人生が動き始めました。</p>
+        <p class="voice-meta">30代・会社員 A様</p>
+      </div>
+      <div class="card fx">
+        <p>「いつか変わる」と待ち続けていた自分が、恥ずかしくなるほど変わりました。書くたびに自分と約束できて、続ける怖さが消えていきました。</p>
+        <p class="voice-meta">20代・フリーランス B様</p>
+      </div>
+      <div class="card fx">
+        <p>過去の自分なら途中で投げ出していたと思います。志動録に向き合ってよかった。今は、毎朝のページをめくるのが楽しみです。</p>
+        <p class="voice-meta">40代・経営者 C様</p>
+      </div>
     </div>
     <div class="cta-group fx" style="margin-top:56px">
       <a class="btn-line" href="https://lin.ee/riYjWrx" target="_blank" rel="noopener">

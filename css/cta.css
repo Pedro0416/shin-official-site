@@ -19,15 +19,15 @@
 .btn-line svg{flex:none}
 
 .header-cta-line{
-  background:#06C755!important;
-  border-color:#06C755!important;
+  background:var(--vermilion)!important;
+  border-color:var(--vermilion)!important;
   color:#fff!important;
   white-space:nowrap;
   text-align:center;
   line-height:1.35;
   border-radius:999px;
   font-weight:700;
-  box-shadow:0 6px 18px rgba(6,199,85,.28);
+  box-shadow:0 6px 18px rgba(110,26,36,.22);
   flex-shrink:1;
   min-width:0;
   max-width:100%;
@@ -46,8 +46,8 @@
   .nav-toggle{flex-shrink:0}
 }
 .header-cta-line:hover{
-  background:#05b34c!important;
-  border-color:#05b34c!important;
+  background:var(--vermilion-bright)!important;
+  border-color:var(--vermilion-bright)!important;
   color:#fff!important;
 }
 

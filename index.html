@@ -243,6 +243,10 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 /* PRODUCT ショーケース */
 .product-sec{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--bg-wine) 0%,var(--bg-wine-2) 55%,#F3EBE4 100%)}
 .product-sec::before{content:"志";position:absolute;right:-2vw;top:50%;transform:translateY(-50%);font-family:var(--serif);font-weight:800;font-size:clamp(12rem,28vw,22rem);color:rgba(169,128,60,.06);line-height:1;pointer-events:none;user-select:none}
+.product-bridge{max-width:640px;margin:0 auto 48px;text-align:center}
+.product-bridge h2{font-size:clamp(1.45rem,4.6vw,2.1rem);letter-spacing:.08em;line-height:1.7;margin-bottom:28px}
+.product-bridge .essay-copy{margin-left:auto;margin-right:auto}
+.product-arrow{font-family:var(--serif);font-size:clamp(1.55rem,5vw,2.1rem);letter-spacing:.28em;color:var(--vermilion-bright);font-weight:700;margin-top:36px;line-height:1.6}
 .product-showcase{display:grid;gap:48px;align-items:center}
 @media(min-width:820px){.product-showcase{grid-template-columns:1.05fr .95fr;gap:min(6vw,72px)}}
 .product-visual{position:relative}
@@ -404,7 +408,7 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
         <div class="achieve-mini-grid">
           <div class="achieve-item">
             <div class="achieve-num">SBT1級</div>
-            <p class="achieve-label">メンタルコーチ<br>最年少取得<br>大谷翔平も学んだ</p>
+            <p class="achieve-label">メンタルコーチ<br>最年少取得</p>
           </div>
           <div class="achieve-item">
             <div class="achieve-num">300<small>名以上</small></div>
@@ -425,7 +429,7 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
     <div class="cin-head">
       <p class="eyebrow fx">CINDERELLA</p>
       <p class="cin-brand fx">「シンデレラは努力する」</p>
-      <h2 class="fx">わくわくする目標から逆算した<br>目標達成は楽しい<br>こんなにも人を変える</h2>
+      <h2 class="fx">ワクワクする目標から<br>逆算した努力は、<br>こんなにも人を変える</h2>
       <p class="mission-lead fx">身体が変わり、目つきが変わり、<br>人生が動き出す。<br>企画代表トレーナーとして伴走した、<br><em>本物の変化</em>の記録です。</p>
     </div>
     <div class="cin-photos fx">
@@ -444,26 +448,27 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
   </div>
 </section>
 <section class="product-sec">
-  <div class="wrap product-showcase">
-    <div class="product-visual fx">
-      <div class="product-photo" style="background-image:url(img/journal_desk.jpg)"></div>
-      <span class="product-tag" aria-hidden="true">Vision comes first</span>
+  <div class="wrap">
+    <div class="product-bridge fx">
+      <h2>なぜここまでの変化が<br>生まれたのか？</h2>
+      <p class="essay-copy">それは、ワクワクする最終目標から<em>"今日"</em>までを<br>逆算し、可視化したから。</p>
+      <p class="essay-copy">これを1人でも多くの人に体感してほしいという想いを胸に、<br><em>"嫌でも目標達成してしまうモノ"</em><br>を1年かけて開発しました。</p>
+      <p class="product-arrow">↓ それが ↓</p>
     </div>
-    <div class="product-copy">
-      <p class="eyebrow fx">PRODUCT</p>
-      <h2 class="product-title fx">
-        <span class="product-title-main">志動録ジャーナル</span>
-        <span class="product-title-sub"><em>×</em>志動設計セッション</span>
-      </h2>
-      <div class="product-rule fx" aria-hidden="true"></div>
-      <div class="essay-block fx" style="margin-top:0">
-        <p class="essay-label">WHY<em>なぜ作ったのか</em></p>
-        <p class="essay-copy">人生は<em>書いて、決めて、行動した</em>人から<br>変わっていく。</p>
-        <p class="essay-copy">ただ予定を書くためではない。</p>
-        <p class="essay-copy">毎日、自分の志を確認し、<br>今日やるべきことを明確にする。</p>
-        <p class="essay-copy">その積み重ねが、未来の自分をつくります。</p>
+    <div class="product-showcase">
+      <div class="product-visual fx">
+        <div class="product-photo" style="background-image:url(img/journal_desk.jpg)"></div>
+        <span class="product-tag" aria-hidden="true">Vision comes first</span>
       </div>
-      <a class="product-cta fx" href="journal.html">志動録を詳しく見る</a>
+      <div class="product-copy">
+        <p class="eyebrow fx">PRODUCT</p>
+        <h2 class="product-title fx">
+          <span class="product-title-main">志動録ジャーナル</span>
+          <span class="product-title-sub"><em>×</em>志動設計セッション</span>
+        </h2>
+        <div class="product-rule fx" aria-hidden="true"></div>
+        <a class="product-cta fx" href="journal.html">志動録を詳しく見る</a>
+      </div>
     </div>
   </div>
 </section>

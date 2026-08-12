@@ -1,0 +1,9 @@
+:root{
+  --bg-deep:#F4ECE7; --bg-wine:#FFFFFF; --bg-wine-2:#FAF6F3;
+  --gold:#A9803C; --gold-soft:#8F6F3E;
+  --vermilion:#6E1A24; --vermilion-bright:#95293A;
+  --enji-deep:#3E1017;
+  --ink:#2C1E21; --ink-dim:rgba(44,30,33,.66);
+  --serif:'Shippori Mincho',serif; --sans:'Noto Sans JP',sans-serif;
+  --maxw:1080px;
+}

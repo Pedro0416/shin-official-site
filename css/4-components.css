@@ -252,4 +252,36 @@ h1 em {
     font-size: clamp(.84rem, 3.3vw, .9rem);
     line-height: 1.72;
   }
+
+  /* dissolved from mobile.css — after base h2 so cascade wins */
+  p, li, h1, h2, h3,
+  .lead, .desc, .desc-after,
+  .mission-lead, .mission-lines p,
+  .essay-copy, .story-quote, .big-quote,
+  .stat .label, .stat .num,
+  .origin-body p, .origin-title,
+  .life-body p, .why-body p,
+  .card p, .card h3,
+  .prof-role-main, .prof-role-sub,
+  .cinderella-brand, .cin-brand,
+  .lecture-text p, .change-list li,
+  .j-hero .desc p, .follow-lead {
+    word-break: normal;
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: clamp(1.15rem, 4.5vw, 1.52rem);
+    letter-spacing: .04em;
+    line-height: 1.55;
+    margin-bottom: 20px;
+    text-wrap: pretty;
+  }
+
+  h3 {
+    font-size: clamp(.98rem, 3.8vw, 1.1rem);
+    letter-spacing: .04em;
+    line-height: 1.55;
+  }
 }

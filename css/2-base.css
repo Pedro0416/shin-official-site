@@ -8,3 +8,11 @@ a{color:inherit;text-decoration:none}
 .fx{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
 .fx.on{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.fx{opacity:1;transform:none}}
+
+@media (max-width: 819px) {
+  body {
+    letter-spacing: .04em;
+    line-height: 1.85;
+  }
+}
+

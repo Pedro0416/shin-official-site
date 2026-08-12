@@ -19,9 +19,9 @@
 .btn-line svg{flex:none}
 
 .header-cta-line{
-  background:var(--vermilion)!important;
-  border-color:var(--vermilion)!important;
-  color:#fff!important;
+  background:var(--vermilion);
+  border-color:var(--vermilion);
+  color:#fff;
   white-space:nowrap;
   text-align:center;
   line-height:1.35;
@@ -46,9 +46,9 @@
   .nav-toggle{flex-shrink:0}
 }
 .header-cta-line:hover{
-  background:var(--vermilion-bright)!important;
-  border-color:var(--vermilion-bright)!important;
-  color:#fff!important;
+  background:var(--vermilion-bright);
+  border-color:var(--vermilion-bright);
+  color:#fff;
 }
 
 .sticky-cta .btn-line{
@@ -57,11 +57,11 @@
   padding:15px;
   font-size:.92rem;
   letter-spacing:.1em;
-  background:#06C755!important;
+  background:#06C755;
   box-shadow:0 8px 24px rgba(6,199,85,.3);
 }
 .sticky-cta .btn-line:hover{
-  background:#05b34c!important;
+  background:#05b34c;
 }
 
 .cta-group{
@@ -101,3 +101,15 @@
 .btn-ghost:hover{background:rgba(169,128,60,.08)}
 
 .sns-btns .sns-btn.line{order:-1}
+
+@media (max-width: 819px) {
+  .btn-line {
+    font-size: clamp(.86rem, 3.4vw, .9rem);
+    padding: 15px 28px;
+    letter-spacing: .1em;
+  }
+  .sticky-cta .btn-line {
+    font-size: clamp(.84rem, 3.2vw, .88rem);
+    padding: 13px;
+  }
+}

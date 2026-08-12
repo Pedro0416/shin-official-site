@@ -1,0 +1,74 @@
+/* pages/contact.css — page-specific */
+.page-hero h1{font-family:var(--serif);font-weight:800;font-size:clamp(2.2rem,8vw,3.4rem);letter-spacing:.1em;line-height:1.45}
+.page-hero .en{font-size:clamp(.95rem,3.2vw,1.15rem);letter-spacing:.4em;color:var(--gold);margin-bottom:18px;display:block;font-weight:600}
+.page-hero .desc{color:var(--ink);font-family:var(--serif);font-size:clamp(1.05rem,3.8vw,1.35rem);font-weight:700;letter-spacing:.08em;line-height:1.85;margin-top:24px;max-width:640px}
+.page-hero .desc-sub{color:var(--ink-dim);font-size:clamp(.9rem,3.2vw,1rem);margin-top:14px;line-height:1.9;max-width:560px}
+.contact-cta{padding:48px 24px 72px}
+.contact-cta .form-wrap{max-width:640px}
+.contact-cta .btn-line{font-size:clamp(1.08rem,4vw,1.35rem);padding:22px 40px;width:100%;max-width:420px;letter-spacing:.1em;box-shadow:0 14px 36px rgba(6,199,85,.4)}
+.contact-points{display:grid;gap:12px;margin:0 auto 32px;max-width:420px;text-align:left}
+.contact-points li{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-size:clamp(1rem,3.6vw,1.18rem);font-weight:700;letter-spacing:.08em;color:var(--ink);line-height:1.6}
+.contact-points li::before{content:"";flex:none;width:8px;height:8px;background:var(--vermilion);transform:rotate(45deg)}
+
+.form-wrap{max-width:560px;margin:0 auto}
+.field{margin-bottom:26px}
+label{display:block;font-size:.9rem;letter-spacing:.2em;color:var(--gold);margin-bottom:10px}
+label small{color:var(--vermilion-bright);margin-left:8px}
+input,select,textarea{width:100%;background:#fff;border:1px solid rgba(110,26,36,.25);border-radius:3px;padding:15px 16px;color:var(--ink);font-family:var(--sans);font-size:16px;letter-spacing:.04em;transition:border-color .3s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+textarea{min-height:130px;resize:vertical}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;max-width:680px;margin:0 auto;background:rgba(201,162,75,.2);border:1px solid rgba(201,162,75,.2)}
+.steps div{background:var(--bg-deep);padding:22px 12px;text-align:center}
+.steps b{display:block;font-family:var(--serif);color:var(--gold);font-size:1.05rem;letter-spacing:.1em;margin-bottom:6px}
+.steps span{font-size:.72rem;color:var(--ink-dim);letter-spacing:.08em;line-height:1.8}
+details{border-bottom:1px solid rgba(201,162,75,.2);max-width:640px;margin:0 auto}
+summary{cursor:pointer;padding:22px 8px;font-family:var(--serif);font-size:.98rem;letter-spacing:.1em;list-style:none;display:flex;justify-content:space-between;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-size:1.2rem;transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 8px 22px;font-size:.88rem;color:var(--ink-dim)}
+
+/* dissolved from mobile.css — contact-owned */
+@media (max-width: 819px) {
+  body:has(.contact-cta) .page-hero h1 {
+    font-size: clamp(2rem, 8.2vw, 2.55rem);
+    font-weight: 800;
+    letter-spacing: .06em;
+    line-height: 1.4;
+  }
+  body:has(.contact-cta) .page-hero .en {
+    font-size: clamp(1rem, 3.6vw, 1.15rem);
+    letter-spacing: .32em;
+  }
+  body:has(.contact-cta) .page-hero .desc {
+    font-size: clamp(1.08rem, 4.2vw, 1.28rem);
+    font-weight: 700;
+    line-height: 1.75;
+  }
+  body:has(.contact-cta) .page-hero .desc-sub {
+    font-size: clamp(.88rem, 3.4vw, .95rem);
+    line-height: 1.85;
+  }
+  .contact-cta {
+    padding: 36px 18px 56px;
+  }
+  .contact-cta .btn-line {
+    font-size: clamp(1.05rem, 4vw, 1.22rem);
+    padding: 20px 28px;
+  }
+  .contact-points li {
+    font-size: clamp(1.02rem, 3.8vw, 1.12rem);
+  }
+  .steps b {
+    font-size: clamp(.92rem, 3.5vw, .98rem);
+    letter-spacing: .08em;
+  }
+  .steps p,
+  .form-note,
+  .faq p,
+  details p {
+    font-size: clamp(.82rem, 3.2vw, .88rem);
+    line-height: 1.78;
+  }
+}
+

@@ -356,3 +356,13 @@
     margin: 1em 0 1.4em;
   }
 }
+
+/* dissolved from mobile.css — mission typography mobile */
+@media (max-width: 819px) {
+  .mission {
+    font-size: clamp(.84rem, 3.3vw, .9rem);
+    line-height: 1.82;
+    letter-spacing: .03em;
+  }
+}
+

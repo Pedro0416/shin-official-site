@@ -113,15 +113,16 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
 
 .mission-block{position:relative;margin:34px 0;padding:24px 0 24px 26px;border-left:2px solid var(--gold)}
 .mission-block::before{content:"";position:absolute;left:-2px;top:0;width:2px;height:32px;background:var(--vermilion-bright)}
-.mission-label{display:flex;align-items:baseline;gap:14px;font-size:clamp(.9rem,1.35vw,1.02rem);letter-spacing:.48em;color:var(--gold-soft);font-weight:500;margin-bottom:20px}
-.mission-label em{font-style:normal;font-family:var(--serif);font-size:clamp(1.15rem,1.8vw,1.35rem);letter-spacing:.38em;color:var(--vermilion-bright);font-weight:600}
+.mission-label{display:flex;align-items:center;gap:14px;font-size:clamp(1.28rem,4.6vw,1.55rem);letter-spacing:.28em;color:var(--gold-soft);font-weight:600;margin-bottom:20px}
+.mission-label em{font-style:normal;font-family:var(--serif);font-size:clamp(1.95rem,7.2vw,2.65rem);letter-spacing:0;line-height:1.4;color:var(--vermilion-bright);font-weight:800;font-feature-settings:"palt" 0,"pkna" 0;font-kerning:none;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 .mission{font-family:var(--serif);font-size:1.02rem;line-height:2.1;margin:0;letter-spacing:.05em}
 .mission-lines{display:grid;gap:10px}
 .mission-lines p{font-family:var(--serif);font-size:1.02rem;line-height:1.9;margin:0;letter-spacing:.05em}
-.prof-roles{list-style:none;display:grid;gap:16px;margin:8px 0 28px}
-.prof-roles li{border-left:2px solid var(--vermilion);padding:2px 0 2px 14px;display:grid;gap:4px}
-.prof-role-main{font-size:.95rem;line-height:1.7;letter-spacing:.03em;color:var(--ink)}
-.prof-role-sub{font-size:.85rem;line-height:1.6;letter-spacing:.06em;color:var(--ink-dim)}
+.prof-roles{list-style:none;display:grid;gap:14px;margin:8px 0 28px;padding:20px 22px;max-width:560px;border:1px solid rgba(110,26,36,.28);background:rgba(255,255,255,.88);border-radius:2px;box-shadow:0 4px 14px rgba(62,16,23,.04)}
+.prof-roles li{border:none;padding:0 0 0 1.5em;display:block;position:relative;font-family:var(--serif);font-size:clamp(.95rem,1.7vw,1.1rem);line-height:1.75;letter-spacing:.06em;color:var(--ink)}
+.prof-roles li::before{content:"◻";position:absolute;left:0;top:0;color:var(--vermilion-bright);font-size:.95em}
+.prof-role-main{font-size:inherit;line-height:inherit;letter-spacing:inherit;color:inherit}
+.prof-role-sub{display:block;padding-left:0;margin-top:2px;font-size:.92em;line-height:1.6;letter-spacing:.08em;color:var(--ink-dim)}
 .prof-leads{display:grid;gap:14px;margin-bottom:8px}
 .prof-leads .lead{font-family:var(--serif);font-size:1.02rem;line-height:1.95;letter-spacing:.04em;margin:0}
 
@@ -194,18 +195,12 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
       <p class="eyebrow fx">PROFILE</p>
       <h2 class="fx">SHIN<span style="font-size:.55em;color:var(--ink-dim);margin-left:14px;letter-spacing:.2em">シン</span></h2>
       <ul class="prof-roles fx">
+        <li><span class="prof-role-main">目標逆算型ジャーナル</span></li>
         <li>
-          <span class="prof-role-main">目標逆算型ジャーナル「志動録」</span>
-          <span class="prof-role-sub">プロデューサー</span>
+          <span class="prof-role-main">シンデレラ</span>
+          <span class="prof-role-sub">代表トレーナー</span>
         </li>
-        <li>
-          <span class="prof-role-main">YouTube企画「シンデレラは努力する」</span>
-          <span class="prof-role-sub">企画代表トレーナー</span>
-        </li>
-        <li>
-          <span class="prof-role-main">SBT1級メンタルコーチ</span>
-          <span class="prof-role-sub">最年少取得</span>
-        </li>
+        <li><span class="prof-role-main">SBT</span></li>
       </ul>
       <div class="prof-leads">
         <p class="lead fx">身体づくりを入口に、<br>延べ300名以上の「人生の変化」に伴走</p>

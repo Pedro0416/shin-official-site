@@ -297,22 +297,34 @@
     padding: 16px 0 16px 14px;
   }
 
-  .mission-label {
-    gap: 8px;
-    letter-spacing: .28em;
-    font-size: clamp(.78rem, 2.9vw, .86rem);
-    margin-bottom: 14px;
+  .mission-label,
+  .essay-block .essay-label {
+    gap: 10px;
+    letter-spacing: .22em;
+    font-size: clamp(1.18rem, 4.8vw, 1.35rem);
+    margin-bottom: 18px;
+    align-items: center;
+  }
+
+  .mission-label em,
+  .essay-block .essay-label em {
+    letter-spacing: 0;
+    font-size: clamp(1.55rem, 6.5vw, 1.95rem);
+    font-weight: 800;
+    line-height: 1.4;
+    font-feature-settings: "palt" 0, "pkna" 0;
+    font-kerning: none;
   }
 
   .mission-label em {
-    letter-spacing: .18em;
-    font-size: clamp(.92rem, 3.5vw, 1rem);
+    font-size: clamp(1.85rem, 8vw, 2.35rem);
   }
 
   .mission-lines p {
-    font-size: clamp(.86rem, 3.4vw, .92rem);
-    line-height: 1.78;
-    letter-spacing: .03em;
+    font-size: clamp(1.22rem, 5vw, 1.45rem);
+    line-height: 1.85;
+    letter-spacing: .04em;
+    font-weight: 700;
   }
 
   .essay-copy {
@@ -320,18 +332,6 @@
     line-height: 1.9;
     letter-spacing: .03em;
     margin-bottom: 10px;
-  }
-
-  .essay-block .essay-label {
-    gap: 8px;
-    letter-spacing: .28em;
-    font-size: clamp(.78rem, 2.9vw, .86rem);
-    margin-bottom: 14px;
-  }
-
-  .essay-block .essay-label em {
-    letter-spacing: .16em;
-    font-size: clamp(.92rem, 3.5vw, 1rem);
   }
 
   .story-quote,
@@ -479,7 +479,9 @@
   }
 
   .life-body p,
-  .why-body p {
+  .why-body p,
+  .essay p {
+    font-family: var(--serif);
     font-size: clamp(.84rem, 3.3vw, .9rem);
     line-height: 1.82;
     letter-spacing: .03em;
@@ -488,6 +490,7 @@
 
   .essay-traits,
   .why-body .essay-traits {
+    font-family: var(--serif);
     line-height: 2.2;
     letter-spacing: .06em;
     margin: 1.2em 0;
@@ -541,12 +544,17 @@
   }
 
   .hero-title {
-    font-size: clamp(1.38rem, 6.8vw, 1.85rem);
-    line-height: 1.68;
-    letter-spacing: .08em;
+    font-size: clamp(2.6rem, 12.5vw, 3.8rem);
+    line-height: 1.45;
+    letter-spacing: .05em;
     max-width: 100%;
-    padding: 0 6px;
-    text-shadow: 0 0 16px rgba(255, 252, 249, .95), 0 1px 0 rgba(255, 252, 249, .8);
+    padding: 0 2px;
+    color: #fff;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, .5), 0 1px 2px rgba(0, 0, 0, .35);
+  }
+
+  .hero-title .shidou {
+    color: #E23A3A;
   }
 
   .achieve-feature {

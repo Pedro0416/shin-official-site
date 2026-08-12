@@ -11,6 +11,8 @@
 <link rel="stylesheet" href="css/1-tokens.css">
 <link rel="stylesheet" href="css/2-base.css">
 <link rel="stylesheet" href="css/3-layout.css">
+<link rel="stylesheet" href="css/4-components.css">
+<link rel="stylesheet" href="css/5-blocks.css">
 <style>
 @media(max-width:819px){
   .page-hero{padding:120px 18px 56px;min-height:auto;overflow:hidden}
@@ -27,34 +29,11 @@
   .eyebrow-lg{font-size:clamp(1.12rem,4.4vw,1.38rem);letter-spacing:.2em;gap:14px}
   .mission-lead{font-size:clamp(.86rem,3.5vw,.92rem);line-height:1.85;letter-spacing:.03em;max-width:100%;word-break:normal;overflow-wrap:break-word}
 }
-h2{font-family:var(--serif);font-weight:700;font-size:clamp(1.55rem,4.6vw,2.3rem);line-height:1.7;letter-spacing:.1em;margin-bottom:34px}
-h2 em,h1 em{font-style:normal;color:var(--vermilion-bright)}
-.lead{color:var(--ink-dim);font-size:.95rem;max-width:620px}
-/* サブページ共通ヒーロー */
-.page-hero{min-height:52svh;display:flex;align-items:flex-end;padding:140px 24px 64px;background:radial-gradient(120% 90% at 50% 0%,rgba(216,73,43,.13),transparent 55%),linear-gradient(180deg,var(--bg-deep),var(--bg-wine))}
-.page-hero .wrap{width:100%}
-.page-hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(1.9rem,6vw,3rem);letter-spacing:.14em;line-height:1.6}
-.page-hero .en{font-size:clamp(.85rem,1.2vw,.98rem);letter-spacing:.46em;color:var(--gold-soft);margin-bottom:18px;display:block}
-.page-hero .desc{color:var(--ink-dim);font-size:.9rem;margin-top:20px;max-width:560px}
+
 .cinderella-brand{font-family:var(--serif);font-weight:700;color:var(--vermilion-bright);letter-spacing:.12em;line-height:1.5;max-width:100%}
 .page-hero .cinderella-brand{display:block;font-size:clamp(1.45rem,5vw,2.25rem);margin-top:28px}
 .page-hero .desc-after{margin-top:12px;font-size:.88rem}
 .lead .cinderella-brand{font-size:clamp(1.15rem,3.4vw,1.5rem)}
-/* ボタン */
-.btn-fire{display:inline-block;font-weight:700;font-size:1rem;letter-spacing:.16em;color:#fff;background:linear-gradient(90deg,#5A1420,#8A2334);padding:20px 58px;border-radius:999px;box-shadow:0 12px 32px rgba(90,20,32,.35);transition:transform .3s,box-shadow .3s;border:none;cursor:pointer;font-family:var(--sans)}
-.btn-fire:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(90,20,32,.45)}
-.link-more{font-size:clamp(.9rem,1.2vw,1rem);letter-spacing:.22em;color:var(--gold);border-bottom:1px solid rgba(201,162,75,.5);padding-bottom:6px;transition:opacity .3s}
-.link-more:hover{opacity:.7}
-/* 汎用パーツ */
-.card-grid{display:grid;gap:22px}
-@media(min-width:820px){.card-grid.c3{grid-template-columns:repeat(3,1fr)}.card-grid.c2{grid-template-columns:repeat(2,1fr)}}
-.card{background:#fff;border:1px solid rgba(110,26,36,.12);border-radius:6px;padding:30px 26px;box-shadow:0 8px 28px rgba(62,16,23,.07)}
-.card h3{font-family:var(--serif);font-size:1.15rem;letter-spacing:.12em;color:var(--gold);margin-bottom:14px;font-weight:700}
-.card p{font-size:.88rem;color:var(--ink-dim)}
-.checklist{list-style:none;display:grid;gap:14px;margin:30px 0}
-.checklist li{display:flex;gap:14px;align-items:flex-start;font-size:.95rem}
-.checklist li::before{content:"";flex:none;width:9px;height:9px;margin-top:14px;background:var(--vermilion);transform:rotate(45deg)}
-.ph{border:1px dashed rgba(110,26,36,.3);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--ink-dim);font-size:.78rem;letter-spacing:.2em;background:#F3EAE5}
 
 .ba-slider{position:relative;max-width:560px;margin:0 auto;padding:0 42px}
 .ba-viewport{overflow:hidden;border-radius:6px;border:1px solid rgba(110,26,36,.1);box-shadow:0 14px 40px rgba(62,16,23,.12);background:#F1E7E2}
@@ -89,14 +68,6 @@ h2 em,h1 em{font-style:normal;color:var(--vermilion-bright)}
 .moments img{width:100%;max-width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:6px;box-shadow:0 10px 30px rgba(62,16,23,.14);border:1px solid rgba(110,26,36,.08)}
 .moments figcaption{font-size:.78rem;color:var(--ink-dim);letter-spacing:.06em;margin-top:10px;text-align:center;line-height:1.75;word-break:normal;overflow-wrap:break-word}
 .voice-meta{font-size:clamp(.88rem,1.1vw,.95rem);letter-spacing:.14em;color:var(--gold-soft);border-top:1px solid rgba(110,26,36,.12);padding-top:14px;margin-top:16px}
-.yt-grid{display:grid!important;grid-template-columns:1fr 1fr!important;grid-template-rows:auto auto;gap:2px!important;max-width:960px;margin:28px auto 0;width:100%;min-width:0;border-radius:8px;overflow:hidden;border:1px solid rgba(110,26,36,.14);box-shadow:0 10px 28px rgba(62,16,23,.12);background:rgba(110,26,36,.14)}
-.yt-card{display:block;position:relative;aspect-ratio:16/9;width:100%;border-radius:0;overflow:hidden;background:#F1E7E2 center/cover no-repeat;border:none;box-shadow:none;transition:opacity .3s}
-.yt-card::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(23,6,7,.45));pointer-events:none}
-.yt-card:hover{transform:none;box-shadow:none;opacity:.92}
-.yt-card .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:40px;height:28px;background:rgba(216,32,32,.94);border-radius:6px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.28);z-index:1}
-.yt-card .play::after{content:"";border-style:solid;border-width:6px 0 6px 10px;border-color:transparent transparent transparent #fff;margin-left:2px}
-.mission-lead{font-family:var(--serif);font-size:clamp(1rem,1.8vw,1.12rem);line-height:2.4;letter-spacing:.1em;color:var(--ink);max-width:640px;word-break:normal;overflow-wrap:break-word}
-.mission-lead em{font-style:normal;color:var(--vermilion-bright)}
 </style>
 <link rel="stylesheet" href="css/mobile.css">
 <link rel="stylesheet" href="css/cta.css">

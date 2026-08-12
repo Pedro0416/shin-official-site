@@ -1,0 +1,255 @@
+/* Shared components — headings, hero, buttons, cards */
+
+h2 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(1.55rem, 4.6vw, 2.3rem);
+  line-height: 1.7;
+  letter-spacing: .1em;
+  margin-bottom: 34px;
+}
+
+h2 em,
+h1 em {
+  font-style: normal;
+  color: var(--vermilion-bright);
+}
+
+.lead {
+  color: var(--ink-dim);
+  font-size: .95rem;
+  max-width: 620px;
+}
+
+/* サブページ共通ヒーロー（ページ固有の上書きは各 HTML に残す） */
+.page-hero {
+  min-height: 52svh;
+  display: flex;
+  align-items: flex-end;
+  padding: 140px 24px 64px;
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(216, 73, 43, .13), transparent 55%),
+    linear-gradient(180deg, var(--bg-deep), var(--bg-wine));
+}
+
+.page-hero .wrap {
+  width: 100%;
+}
+
+.page-hero h1 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 6vw, 3rem);
+  letter-spacing: .14em;
+  line-height: 1.6;
+}
+
+.page-hero .en {
+  font-size: clamp(.85rem, 1.2vw, .98rem);
+  letter-spacing: .46em;
+  color: var(--gold-soft);
+  margin-bottom: 18px;
+  display: block;
+}
+
+.page-hero .desc {
+  color: var(--ink-dim);
+  font-size: .9rem;
+  margin-top: 20px;
+  max-width: 560px;
+}
+
+.btn-fire {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: .16em;
+  color: #fff;
+  background: linear-gradient(90deg, #5A1420, #8A2334);
+  padding: 20px 58px;
+  border-radius: 999px;
+  box-shadow: 0 12px 32px rgba(90, 20, 32, .35);
+  transition: transform .3s, box-shadow .3s;
+  border: none;
+  cursor: pointer;
+  font-family: var(--sans);
+}
+
+.btn-fire:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(90, 20, 32, .45);
+}
+
+/* link-more — base + headings 吸収を1定義に統合 */
+.link-more {
+  font-family: var(--serif);
+  font-size: clamp(1.08rem, 4.2vw, 1.42rem);
+  font-weight: 700;
+  letter-spacing: .14em;
+  line-height: 1.55;
+  color: var(--gold);
+  border-bottom: 2px solid rgba(201, 162, 75, .5);
+  padding-bottom: 8px;
+  transition: opacity .3s;
+}
+
+.link-more:hover {
+  opacity: .7;
+}
+
+.life-sec .link-more,
+.why-sec .link-more {
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 4.2vw, 1.4rem);
+  font-weight: 700;
+  letter-spacing: .14em;
+  line-height: 1.55;
+  padding-bottom: 8px;
+  border-bottom-width: 2px;
+}
+
+.card-grid {
+  display: grid;
+  gap: 22px;
+}
+
+@media (min-width: 820px) {
+  .card-grid.c3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card-grid.c2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  background: #fff;
+  border: 1px solid rgba(110, 26, 36, .12);
+  border-radius: 6px;
+  padding: 30px 26px;
+  box-shadow: 0 8px 28px rgba(62, 16, 23, .07);
+}
+
+.card h3 {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  letter-spacing: .12em;
+  color: var(--gold);
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: .88rem;
+  color: var(--ink-dim);
+}
+
+.checklist {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+  margin: 30px 0;
+}
+
+.checklist li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  font-size: .95rem;
+}
+
+.checklist li::before {
+  content: "";
+  flex: none;
+  width: 9px;
+  height: 9px;
+  margin-top: 14px;
+  background: var(--vermilion);
+  transform: rotate(45deg);
+}
+
+.ph {
+  border: 1px dashed rgba(110, 26, 36, .3);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-dim);
+  font-size: .78rem;
+  letter-spacing: .2em;
+  background: #F3EAE5;
+}
+
+@media (max-width: 819px) {
+  .lead {
+    font-size: clamp(.84rem, 3.4vw, .9rem);
+    line-height: 1.82;
+    letter-spacing: .03em;
+  }
+
+  .page-hero {
+    min-height: auto;
+    padding: 118px 18px 52px;
+    overflow: hidden;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(1.55rem, 6.2vw, 1.95rem);
+    letter-spacing: .08em;
+    line-height: 1.55;
+  }
+
+  .page-hero .en {
+    letter-spacing: .26em;
+    font-size: clamp(.76rem, 2.8vw, .84rem);
+    margin-bottom: 14px;
+  }
+
+  .page-hero .desc,
+  .page-hero .desc-after {
+    font-size: clamp(.82rem, 3.3vw, .88rem);
+    line-height: 1.82;
+    letter-spacing: .03em;
+  }
+
+  .btn-fire {
+    font-size: clamp(.86rem, 3.4vw, .9rem);
+    padding: 15px 28px;
+    letter-spacing: .1em;
+  }
+
+  .link-more {
+    font-size: clamp(1.02rem, 4.5vw, 1.22rem);
+    letter-spacing: .14em;
+  }
+
+  .life-sec .link-more,
+  .why-sec .link-more {
+    font-size: clamp(1.08rem, 4.4vw, 1.28rem);
+    letter-spacing: .12em;
+    line-height: 1.55;
+    padding-bottom: 8px;
+    border-bottom-width: 2px;
+  }
+
+  .card {
+    padding: 20px 16px;
+  }
+
+  .card h3 {
+    font-size: clamp(.92rem, 3.6vw, 1rem);
+    letter-spacing: .08em;
+    margin-bottom: 8px;
+  }
+
+  .card p {
+    font-size: clamp(.8rem, 3.2vw, .86rem);
+    line-height: 1.78;
+  }
+
+  .checklist li {
+    font-size: clamp(.84rem, 3.3vw, .9rem);
+    line-height: 1.72;
+  }
+}

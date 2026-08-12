@@ -11,43 +11,9 @@
 <link rel="stylesheet" href="css/1-tokens.css">
 <link rel="stylesheet" href="css/2-base.css">
 <link rel="stylesheet" href="css/3-layout.css">
+<link rel="stylesheet" href="css/4-components.css">
+<link rel="stylesheet" href="css/5-blocks.css">
 <style>
-@media(max-width:819px){
-  .page-hero{padding:120px 18px 48px;min-height:42svh}
-}
-h2{font-family:var(--serif);font-weight:700;font-size:clamp(1.55rem,4.6vw,2.3rem);line-height:1.7;letter-spacing:.1em;margin-bottom:34px}
-h2 em,h1 em{font-style:normal;color:var(--vermilion-bright)}
-.lead{color:var(--ink-dim);font-size:.95rem;max-width:620px}
-/* サブページ共通ヒーロー */
-.page-hero{min-height:52svh;display:flex;align-items:flex-end;padding:140px 24px 64px;background:radial-gradient(120% 90% at 50% 0%,rgba(216,73,43,.13),transparent 55%),linear-gradient(180deg,var(--bg-deep),var(--bg-wine))}
-.page-hero .wrap{width:100%}
-.page-hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(1.9rem,6vw,3rem);letter-spacing:.14em;line-height:1.6}
-.page-hero .en{font-size:clamp(.85rem,1.2vw,.98rem);letter-spacing:.46em;color:var(--gold-soft);margin-bottom:18px;display:block}
-.page-hero .desc{color:var(--ink-dim);font-size:.9rem;margin-top:20px;max-width:560px}
-/* ボタン */
-.btn-fire{display:inline-block;font-weight:700;font-size:1rem;letter-spacing:.16em;color:#fff;background:linear-gradient(90deg,#5A1420,#8A2334);padding:20px 58px;border-radius:999px;box-shadow:0 12px 32px rgba(90,20,32,.35);transition:transform .3s,box-shadow .3s;border:none;cursor:pointer;font-family:var(--sans)}
-.btn-fire:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(90,20,32,.45)}
-.link-more{font-size:clamp(.9rem,1.2vw,1rem);letter-spacing:.22em;color:var(--gold);border-bottom:1px solid rgba(201,162,75,.5);padding-bottom:6px;transition:opacity .3s}
-.link-more:hover{opacity:.7}
-.life-sec .link-more{font-family:var(--serif);font-size:clamp(1.1rem,4.2vw,1.4rem);font-weight:700;letter-spacing:.14em;line-height:1.55;padding-bottom:8px;border-bottom-width:2px}
-/* 汎用パーツ */
-.card-grid{display:grid;gap:22px}
-@media(min-width:820px){.card-grid.c3{grid-template-columns:repeat(3,1fr)}.card-grid.c2{grid-template-columns:repeat(2,1fr)}}
-.card{background:#fff;border:1px solid rgba(110,26,36,.12);border-radius:6px;padding:30px 26px;box-shadow:0 8px 28px rgba(62,16,23,.07)}
-.card h3{font-family:var(--serif);font-size:1.15rem;letter-spacing:.12em;color:var(--gold);margin-bottom:14px;font-weight:700}
-.card p{font-size:.88rem;color:var(--ink-dim)}
-.checklist{list-style:none;display:grid;gap:14px;margin:30px 0}
-.checklist li{display:flex;gap:14px;align-items:flex-start;font-size:.95rem}
-.checklist li::before{content:"";flex:none;width:9px;height:9px;margin-top:14px;background:var(--vermilion);transform:rotate(45deg)}
-.ph{border:1px dashed rgba(110,26,36,.3);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--ink-dim);font-size:.78rem;letter-spacing:.2em;background:#F3EAE5}
-
-.mission-block{position:relative;margin:34px 0;padding:24px 0 24px 26px;border-left:2px solid var(--gold)}
-.mission-block::before{content:"";position:absolute;left:-2px;top:0;width:2px;height:32px;background:var(--vermilion-bright)}
-.mission-label{display:flex;align-items:center;gap:14px;font-size:clamp(1.28rem,4.6vw,1.55rem);letter-spacing:.28em;color:var(--gold-soft);font-weight:600;margin-bottom:20px}
-.mission-label em{font-style:normal;font-family:var(--serif);font-size:clamp(1.95rem,7.2vw,2.65rem);letter-spacing:0;line-height:1.4;color:var(--vermilion-bright);font-weight:800;font-feature-settings:"palt" 0,"pkna" 0;font-kerning:none;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-.mission{font-family:var(--serif);font-size:1.02rem;line-height:2.1;margin:0;letter-spacing:.05em}
-.mission-lines{display:grid;gap:10px}
-.mission-lines p{font-family:var(--serif);font-size:1.02rem;line-height:1.9;margin:0;letter-spacing:.05em}
 .prof-roles{list-style:none;display:grid;gap:14px;margin:8px 0 28px;padding:20px 22px;max-width:560px;border:1px solid rgba(110,26,36,.28);background:rgba(255,255,255,.88);border-radius:2px;box-shadow:0 4px 14px rgba(62,16,23,.04)}
 .prof-roles li{border:none;padding:0 0 0 1.5em;display:block;position:relative;font-family:var(--serif);font-size:clamp(.95rem,1.7vw,1.1rem);line-height:1.75;letter-spacing:.06em;color:var(--ink)}
 .prof-roles li::before{content:"◻";position:absolute;left:0;top:0;color:var(--vermilion-bright);font-size:.95em}
@@ -75,12 +41,11 @@ h2 em,h1 em{font-style:normal;color:var(--vermilion-bright)}
 .life-body{max-width:680px;margin:0 auto}
 .life-body p{font-family:var(--serif);font-size:1.02rem;line-height:2.1;letter-spacing:.05em;margin:0 0 22px}
 .life-body p em{font-style:normal;color:var(--vermilion-bright)}
-.life-body .pull{font-size:clamp(1.32rem,5.2vw,1.78rem);font-weight:700;color:var(--gold);letter-spacing:.08em;line-height:1.85;text-align:center;margin:36px 0}
+
 .life-body .sig{text-align:right;color:var(--gold-soft);letter-spacing:.18em;margin-bottom:0;font-size:clamp(1.15rem,4.2vw,1.35rem)}
 @media(max-width:819px){
   .prof-visual{max-width:280px;margin:0 auto}
   .prof-grid{gap:36px}
-  .mission-block{margin:28px 0 0;padding:20px 0 20px 18px}
   .prof-roles{gap:18px;margin:6px 0 24px}
   .origin-sec .wrap{padding:0;min-width:0}
   .origin-list{gap:18px;width:100%}
@@ -93,7 +58,6 @@ h2 em,h1 em{font-style:normal;color:var(--vermilion-bright)}
   .origin-body p{font-size:clamp(.82rem,3.6vw,.88rem);line-height:1.82;letter-spacing:.02em}
   .life-body p{font-size:clamp(.92rem,3.8vw,.98rem);line-height:1.95;letter-spacing:.03em;overflow-wrap:break-word;word-break:normal}
   .life-sec h2{font-size:clamp(1.7rem,7.2vw,2.2rem);letter-spacing:.06em;line-height:1.5;margin-bottom:22px}
-  .life-body .pull{font-size:clamp(1.22rem,5vw,1.58rem);letter-spacing:.06em;line-height:1.75;margin:28px 0}
 }
 </style>
 <link rel="stylesheet" href="css/mobile.css">

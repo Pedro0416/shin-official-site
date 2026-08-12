@@ -51,21 +51,6 @@
     padding: 0 4px;
   }
 
-  .yt-grid {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 2px !important;
-    width: 100%;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-
-  .yt-card {
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    border: none !important;
-  }
-
   .hero { overflow: hidden; }
   .hero-photos { overflow: hidden; }
 
@@ -203,18 +188,6 @@
     display: none;
   }
 
-  .page-hero {
-    min-height: auto;
-    padding: 118px 18px 52px;
-    overflow: hidden;
-  }
-
-  .page-hero h1 {
-    font-size: clamp(1.55rem, 6.2vw, 1.95rem);
-    letter-spacing: .08em;
-    line-height: 1.55;
-  }
-
   body:has(.contact-cta) .page-hero h1 {
     font-size: clamp(2rem, 8.2vw, 2.55rem);
     font-weight: 800;
@@ -251,19 +224,6 @@
     font-size: clamp(1.02rem, 3.8vw, 1.12rem);
   }
 
-  .page-hero .en {
-    letter-spacing: .26em;
-    font-size: clamp(.76rem, 2.8vw, .84rem);
-    margin-bottom: 14px;
-  }
-
-  .page-hero .desc,
-  .page-hero .desc-after {
-    font-size: clamp(.82rem, 3.3vw, .88rem);
-    line-height: 1.82;
-    letter-spacing: .03em;
-  }
-
   .j-hero {
     min-height: auto;
     padding: 118px 18px 52px;
@@ -287,54 +247,10 @@
     letter-spacing: .03em;
   }
 
-  .lead,
-  .mission-lead,
   .prof-leads .lead {
     font-size: clamp(.84rem, 3.4vw, .9rem);
     line-height: 1.82;
     letter-spacing: .03em;
-  }
-
-  .mission-block {
-    margin: 22px 0 0;
-    padding: 16px 0 16px 14px;
-  }
-
-  .mission-label,
-  .essay-block .essay-label {
-    gap: 10px;
-    letter-spacing: .22em;
-    font-size: clamp(1.18rem, 4.8vw, 1.35rem);
-    margin-bottom: 18px;
-    align-items: center;
-  }
-
-  .mission-label em,
-  .essay-block .essay-label em {
-    letter-spacing: 0;
-    font-size: clamp(1.55rem, 6.5vw, 1.95rem);
-    font-weight: 800;
-    line-height: 1.4;
-    font-feature-settings: "palt" 0, "pkna" 0;
-    font-kerning: none;
-  }
-
-  .mission-label em {
-    font-size: clamp(1.85rem, 8vw, 2.35rem);
-  }
-
-  .mission-lines p {
-    font-size: clamp(1.22rem, 5vw, 1.45rem);
-    line-height: 1.85;
-    letter-spacing: .04em;
-    font-weight: 700;
-  }
-
-  .essay-copy {
-    font-size: clamp(.84rem, 3.3vw, .9rem);
-    line-height: 1.9;
-    letter-spacing: .03em;
-    margin-bottom: 10px;
   }
 
   .story-quote,
@@ -493,38 +409,6 @@
     margin-bottom: 14px;
   }
 
-  .essay-traits,
-  .why-body .essay-traits {
-    font-family: var(--serif);
-    line-height: 2.2;
-    letter-spacing: .06em;
-    margin: 1.2em 0;
-  }
-
-  .essay .pull,
-  .life-body .pull,
-  .why-body .pull {
-    font-size: clamp(1.18rem, 4.6vw, 1.52rem);
-    font-weight: 700;
-    letter-spacing: .05em;
-    line-height: 1.85;
-    margin: 24px 0;
-    text-wrap: balance;
-  }
-
-  .essay .pull {
-    padding: 4px 0 4px 18px;
-    margin: 2em 0;
-  }
-
-  .essay-emphasis,
-  .why-body .essay-emphasis {
-    font-size: clamp(1.12rem, 4.4vw, 1.42rem);
-    letter-spacing: .06em;
-    line-height: 1.75;
-    margin: 1em 0 1.4em;
-  }
-
   .product-title-main {
     font-size: clamp(1.28rem, 4.8vw, 1.55rem);
     margin-bottom: 8px;
@@ -571,26 +455,6 @@
     height: 30px;
   }
 
-  .card {
-    padding: 20px 16px;
-  }
-
-  .card h3 {
-    font-size: clamp(.92rem, 3.6vw, 1rem);
-    letter-spacing: .08em;
-    margin-bottom: 8px;
-  }
-
-  .card p {
-    font-size: clamp(.8rem, 3.2vw, .86rem);
-    line-height: 1.78;
-  }
-
-  .checklist li {
-    font-size: clamp(.84rem, 3.3vw, .9rem);
-    line-height: 1.72;
-  }
-
   .change-list li {
     padding: 14px 12px;
     font-size: clamp(.82rem, 3.2vw, .88rem);
@@ -630,12 +494,6 @@
     letter-spacing: .14em;
   }
 
-  .btn-fire {
-    font-size: clamp(.86rem, 3.4vw, .9rem);
-    padding: 15px 28px;
-    letter-spacing: .1em;
-  }
-
   .btn-line {
     font-size: clamp(.86rem, 3.4vw, .9rem);
     padding: 15px 28px;
@@ -645,31 +503,6 @@
   .sticky-cta .btn-line {
     font-size: clamp(.84rem, 3.2vw, .88rem);
     padding: 13px;
-  }
-
-  .link-more {
-    font-size: clamp(.8rem, 3.1vw, .86rem);
-    letter-spacing: .14em;
-  }
-
-  .life-sec .link-more {
-    font-family: var(--serif);
-    font-size: clamp(1.08rem, 4.4vw, 1.28rem);
-    font-weight: 700;
-    letter-spacing: .12em;
-    line-height: 1.55;
-    padding-bottom: 8px;
-    border-bottom-width: 2px;
-  }
-
-  .why-sec .link-more {
-    font-family: var(--serif);
-    font-size: clamp(1.08rem, 4.4vw, 1.28rem);
-    font-weight: 700;
-    letter-spacing: .12em;
-    line-height: 1.55;
-    padding-bottom: 8px;
-    border-bottom-width: 2px;
   }
 
   .btn-yt {

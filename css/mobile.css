@@ -52,15 +52,18 @@
   }
 
   .yt-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 2px !important;
     width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
   }
 
-  @media (min-width: 560px) {
-    .yt-grid {
-      grid-template-columns: 1fr 1fr;
-    }
+  .yt-card {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
   }
 
   .hero { overflow: hidden; }
@@ -400,8 +403,10 @@
   }
 
   .achieve-tag {
-    font-size: clamp(1.05rem, 4.2vw, 1.2rem);
-    margin-bottom: 14px;
+    font-size: clamp(1.35rem, 5.5vw, 1.7rem);
+    margin-bottom: 18px;
+    text-align: center;
+    font-weight: 800;
   }
 
   .achieve-brand {

@@ -157,8 +157,8 @@
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.15});
 document.querySelectorAll('.fx').forEach(el=>io.observe(el));
 const st=document.getElementById('stickyCta');
-if(st){const h=document.querySelector('.page-hero,.hero');
-new IntersectionObserver(es=>{st.classList.toggle('show',!es[0].isIntersecting)},{threshold:.1}).observe(h);}
+if(st){const h=document.querySelector('.page-hero,.hero,.j-hero');
+if(h){new IntersectionObserver(es=>{st.classList.toggle('show',!es[0].isIntersecting)},{threshold:.1}).observe(h);}}
 const navToggle=document.querySelector('.nav-toggle');
 if(navToggle){
   const closeNav=()=>{navToggle.setAttribute('aria-expanded','false');document.body.classList.remove('nav-open')};

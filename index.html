@@ -134,7 +134,7 @@
     </div>
     <div class="fx" style="margin-top:40px;text-align:center;display:flex;flex-wrap:wrap;gap:20px;justify-content:center;align-items:center">
       <a class="link-more" href="voice.html">すべての変化の記録を見る →</a>
-      <a class="btn-yt" href="https://youtu.be/vM_soSQTJM0" target="_blank" rel="noopener">
+      <a class="btn-yt" href="https://youtu.be/j4NA0WEkACQ?si=rX-0wyMGfQC8mxHN" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.6 4 12 4 12 4s-4.6 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S.8 9.4.8 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.6.2 7.6.2s4.6 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15V8.6l6.2 3.2-6.2 3.2z"/></svg>
         YouTubeで見る
       </a>
@@ -201,8 +201,8 @@
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.15});
 document.querySelectorAll('.fx').forEach(el=>io.observe(el));
 const st=document.getElementById('stickyCta');
-if(st){const h=document.querySelector('.page-hero,.hero');
-new IntersectionObserver(es=>{st.classList.toggle('show',!es[0].isIntersecting)},{threshold:.1}).observe(h);}
+if(st){const h=document.querySelector('.page-hero,.hero,.j-hero');
+if(h){new IntersectionObserver(es=>{st.classList.toggle('show',!es[0].isIntersecting)},{threshold:.1}).observe(h);}}
 const navToggle=document.querySelector('.nav-toggle');
 if(navToggle){
   const closeNav=()=>{navToggle.setAttribute('aria-expanded','false');document.body.classList.remove('nav-open')};

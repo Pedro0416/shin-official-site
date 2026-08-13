@@ -1,8 +1,12 @@
 /* Shared components — headings, hero, buttons, cards */
 
+h1, h2, h3 {
+  font-family: var(--serif);
+}
+
 h2 {
   font-family: var(--serif);
-  font-weight: 700;
+  font-weight: 800;
   font-size: clamp(1.55rem, 4.6vw, 2.3rem);
   line-height: 1.7;
   letter-spacing: .1em;
@@ -16,6 +20,7 @@ h1 em {
 }
 
 .lead {
+  font-family: var(--serif);
   color: var(--ink-dim);
   font-size: .95rem;
   max-width: 620px;
@@ -52,11 +57,19 @@ h1 em {
   display: block;
 }
 
-.page-hero .desc {
+.page-hero .desc,
+.page-hero .desc-after {
+  font-family: var(--serif);
   color: var(--ink-dim);
   font-size: .9rem;
   margin-top: 20px;
   max-width: 560px;
+  letter-spacing: .05em;
+  line-height: 2;
+}
+
+.page-hero .desc-after {
+  margin-top: 12px;
 }
 
 .btn-fire {

@@ -95,6 +95,7 @@
 .achieve-item .achieve-num{font-family:var(--serif);font-weight:800;color:var(--gold);font-size:clamp(1.95rem,6.8vw,3rem);line-height:1.2;max-width:100%;overflow-wrap:break-word;letter-spacing:.02em;text-shadow:0 1px 0 rgba(255,255,255,.35)}
 .achieve-item .achieve-num small{font-size:.48em;margin-left:2px;font-weight:800}
 .achieve-item .achieve-sub{font-family:var(--serif);font-size:clamp(.72rem,2.6vw,.86rem);letter-spacing:.06em;color:var(--vermilion-bright);margin-top:8px;line-height:1.55;font-weight:700}
+.achieve-item .achieve-sub-title{display:inline-block;white-space:nowrap;font-size:clamp(.62rem,2.2vw,.78rem);letter-spacing:.02em}
 .achieve-item .achieve-label{font-size:clamp(.78rem,2.8vw,.88rem);letter-spacing:.08em;color:var(--ink-dim);margin-top:8px;line-height:1.65}
 .achieve-feature{margin-top:20px;text-align:center}
 .achieve-vid{display:block;position:relative;max-width:560px;margin:0 auto;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#F1E7E2 center/cover no-repeat;border:1px solid rgba(110,26,36,.1);box-shadow:0 10px 28px rgba(62,16,23,.12);transition:transform .35s,box-shadow .35s}

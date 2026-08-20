@@ -71,35 +71,6 @@
   gap:18px;
 }
 
-.cta-lead{
-  margin:8px auto 40px;
-  max-width:22em;
-  text-align:center;
-  color:#fff;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:16px;
-  font-family:var(--serif);
-  font-size:clamp(1.05rem,3.8vw,1.28rem);
-  font-weight:600;
-  letter-spacing:.14em;
-  line-height:1.9;
-}
-
-.cta-lead-line{
-  display:block;
-  color:#fff;
-  width:100%;
-}
-
-.cta-lead-rule{
-  display:block;
-  width:min(56px,16vw);
-  height:1px;
-  background:rgba(255,255,255,.45);
-}
-
 .cta-nudge{
   margin:0 0 4px;
   max-width:22em;

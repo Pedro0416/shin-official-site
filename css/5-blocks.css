@@ -234,10 +234,12 @@
 .pull em {
   font-style: normal;
   color: var(--vermilion-bright);
+  -webkit-text-fill-color: var(--vermilion-bright);
 }
 
 .life-body .pull,
-.why-body .pull {
+.why-body .pull,
+.essay .pull {
   font-size: clamp(1.32rem, 5.2vw, 1.78rem);
   font-weight: 700;
   letter-spacing: .08em;
@@ -246,6 +248,9 @@
   margin: 36px 0;
   border-left: none;
   padding: 0;
+  word-break: keep-all;
+  line-break: strict;
+  overflow-wrap: normal;
 }
 
 .life-body .pull {

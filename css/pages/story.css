@@ -10,6 +10,11 @@
 .essay .essay-traits{text-align:left}
 .essay .essay-emphasis,
 .essay .pull{text-align:center}
+.essay .pull em{
+  font-style:normal;
+  color:var(--vermilion-bright);
+  -webkit-text-fill-color:var(--vermilion-bright);
+}
 .essay p{font-family:var(--serif);color:var(--ink-dim);font-size:1.02rem;line-height:2.1;letter-spacing:.05em;margin-bottom:1.8em}
 
 .essay .strong{color:var(--ink);font-weight:600}

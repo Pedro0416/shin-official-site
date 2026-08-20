@@ -65,7 +65,7 @@
   .stats h2{font-size:clamp(1.3rem,5vw,1.75rem);letter-spacing:.06em;line-height:1.65;margin-bottom:26px}
   .stats .eyebrow{gap:12px;letter-spacing:.28em;font-size:.9rem}
   .cin-head h2{font-size:clamp(1.05rem,4vw,1.32rem);letter-spacing:.04em;line-height:1.7;margin-bottom:20px}
-  .cin-brand{font-size:clamp(1.02rem,3.8vw,1.28rem);letter-spacing:.05em;margin:6px 0 14px;line-height:1.6}
+  .cin-brand{font-size:clamp(1.28rem,5.2vw,1.65rem);letter-spacing:.04em;margin:8px 0 16px;line-height:1.5;font-weight:800}
   .cin-head .eyebrow{gap:12px;letter-spacing:.28em;font-size:.9rem}
   .cin-head .mission-lead{font-size:clamp(.88rem,3.6vw,.95rem);letter-spacing:.04em;line-height:1.95;overflow-wrap:break-word;word-break:normal}
   .story-quote{font-size:clamp(1.05rem,4.2vw,1.3rem);letter-spacing:.08em;line-height:2;padding:0 4px;max-width:100%}
@@ -147,6 +147,24 @@
 .product-cta::after{content:"→";width:auto;height:auto;background:none;font-weight:700;letter-spacing:0;transition:transform .3s}
 .product-cta:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(90,20,32,.42);opacity:1;gap:10px}
 .product-cta:hover::after{transform:translateX(4px);width:auto}
+.product-changes{margin-top:56px;display:grid;gap:56px}
+.product-change-block{max-width:680px;margin:0 auto;width:100%}
+.product-change-title{font-family:var(--serif);font-weight:800;font-size:clamp(1.25rem,4.4vw,1.75rem);letter-spacing:.08em;line-height:1.65;text-align:center;margin:0 0 28px;color:var(--ink)}
+.change-list{list-style:none;display:grid;gap:1px;background:rgba(201,162,75,.2);border:1px solid rgba(201,162,75,.2);max-width:640px;margin:0 auto}
+.change-list li{background:#fff;padding:22px 26px;font-family:var(--serif);font-size:1rem;line-height:1.7;letter-spacing:.06em;display:flex;gap:16px;align-items:center;color:var(--ink)}
+.change-list li::before{content:"";flex:none;width:9px;height:9px;background:var(--gold);transform:rotate(45deg)}
+.product-change-note{text-align:center;margin-top:18px;color:var(--ink-dim);font-size:.9rem;line-height:1.9;letter-spacing:.04em}
+.product-change-note:first-of-type{margin-top:36px}
+.product-change-note span{color:var(--vermilion-bright)}
+.product-change-cta{text-align:center;margin-top:8px}
+.product-change-cta .product-cta{margin-top:0}
+@media(max-width:819px){
+  .product-changes{margin-top:40px;gap:44px}
+  .product-change-title{font-size:clamp(1.12rem,4.6vw,1.38rem);margin-bottom:22px;letter-spacing:.05em}
+  .change-list li{padding:18px 16px;font-size:.92rem;line-height:1.65}
+  .product-change-note{font-size:.86rem;margin-top:14px}
+  .product-change-note:first-of-type{margin-top:28px}
+}
 /* 使用イメージギャラリー */
 .use-gallery{display:grid;gap:20px;max-width:900px;margin:0 auto}
 @media(min-width:720px){.use-gallery{grid-template-columns:1fr 1fr}}
@@ -165,7 +183,7 @@
 .cin-head{max-width:720px;margin:0 auto 48px;text-align:center;min-width:0;padding:0 4px}
 .cin-head .eyebrow{justify-content:center}
 .cin-head .mission-lead{margin:0 auto;max-width:100%}
-.cin-brand{font-family:var(--serif);font-weight:700;font-size:clamp(1.35rem,4vw,1.9rem);letter-spacing:.14em;color:var(--vermilion-bright);margin:8px 0 22px;line-height:1.6;max-width:100%;overflow-wrap:break-word;word-break:normal}
+.cin-brand{font-family:var(--serif);font-weight:800;font-size:clamp(1.65rem,5.2vw,2.45rem);letter-spacing:.1em;color:var(--vermilion-bright);margin:10px 0 26px;line-height:1.5;max-width:100%;overflow-wrap:break-word;word-break:normal;white-space:nowrap}
 .cin-feature-vid{display:block;position:relative;max-width:960px;margin:0 auto;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#F1E7E2 center/cover no-repeat;border:1px solid rgba(110,26,36,.14);box-shadow:0 12px 32px rgba(62,16,23,.14);transition:transform .35s,box-shadow .35s}
 .cin-feature-vid:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(62,16,23,.18)}
 .cin-feature-vid .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:44px;background:rgba(216,32,32,.94);border-radius:10px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(0,0,0,.3);transition:transform .3s;z-index:1}
@@ -182,7 +200,7 @@
 h2{font-size:clamp(1.72rem,6.8vw,2.85rem);font-weight:800;letter-spacing:.08em;line-height:1.55;margin-bottom:28px}
 .product-cta{font-family:var(--serif);font-size:clamp(1.05rem,3.8vw,1.28rem);font-weight:700}
 .lecture-text h3{font-size:clamp(1.38rem,5vw,1.95rem);font-weight:800;letter-spacing:.14em;margin-bottom:16px}
-.cin-brand{font-size:clamp(1.48rem,5.8vw,2.25rem);font-weight:800;letter-spacing:.1em;line-height:1.55;margin:10px 0 24px}
+.cin-brand{font-size:clamp(1.72rem,6.2vw,2.55rem);font-weight:800;letter-spacing:.08em;line-height:1.5;margin:12px 0 28px}
 .cin-head h2{font-size:clamp(1.35rem,4.6vw,1.85rem);letter-spacing:.06em;line-height:1.7}
 .product-title-main{font-size:clamp(1.78rem,6.2vw,2.75rem);font-weight:800;margin-bottom:12px}
 .product-title-sub{font-size:clamp(1.18rem,4.5vw,1.72rem);font-weight:700;letter-spacing:.1em}
@@ -193,7 +211,7 @@ h2{font-size:clamp(1.72rem,6.8vw,2.85rem);font-weight:800;letter-spacing:.08em;l
   h2{font-size:clamp(1.58rem,7vw,2rem);letter-spacing:.06em;margin-bottom:22px}
   .product-cta{font-size:clamp(1rem,3.8vw,1.15rem)}
   .lecture-text h3{font-size:clamp(1.28rem,5.2vw,1.55rem)}
-  .cin-brand{font-size:clamp(1.32rem,6vw,1.72rem)}
+  .cin-brand{font-size:clamp(1.38rem,6.4vw,1.85rem);font-weight:800;letter-spacing:.03em}
   .product-title-main{font-size:clamp(1.55rem,6.5vw,1.95rem)}
   .product-title-sub{font-size:clamp(1.05rem,4.8vw,1.35rem)}
 }
@@ -333,10 +351,11 @@ h2{font-size:clamp(1.72rem,6.8vw,2.85rem);font-weight:800;letter-spacing:.08em;l
     padding: 0 2px;
   }
   .cin-brand {
-    font-size: clamp(.96rem, 3.5vw, 1.18rem);
-    letter-spacing: .04em;
-    line-height: 1.55;
-    margin: 4px 0 12px;
+    font-size: clamp(1.28rem, 5.4vw, 1.72rem);
+    letter-spacing: .03em;
+    line-height: 1.5;
+    margin: 8px 0 16px;
+    font-weight: 800;
   }
   .cin-head {
     padding: 0 2px;

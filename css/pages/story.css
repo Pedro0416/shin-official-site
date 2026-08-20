@@ -5,10 +5,25 @@
 .chapter p{font-family:var(--serif);color:var(--ink-dim);font-size:1.02rem;line-height:2.1;letter-spacing:.05em}
 .big-quote{font-family:var(--serif);font-weight:600;font-size:clamp(1.25rem,4vw,1.8rem);line-height:2.4;letter-spacing:.14em;text-align:center;max-width:680px;margin:0 auto}
 .big-quote em{font-style:normal;color:var(--vermilion-bright)}
-.essay{max-width:620px;margin:0 auto}
+.essay{max-width:620px;margin:0 auto;text-align:left}
+.essay p,
+.essay .essay-traits{text-align:left}
+.essay .essay-emphasis,
+.essay .pull{text-align:center}
 .essay p{font-family:var(--serif);color:var(--ink-dim);font-size:1.02rem;line-height:2.1;letter-spacing:.05em;margin-bottom:1.8em}
 
 .essay .strong{color:var(--ink);font-weight:600}
+.essay .essay-emphasis .strong{
+  color:var(--vermilion-bright);
+  font-weight:800;
+  font-size:clamp(1.55rem,6.5vw,2.15rem);
+  letter-spacing:.06em;
+  line-height:1.7;
+}
+.essay .essay-emphasis{
+  font-size:clamp(1.22rem,4.8vw,1.55rem);
+  line-height:1.85;
+}
 
 .essay-title{font-family:var(--serif);font-weight:700;font-size:clamp(1.45rem,4.4vw,2rem);letter-spacing:.12em;line-height:1.8;margin-bottom:40px}
 .sig{font-family:var(--serif);text-align:right;letter-spacing:.3em;color:var(--vermilion);margin-top:3em;font-size:clamp(1.15rem,4.2vw,1.35rem)}

@@ -45,7 +45,11 @@
   .assert-title{font-size:clamp(1.12rem,4.2vw,1.42rem);letter-spacing:.04em;line-height:1.7;margin-bottom:22px;max-width:100%;padding:0 4px}
 }
 .why-sec{background:linear-gradient(180deg,var(--bg-wine),var(--bg-deep))}
-.why-body{max-width:680px;margin:0 auto}
+.why-body{max-width:680px;margin:0 auto;text-align:left}
+.why-body p,
+.why-body .essay-traits{text-align:left}
+.why-body .essay-emphasis,
+.why-body .pull{text-align:center}
 .why-body p{font-family:var(--serif);font-size:1.02rem;line-height:2.1;letter-spacing:.05em;margin:0 0 22px}
 
 .why-body p em{font-style:normal;color:var(--vermilion-bright)}

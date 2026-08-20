@@ -195,7 +195,7 @@
 
 .essay-traits {
   font-family: var(--serif);
-  text-align: center;
+  text-align: left;
   letter-spacing: .1em;
   color: var(--ink);
   font-weight: 500;
@@ -215,7 +215,8 @@
 
 .essay-emphasis .strong {
   color: var(--vermilion-bright);
-  font-weight: 700;
+  font-weight: 800;
+  font-size: 1.35em;
 }
 
 .pull {
@@ -253,11 +254,6 @@
 
 .why-body .pull {
   color: var(--ink);
-}
-
-.why-body .pull em {
-  font-style: normal;
-  color: var(--vermilion-bright);
 }
 
 @media (max-width: 819px) {
@@ -324,14 +320,6 @@
     border: none;
   }
 
-  .essay-traits,
-  .why-body .essay-traits {
-    font-family: var(--serif);
-    line-height: 2.2;
-    letter-spacing: .06em;
-    margin: 1.2em 0;
-  }
-
   .essay .pull,
   .life-body .pull,
   .why-body .pull {
@@ -340,6 +328,7 @@
     letter-spacing: .05em;
     line-height: 1.85;
     margin: 24px 0;
+    text-align: center;
     text-wrap: balance;
   }
 
@@ -354,6 +343,16 @@
     letter-spacing: .06em;
     line-height: 1.75;
     margin: 1em 0 1.4em;
+    text-align: center;
+  }
+
+  .essay-traits,
+  .why-body .essay-traits {
+    font-family: var(--serif);
+    line-height: 2.2;
+    letter-spacing: .06em;
+    margin: 1.2em 0;
+    text-align: left;
   }
 }
 

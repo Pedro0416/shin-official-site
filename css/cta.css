@@ -74,12 +74,12 @@
 .cta-nudge{
   margin:0 0 4px;
   max-width:22em;
-  font-family:var(--sans);
-  font-size:clamp(.82rem,3.2vw,.92rem);
-  font-weight:400;
-  letter-spacing:.06em;
-  line-height:1.85;
-  color:rgba(255,248,240,.72);
+  font-family:var(--serif);
+  font-size:clamp(.88rem,3.4vw,1.05rem);
+  font-weight:600;
+  letter-spacing:.12em;
+  line-height:1.9;
+  color:rgba(255,248,240,.78);
   text-align:center;
 }
 

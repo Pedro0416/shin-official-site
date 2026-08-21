@@ -73,14 +73,27 @@
 
 .cta-nudge{
   margin:0 0 4px;
-  max-width:22em;
+  max-width:100%;
+  padding:0 4px;
   font-family:var(--serif);
-  font-size:clamp(.88rem,3.4vw,1.05rem);
+  font-size:clamp(.82rem,3.4vw,1.05rem);
   font-weight:600;
-  letter-spacing:.12em;
+  letter-spacing:.08em;
   line-height:1.9;
   color:rgba(255,248,240,.78);
   text-align:center;
+}
+
+.cta-nudge-keep{
+  display:inline-block;
+  white-space:nowrap;
+}
+
+.cta-mark{
+  font-family:var(--sans);
+  font-style:normal;
+  font-weight:700;
+  letter-spacing:0;
 }
 
 .cta-nudge-light{

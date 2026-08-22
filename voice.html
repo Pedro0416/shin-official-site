@@ -31,6 +31,7 @@
     <span class="en">RESULTS</span>
     <h1>変化の記録</h1>
     <p class="desc">身体が変わり、目つきが変わり、<br>人生が動き出す。</p>
+    <p class="cin-collab">（マツカワリュウドウチャンネル×マイボディラボ 共同事業）</p>
     <p class="cinderella-brand">「シンデレラは努力する」</p>
     <p class="desc desc-after">で生まれた、本物の変化。</p>
   </div>
@@ -41,59 +42,6 @@
     <p class="eyebrow eyebrow-lg fx">BEFORE → AFTER</p>
     <h2 class="fx">努力は、<br>こんなにも人を変える。</h2>
     <p class="mission-lead fx" style="margin-bottom:44px">企画代表トレーナーとして伴走した、<br><em>本物の変化</em>の記録です。</p>
-    <div class="ba-slider fx" data-ba-slider>
-      <button class="ba-nav ba-prev" type="button" aria-label="前の写真">‹</button>
-      <div class="ba-viewport" aria-roledescription="carousel" aria-label="ビフォーアフター">
-        <div class="ba-track">
-          <figure class="ba-slide">
-            <div class="ba-frame">
-              <img src="img/ba_label1.jpg" alt="ビフォーアフター 1" loading="lazy">
-            </div>
-          </figure>
-          <figure class="ba-slide">
-            <div class="ba-frame">
-              <img src="img/ba_label2.jpg" alt="ビフォーアフター 2" loading="lazy">
-            </div>
-          </figure>
-          <figure class="ba-slide">
-            <div class="ba-frame">
-              <img src="img/ba_label3.jpg" alt="ビフォーアフター 3" loading="lazy">
-            </div>
-          </figure>
-          <figure class="ba-slide">
-            <div class="ba-frame">
-              <img src="img/ba_body1.jpg" alt="ビフォーアフター 4" loading="lazy">
-              <span class="ba-tag ba-tag-before">BEFORE</span>
-              <span class="ba-tag ba-tag-after">AFTER</span>
-            </div>
-          </figure>
-          <figure class="ba-slide">
-            <div class="ba-frame">
-              <img src="img/ba_body2.jpg" alt="ビフォーアフター 5" loading="lazy">
-              <span class="ba-tag ba-tag-before">BEFORE</span>
-              <span class="ba-tag ba-tag-after">AFTER</span>
-            </div>
-          </figure>
-          <figure class="ba-slide">
-            <div class="ba-frame">
-              <img src="img/ba_face1.jpg" alt="ビフォーアフター 6" loading="lazy">
-              <span class="ba-tag ba-tag-before">BEFORE</span>
-              <span class="ba-tag ba-tag-after">AFTER</span>
-            </div>
-          </figure>
-          <figure class="ba-slide">
-            <div class="ba-frame">
-              <img src="img/ba_face2.jpg" alt="ビフォーアフター 7" loading="lazy">
-              <span class="ba-tag ba-tag-before">BEFORE</span>
-              <span class="ba-tag ba-tag-after">AFTER</span>
-            </div>
-          </figure>
-        </div>
-      </div>
-      <button class="ba-nav ba-next" type="button" aria-label="次の写真">›</button>
-      <div class="ba-dots" role="tablist" aria-label="スライド選択"></div>
-      <p class="ba-counter" aria-live="polite"><span data-ba-current>1</span> / <span data-ba-total>7</span></p>
-    </div>
     <div class="yt-grid fx" id="ytGrid" aria-label="シンデレラ出演動画"></div>
   </div>
 </section>
@@ -185,55 +133,6 @@ if(ytGrid){VIDEOS.forEach(id=>{
   a.innerHTML='<span class="play" aria-hidden="true"></span>';
   ytGrid.appendChild(a);
 })}
-
-(function(){
-  const root=document.querySelector('[data-ba-slider]');
-  if(!root) return;
-  const track=root.querySelector('.ba-track');
-  const slides=[...root.querySelectorAll('.ba-slide')];
-  const prev=root.querySelector('.ba-prev');
-  const next=root.querySelector('.ba-next');
-  const dotsWrap=root.querySelector('.ba-dots');
-  const curEl=root.querySelector('[data-ba-current]');
-  const totEl=root.querySelector('[data-ba-total]');
-  const n=slides.length;
-  let i=0, timer=null, touchX=0;
-  if(totEl) totEl.textContent=String(n);
-  const dots=slides.map((_,idx)=>{
-    const b=document.createElement('button');
-    b.type='button';
-    b.className='ba-dot';
-    b.setAttribute('aria-label',(idx+1)+'枚目を表示');
-    b.addEventListener('click',()=>go(idx,true));
-    dotsWrap.appendChild(b);
-    return b;
-  });
-  function go(to,stop){
-    i=(to%n+n)%n;
-    track.style.transform='translateX(-'+i*100+'%)';
-    dots.forEach((d,idx)=>d.setAttribute('aria-current',idx===i?'true':'false'));
-    if(curEl) curEl.textContent=String(i+1);
-    if(stop) restart();
-  }
-  function restart(){
-    clearInterval(timer);
-    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    timer=setInterval(()=>go(i+1,false),4200);
-  }
-  prev.addEventListener('click',()=>go(i-1,true));
-  next.addEventListener('click',()=>go(i+1,true));
-  const viewport=root.querySelector('.ba-viewport');
-  viewport.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].clientX},{passive:true});
-  viewport.addEventListener('touchend',e=>{
-    const dx=e.changedTouches[0].clientX-touchX;
-    if(Math.abs(dx)<40) return;
-    go(dx>0?i-1:i+1,true);
-  },{passive:true});
-  root.addEventListener('mouseenter',()=>clearInterval(timer));
-  root.addEventListener('mouseleave',restart);
-  go(0,false);
-  restart();
-})();
 </script>
 </body>
 </html>

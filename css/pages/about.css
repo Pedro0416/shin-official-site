@@ -2,7 +2,7 @@
 .prof-roles{list-style:none;display:grid;gap:14px;margin:8px 0 28px;padding:20px 22px;max-width:100%;border:1px solid rgba(110,26,36,.28);background:rgba(255,255,255,.88);border-radius:2px;box-shadow:0 4px 14px rgba(62,16,23,.04)}
 .prof-roles li{border:none;padding:0 0 0 1.5em;display:block;position:relative;font-family:var(--serif);font-size:clamp(.95rem,1.7vw,1.1rem);line-height:1.75;letter-spacing:.06em;color:var(--ink)}
 .prof-roles li::before{content:"◻";position:absolute;left:0;top:0;color:var(--vermilion-bright);font-size:.95em}
-.role-keep{display:block;white-space:nowrap;font-size:clamp(10px,2.55vw,.9rem);letter-spacing:0}
+.role-keep{display:block;white-space:nowrap;font-size:clamp(12px,3.2vw,1.05rem);letter-spacing:0}
 .prof-role-main{font-size:inherit;line-height:inherit;letter-spacing:inherit;color:inherit}
 .prof-role-sub{display:block;padding-left:0;margin-top:2px;font-size:.92em;line-height:1.6;letter-spacing:.08em;color:var(--ink-dim)}
 .prof-leads{display:grid;gap:14px;margin-bottom:8px}
@@ -34,7 +34,7 @@
   .prof-visual{max-width:280px;margin:0 auto}
   .prof-grid{gap:36px}
   .prof-roles{gap:18px;margin:6px 0 24px;padding:18px 14px;max-width:100%}
-  .role-keep{font-size:clamp(10px,2.55vw,.74em);letter-spacing:0}
+  .role-keep{font-size:clamp(11px,3.1vw,.92em);letter-spacing:0}
   .origin-sec .wrap{padding:0;min-width:0}
   .origin-list{gap:18px;width:100%}
   .origin-item{padding:20px 16px;border-left:none;border:1px solid rgba(169,128,60,.2);border-radius:4px;background:rgba(255,255,255,.72);box-shadow:0 8px 24px rgba(62,16,23,.04);overflow:hidden}

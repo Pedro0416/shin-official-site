@@ -73,6 +73,7 @@
   .wrap{min-width:0;max-width:100%}
   .lecture-text{padding:26px 20px}
   .portrait{max-width:320px;margin:0 auto}
+  .cin-photos{gap:8px}
 }
 @media(prefers-reduced-motion:reduce) and (max-width:819px){.hero-slide{animation:none;opacity:0;transform:scale(1.14)}.hero-slide:first-child{opacity:1}}
 .scroll-cue::before{content:"";position:absolute;left:0;top:-100%;width:1px;height:100%;background:var(--gold);animation:drip 2.2s ease-in-out infinite}
@@ -168,9 +169,9 @@
 /* 使用イメージギャラリー */
 .use-gallery{display:grid;gap:20px;max-width:900px;margin:0 auto}
 @media(min-width:720px){.use-gallery{grid-template-columns:1fr 1fr}}
-.use-gallery .ba-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:960px;margin:20px auto 0}
-@media(min-width:820px){.ba-strip{gap:18px}}
-.ba-strip img{width:100%;aspect-ratio:1;object-fit:cover;display:block;border-radius:6px;box-shadow:0 8px 24px rgba(62,16,23,.12);border:1px solid rgba(110,26,36,.08)}
+.use-gallery .ba-strip,.cin-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:960px;margin:20px auto 0}
+@media(min-width:820px){.ba-strip,.cin-photos{gap:18px}}
+.ba-strip img,.cin-photos img{width:100%;aspect-ratio:1;object-fit:cover;display:block;border-radius:6px;box-shadow:0 8px 24px rgba(62,16,23,.12);border:1px solid rgba(110,26,36,.08)}
 .cta-sec{background:radial-gradient(120% 100% at 50% 0%,rgba(255,255,255,.06),transparent 55%),var(--enji-deep);text-align:center;color:#F7EFE9}
 .cta-sec .lead{color:rgba(247,239,233,.78)}
 .cta-sec .eyebrow{color:#D9B25E}

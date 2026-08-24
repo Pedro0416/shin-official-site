@@ -174,8 +174,8 @@
 .cta-sec .lead{color:rgba(247,239,233,.78)}
 .cta-sec .eyebrow{color:#D9B25E}
 
-.role-frames{list-style:none;display:grid;gap:14px;margin:0 0 28px;padding:20px 22px;max-width:100%;box-sizing:border-box;border:1px solid rgba(110,26,36,.28);background:rgba(255,255,255,.88);border-radius:2px;box-shadow:0 4px 14px rgba(62,16,23,.04)}
-.role-frames li{font-family:var(--serif);font-size:clamp(.95rem,1.7vw,1.1rem);line-height:1.75;letter-spacing:.06em;color:var(--ink);border:none;background:none;padding:0;padding-left:1.5em;box-shadow:none;position:relative;min-width:0;overflow-wrap:anywhere;word-break:break-word}
+.role-frames{list-style:none;display:grid;gap:12px;margin:0 0 22px;padding:18px 16px;max-width:100%;box-sizing:border-box;border:1px solid rgba(110,26,36,.28);background:rgba(255,255,255,.88);border-radius:2px;box-shadow:0 4px 14px rgba(62,16,23,.04)}
+.role-frames li{font-family:var(--serif);font-size:clamp(11px,3.05vw,1.1rem);line-height:1.7;letter-spacing:.03em;color:var(--ink);border:none;background:none;padding:0;padding-left:1.4em;box-shadow:none;position:relative;min-width:0;white-space:nowrap}
 .role-frames li::before{content:"◻";position:absolute;left:0;top:0;color:var(--vermilion-bright);font-size:.95em}
 .role-keep{font-size:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit}
 /* CINDERELLA */
@@ -228,8 +228,8 @@ h2{font-size:clamp(1.72rem,6.8vw,2.85rem);font-weight:800;letter-spacing:.08em;l
     min-width: 0;
     max-width: 100%;
   }
-  .role-frames{padding:18px 14px}
-  .role-frames li{letter-spacing:.03em}
+  .role-frames{padding:14px 12px;gap:10px;margin:0 0 16px}
+  .role-frames li{letter-spacing:.01em;font-size:clamp(10.5px,2.9vw,.98rem)}
   .hero { overflow: hidden; }
   .hero-photos { overflow: hidden; }
   .hero-inner {

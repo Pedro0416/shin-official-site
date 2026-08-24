@@ -17,7 +17,7 @@
 }
 
 .cinderella-brand{font-family:var(--serif);font-weight:700;color:var(--vermilion-bright);letter-spacing:.12em;line-height:1.5;max-width:100%}
-.page-hero .cin-collab{display:block;margin:22px 0 6px;font-family:var(--serif);font-size:clamp(.95rem,3.6vw,1.18rem);font-weight:700;letter-spacing:.02em;color:var(--ink-dim);line-height:1.6;white-space:nowrap}
+.page-hero .cin-collab{display:block;margin:22px 0 6px;font-family:var(--serif);font-size:clamp(.86rem,3.4vw,1.18rem);font-weight:700;letter-spacing:.02em;color:var(--ink-dim);line-height:1.6;overflow-wrap:anywhere;word-break:break-word}
 .page-hero .cinderella-brand{display:block;font-size:clamp(1.45rem,5vw,2.25rem);margin-top:0}
 .page-hero .desc-after{margin-top:12px;font-size:.88rem}
 .lead .cinderella-brand{font-size:clamp(1.15rem,3.4vw,1.5rem)}

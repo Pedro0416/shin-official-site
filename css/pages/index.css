@@ -174,15 +174,15 @@
 .cta-sec .lead{color:rgba(247,239,233,.78)}
 .cta-sec .eyebrow{color:#D9B25E}
 
-.role-frames{list-style:none;display:grid;gap:14px;margin:0 0 28px;padding:20px 22px;max-width:100%;border:1px solid rgba(110,26,36,.28);background:rgba(255,255,255,.88);border-radius:2px;box-shadow:0 4px 14px rgba(62,16,23,.04)}
-.role-frames li{font-family:var(--serif);font-size:clamp(.95rem,1.7vw,1.1rem);line-height:1.75;letter-spacing:.06em;color:var(--ink);border:none;background:none;padding:0;padding-left:1.5em;box-shadow:none;position:relative}
+.role-frames{list-style:none;display:grid;gap:14px;margin:0 0 28px;padding:20px 22px;max-width:100%;box-sizing:border-box;border:1px solid rgba(110,26,36,.28);background:rgba(255,255,255,.88);border-radius:2px;box-shadow:0 4px 14px rgba(62,16,23,.04)}
+.role-frames li{font-family:var(--serif);font-size:clamp(.95rem,1.7vw,1.1rem);line-height:1.75;letter-spacing:.06em;color:var(--ink);border:none;background:none;padding:0;padding-left:1.5em;box-shadow:none;position:relative;min-width:0;overflow-wrap:anywhere;word-break:break-word}
 .role-frames li::before{content:"◻";position:absolute;left:0;top:0;color:var(--vermilion-bright);font-size:.95em}
-.role-keep{display:inline;white-space:nowrap;font-size:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit}
+.role-keep{font-size:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit}
 /* CINDERELLA */
 .cin-sec{background:linear-gradient(180deg,var(--bg-wine-2),var(--bg-wine) 45%,var(--bg-wine-2))}
 .cin-head{max-width:720px;margin:0 auto 48px;text-align:center;min-width:0;padding:0 4px}
 .cin-head .eyebrow{justify-content:center}
-.cin-collab{font-family:var(--serif);font-size:clamp(.95rem,3.6vw,1.18rem);font-weight:700;letter-spacing:.02em;color:var(--ink-dim);margin:0 0 8px;line-height:1.6;white-space:nowrap}
+.cin-collab{font-family:var(--serif);font-size:clamp(.86rem,3.4vw,1.18rem);font-weight:700;letter-spacing:.02em;color:var(--ink-dim);margin:0 0 8px;line-height:1.6;overflow-wrap:anywhere;word-break:break-word}
 .cin-head .mission-lead{margin:0 auto;max-width:100%}
 .cin-brand{font-family:var(--serif);font-weight:800;font-size:clamp(1.65rem,5.2vw,2.45rem);letter-spacing:.1em;color:var(--vermilion-bright);margin:4px 0 26px;line-height:1.5;max-width:100%;overflow-wrap:break-word;word-break:normal;white-space:nowrap}
 .cin-note{text-align:center;font-size:.7rem;color:rgba(44,30,33,.45);letter-spacing:.12em;margin-top:18px}
@@ -229,6 +229,7 @@ h2{font-size:clamp(1.72rem,6.8vw,2.85rem);font-weight:800;letter-spacing:.08em;l
     max-width: 100%;
   }
   .role-frames{padding:18px 14px}
+  .role-frames li{letter-spacing:.03em}
   .hero { overflow: hidden; }
   .hero-photos { overflow: hidden; }
   .hero-inner {

@@ -10,7 +10,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:
 .nav-toggle[aria-expanded="true"]{border-color:var(--vermilion);background:#fff}
 .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(3.5px) rotate(45deg)}
 .nav-toggle[aria-expanded="true"] span:nth-child(2){transform:translateY(-3.5px) rotate(-45deg)}
-nav{display:none}
+header nav{display:none}
 .header-cta{font-size:.82rem;letter-spacing:.12em;border:1px solid var(--gold);color:var(--gold);padding:8px 14px;border-radius:2px;transition:background .3s,color .3s;white-space:nowrap}
 .header-cta:hover{background:var(--vermilion);border-color:var(--vermilion);color:#fff}
 @media(max-width:819px){
@@ -18,7 +18,7 @@ nav{display:none}
   .header-right{gap:10px}
   .brand{font-size:.95rem;gap:8px}
   .brand .seal{font-size:.72rem;width:2.1em;height:2.1em}
-  nav{
+  header nav{
     position:fixed;
     top:62px;
     left:14px;
@@ -33,20 +33,20 @@ nav{display:none}
     box-shadow:0 18px 40px rgba(62,16,23,.16);
     z-index:110;
   }
-  body.nav-open nav{display:flex}
-  nav a{display:block;padding:16px 22px;font-size:.95rem;letter-spacing:.18em;color:var(--ink);border-bottom:1px solid rgba(110,26,36,.08)}
-  nav a:last-child{border-bottom:none}
-  nav a.act{color:var(--vermilion-bright);border-bottom-color:rgba(110,26,36,.08)}
-  nav a:hover{color:var(--gold);background:rgba(249,243,238,.7)}
+  body.nav-open header nav{display:flex}
+  header nav a{display:block;padding:16px 22px;font-size:.95rem;letter-spacing:.18em;color:var(--ink);border-bottom:1px solid rgba(110,26,36,.08)}
+  header nav a:last-child{border-bottom:none}
+  header nav a.act{color:var(--vermilion-bright);border-bottom-color:rgba(110,26,36,.08)}
+  header nav a:hover{color:var(--gold);background:rgba(249,243,238,.7)}
   section{overflow-x:clip;padding:80px 16px 64px}
   .sticky-cta{padding-bottom:calc(12px + env(safe-area-inset-bottom))}
 }
 @media(min-width:820px){
   .nav-toggle{display:none}
-  nav{display:flex;gap:26px;font-size:.9rem;letter-spacing:.14em;position:static;opacity:1;visibility:visible;transform:none;pointer-events:auto;background:none;border:none;box-shadow:none;padding:0;flex-direction:row}
-  nav a{color:var(--ink-dim);padding:0;border:none;font-size:inherit}
-  nav a.act{color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:4px}
-  nav a:hover{color:var(--gold);background:none}
+  header nav{display:flex;gap:26px;font-size:.9rem;letter-spacing:.14em;position:static;opacity:1;visibility:visible;transform:none;pointer-events:auto;background:none;border:none;box-shadow:none;padding:0;flex-direction:row}
+  header nav a{color:var(--ink-dim);padding:0;border:none;font-size:inherit}
+  header nav a.act{color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:4px}
+  header nav a:hover{color:var(--gold);background:none}
   .header-cta{font-size:.88rem;padding:8px 18px}
 }
 section{padding:110px 24px;position:relative}
@@ -57,6 +57,12 @@ section{padding:110px 24px;position:relative}
 .eyebrow-lg{font-size:clamp(1.15rem,4.6vw,1.55rem);font-weight:700;letter-spacing:.28em;margin-bottom:22px}
 footer{background:var(--enji-deep);padding:54px 24px 120px;text-align:center;font-size:.75rem;color:rgba(245,239,230,.4);letter-spacing:.14em}
 footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
+.footer-legal{display:flex;flex-direction:column;align-items:center;gap:10px;margin:8px 0 22px;list-style:none;padding:0;position:static;background:none;border:none;box-shadow:none}
+.footer-legal a{color:rgba(245,239,230,.4);font-size:.75rem;letter-spacing:.14em;line-height:1.6;text-decoration:none;transition:color .25s,opacity .25s}
+.footer-legal a:hover{color:rgba(245,239,230,.7)}
+@media(min-width:560px){
+  .footer-legal{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:8px 20px}
+}
 .follow-lead{color:var(--ink-dim);font-size:.8rem;letter-spacing:.16em;margin-bottom:22px}
 .sns-btns{display:flex;flex-direction:column;gap:14px;align-items:center;margin-bottom:34px}
 @media(min-width:560px){.sns-btns{flex-direction:row;justify-content:center}}
@@ -87,7 +93,7 @@ footer .brand{justify-content:center;margin-bottom:20px;color:#F5EDE7}
     overflow-x: clip;
     padding: 80px 16px 64px;
   }
-  nav a {
+  header nav a {
     font-size: clamp(.88rem, 3.4vw, .92rem);
     letter-spacing: .14em;
     padding: 14px 18px;
